@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ASTROSCOPE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="img/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="fadein"></div>
+
+  <div id="titledesc" class="centered-container">
+    <div id="titledesctext" class="centered-text">
+      <h1>ASTROSCOPE</h1>
+      <p>Project description paragraph</p>
+    </div>
+  </div>
+
+  <div id="groupphoto" class="centered-container">
+    <p>Group photo?</p><br>
+    <img src="http://placekitten.com/400/400/" alt="">
+  </div>
+
+  <div id="demotitlediv" class="centered-container">
+    <div id="demotitle" class="centered-text">
+      <h2>Group members</h2>
+    </div>
+  </div>
+  <div id="members" class="centered-container">
+    <div id="firstmember" class="image-div">
+      <div>Name Lastname</div>
+      <div>Major</div>
+      <img src="http://placekitten.com/200/200" alt="">
+    </div>
+
+    <div id="secondmember" class="image-div">
+      <div>Name Lastname</div>
+      <div>Major</div>
+      <img src="http://placekitten.com/200/200" alt="">
+    </div>
+
+    <div id="thirdmember" class="image-div">
+      <div>Name Lastname</div>
+      <div>Major</div>
+      <img src="http://placekitten.com/200/200" alt="">
+    </div>
+
+    <div id="fourthmember" class="image-div">
+      <div>Name Lastname</div>
+      <div>Major</div>
+      <img src="http://placekitten.com/200/200" alt="">
+    </div>
+  </div>
+
+  <div id="demotitlediv" class="centered-container">
+    <div id="demotitle" class="centered-text">
+      <h2>Project demo</h2>
+    </div>
+  </div>
+  <div id="demovid" class="centered-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=7RECQ73rNFaaqouS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <div id="docs" class="centered-container">
+    <div id="doctext" class="centered-text">
+      <h3>Documents</h3>
+      <a href="">Senior Design 1 Final Report</a><br>
+      <a href="">Senior Design 2 Final Report</a><br>
+      <a href="">Conference Paper</a><br>
+      <a href="">CDR Presentation</a><br>
+      <a href="">Final Presentation</a><br>
+    </div>
+  </div>
+
+  <div id="sponsor" class="centered-container">
+    <div id="sponsortext" class="centered-text">
+      <h4>Sponsor with contact (FSI/Mike)</h4>
+    </div>
+  </div>
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+  };
+  </script>
+</body>
+</html>
