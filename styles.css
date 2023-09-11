@@ -17,6 +17,11 @@
   margin: 25px;
 }
 
+.custom-paragraph {
+  text-align: center;
+  margin: auto;
+}
+
 /* Stuff for fade effect */
 @keyframes fadeinall 
 {
