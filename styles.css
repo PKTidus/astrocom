@@ -12,19 +12,6 @@
     text-align: center; /* Center text within this div */
 }
 
-.sponsor-div {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    margin-bottom: 50px;
-    /* align-items: center; /* Center vertically */
-    /* height: 100vh; /* Optional: Set a fixed height for vertical centering */
-}
-
-.sponsor-text {
-    text-align: center; /* Center text within this div */
-    margin-bottom: 50px;
-}
-
 .image-div {
   text-align: center;
   margin: 25px;
