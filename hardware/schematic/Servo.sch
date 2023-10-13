@@ -10571,14 +10571,14 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="SERVO_PINOUT" gate="B" pin="2"/>
 </segment>
 </net>
-<net name="N$39" class="0">
+<net name="OE" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="~OE"/>
 <pinref part="ROE" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$45" class="0">
+<net name="A0" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A0"/>
 <wire x1="88.9" y1="81.28" x2="48.26" y2="81.28" width="0.1524" layer="91"/>
@@ -10586,7 +10586,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS5" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$44" class="0">
+<net name="A1" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A1"/>
 <wire x1="88.9" y1="78.74" x2="55.88" y2="78.74" width="0.1524" layer="91"/>
@@ -10594,7 +10594,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS4" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$46" class="0">
+<net name="A2" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A2"/>
 <wire x1="88.9" y1="76.2" x2="63.5" y2="76.2" width="0.1524" layer="91"/>
@@ -10602,7 +10602,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS3" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$47" class="0">
+<net name="A3" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A3"/>
 <wire x1="88.9" y1="73.66" x2="71.12" y2="73.66" width="0.1524" layer="91"/>
@@ -10610,7 +10610,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS2" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$48" class="0">
+<net name="A4" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A4"/>
 <wire x1="88.9" y1="71.12" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
@@ -10618,14 +10618,14 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$49" class="0">
+<net name="A5" class="0">
 <segment>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="A5"/>
 <wire x1="88.9" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="RS" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$50" class="0">
+<net name="LED_RS6" class="0">
 <segment>
 <pinref part="LED4" gate="G$1" pin="C"/>
 <pinref part="RS6" gate="G$1" pin="2"/>
@@ -10639,8 +10639,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="83.82" y1="88.9" x2="83.82" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="SPULRSCL" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="111.76" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="116.84" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
-<junction x="83.82" y="116.84"/>
 <wire x1="83.82" y1="111.76" x2="48.26" y2="111.76" width="0.1524" layer="91"/>
 <junction x="83.82" y="111.76"/>
 <label x="48.26" y="111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -10688,7 +10686,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <label x="-53.34" y="121.92" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$64" class="0">
+<net name="CC1_RUSB4" class="0">
 <segment>
 <pinref part="I2C_USBC_OUT" gate="A" pin="CC1"/>
 <pinref part="RUSB4" gate="G$1" pin="1"/>
@@ -10696,7 +10694,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-170.18" y1="119.38" x2="-170.18" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$65" class="0">
+<net name="CC2" class="0">
 <segment>
 <pinref part="I2C_USBC_OUT" gate="A" pin="CC2"/>
 <wire x1="-68.58" y1="116.84" x2="-53.34" y2="116.84" width="0.1524" layer="91"/>
