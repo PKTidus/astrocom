@@ -15051,8 +15051,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="4PIN_I2C_TEST" library="PPTC041LFBN-RC" deviceset="PPTC041LFBN-RC" device=""/>
 <part name="X_3" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="U$2" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$6" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$7" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="DCD_NC" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="CTS_NC" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="SENSOR_USBA_IN" library="USB-AP-S-RA-SMT" deviceset="USB-AP-S-RA-SMT" device=""/>
 <part name="SD_CONNECTOR" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MICROSD" device="" package3d_urn="urn:adsk.eagle:package:6240723/1"/>
 <part name="LED1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="" package3d_urn="urn:adsk.eagle:package:6240563/1"/>
@@ -15618,8 +15618,8 @@ In this library the device names are the same as the pin names of the symbols, t
 </instance>
 <instance part="X_3" gate="G$1" x="63.5" y="152.4" smashed="yes"/>
 <instance part="U$2" gate="G$1" x="-457.2" y="-147.32" smashed="yes" rot="R180"/>
-<instance part="U$6" gate="G$1" x="-515.62" y="-127" smashed="yes"/>
-<instance part="U$7" gate="G$1" x="-459.74" y="-144.78" smashed="yes" rot="R180"/>
+<instance part="DCD_NC" gate="G$1" x="-515.62" y="-127" smashed="yes"/>
+<instance part="CTS_NC" gate="G$1" x="-449.58" y="-144.78" smashed="yes" rot="R180"/>
 <instance part="SENSOR_USBA_IN" gate="A" x="7.62" y="198.12" smashed="yes" rot="R180">
 <attribute name="NAME" x="3.4544" y="192.8114" size="2.0828" layer="95" ratio="6" rot="SR180"/>
 </instance>
@@ -15649,14 +15649,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="BOOT_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="BOOT"/>
 <pinref part="CBOOT" gate="G$1" pin="1"/>
 <wire x1="-492.76" y1="88.9" x2="-502.92" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="SW_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="SW"/>
 <wire x1="-502.92" y1="81.28" x2="-477.52" y2="81.28" width="0.1524" layer="91"/>
@@ -15668,7 +15668,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="L1" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="VCC_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="VCC"/>
 <pinref part="CVCC" gate="G$1" pin="2"/>
@@ -15680,28 +15680,28 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-563.88" y="81.28"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="PGOOD_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="PGOOD"/>
 <pinref part="RPG" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="71.12" x2="-551.18" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="MODE_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="MODE"/>
 <pinref part="RMODE" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="66.04" x2="-579.12" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="TRIP_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="TRIP"/>
 <pinref part="RTRIP" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="60.96" x2="-571.5" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="SS_REFIN_3VREG" class="0">
 <segment>
 <pinref part="3.3V_REGULATOR" gate="A" pin="SS_REFIN"/>
 <pinref part="CSS" gate="G$1" pin="2"/>
@@ -16268,7 +16268,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="SUPPLY9" gate="GND" pin="GND"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="EN_3VREG" class="0">
 <segment>
 <pinref part="RENB" gate="G$1" pin="2"/>
 <pinref part="RENT" gate="G$1" pin="1"/>
@@ -16368,7 +16368,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="58.42" y="172.72" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="FB_3VREG" class="0">
 <segment>
 <pinref part="RFBT" gate="G$1" pin="1"/>
 <wire x1="-447.04" y1="58.42" x2="-447.04" y2="60.96" width="0.1524" layer="91"/>
@@ -16381,14 +16381,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-447.04" y="60.96"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="BOOT_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="BOOT"/>
 <pinref part="CBOOT1" gate="G$1" pin="1"/>
 <wire x1="-492.76" y1="185.42" x2="-502.92" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="SW_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="SW"/>
 <wire x1="-502.92" y1="177.8" x2="-477.52" y2="177.8" width="0.1524" layer="91"/>
@@ -16400,7 +16400,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="L2" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="VCC_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="VCC"/>
 <pinref part="CVCC1" gate="G$1" pin="2"/>
@@ -16412,35 +16412,35 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-563.88" y="177.8"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="PGOOD_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="PGOOD"/>
 <pinref part="RPG1" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="167.64" x2="-551.18" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$16" class="0">
+<net name="MODE_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="MODE"/>
 <pinref part="RMODE1" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="162.56" x2="-579.12" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="TRIP_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="TRIP"/>
 <pinref part="RTRIP1" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="157.48" x2="-571.5" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="SS_REFIN_5VREG" class="0">
 <segment>
 <pinref part="5V_REGULATOR" gate="A" pin="SS_REFIN"/>
 <pinref part="CSS1" gate="G$1" pin="2"/>
 <wire x1="-543.56" y1="152.4" x2="-563.88" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="EN_5VREG" class="0">
 <segment>
 <pinref part="RENB1" gate="G$1" pin="2"/>
 <pinref part="RENT1" gate="G$1" pin="1"/>
@@ -16649,7 +16649,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="340.36" y1="134.62" x2="335.28" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="FB_5VREG" class="0">
 <segment>
 <pinref part="RFBT1" gate="G$1" pin="1"/>
 <wire x1="-447.04" y1="154.94" x2="-447.04" y2="157.48" width="0.1524" layer="91"/>
@@ -16772,7 +16772,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="111.76" y="154.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$41" class="0">
+<net name="VBUS_UART_CONV" class="0">
 <segment>
 <pinref part="RU3" gate="G$1" pin="2"/>
 <wire x1="-510.54" y1="-139.7" x2="-523.24" y2="-139.7" width="0.1524" layer="91"/>
@@ -16854,21 +16854,21 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="-48.26" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="TXD_UART_CONV" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="TXD"/>
 <pinref part="RENMCU1" gate="G$1" pin="2"/>
 <wire x1="-464.82" y1="-137.16" x2="-449.58" y2="-137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="RXD_UART_CONV" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="RXD"/>
 <pinref part="RENMCU2" gate="G$1" pin="2"/>
 <wire x1="-464.82" y1="-139.7" x2="-436.88" y2="-139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="SUSPEND" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="!SUSPEND"/>
 <pinref part="RU1" gate="G$1" pin="2"/>
@@ -16876,7 +16876,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-401.32" y1="-119.38" x2="-401.32" y2="-180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$40" class="0">
+<net name="RST_UART_CONV" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="!RST"/>
 <pinref part="RU2" gate="G$1" pin="1"/>
@@ -16959,7 +16959,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-617.22" y1="-195.58" x2="-607.06" y2="-195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$52" class="0">
+<net name="3V3_MCU" class="0">
 <segment>
 <pinref part="RENMCU" gate="G$1" pin="2"/>
 <wire x1="292.1" y1="-81.28" x2="292.1" y2="-86.36" width="0.1524" layer="91"/>
@@ -16970,7 +16970,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="292.1" y="-81.28"/>
 </segment>
 </net>
-<net name="N$53" class="0">
+<net name="CC1_UART" class="0">
 <segment>
 <pinref part="UART_USBC_IN" gate="A" pin="CC1"/>
 <pinref part="RUSB" gate="G$1" pin="1"/>
@@ -16978,7 +16978,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-160.02" y1="187.96" x2="-160.02" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$56" class="0">
+<net name="CC2_UART" class="0">
 <segment>
 <pinref part="UART_USBC_IN" gate="A" pin="CC2"/>
 <wire x1="-68.58" y1="185.42" x2="-53.34" y2="185.42" width="0.1524" layer="91"/>
@@ -17133,7 +17133,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="27.94" y="198.12" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$58" class="0">
+<net name="ILIM_SENSOR_S" class="0">
 <segment>
 <pinref part="SENSOR_PSWITCH" gate="G$1" pin="ILIM"/>
 <pinref part="RILIM" gate="G$1" pin="2"/>
@@ -17141,7 +17141,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="7.62" y1="-205.74" x2="7.62" y2="-213.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$61" class="0">
+<net name="FAULT_SENSOR_S" class="0">
 <segment>
 <pinref part="SENSOR_PSWITCH" gate="G$1" pin="!FAULT"/>
 <pinref part="RFAULT2" gate="G$1" pin="1"/>
@@ -17149,7 +17149,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="7.62" y1="-203.2" x2="7.62" y2="-190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$62" class="0">
+<net name="CC1_I2C" class="0">
 <segment>
 <pinref part="I2C_USBC_IN" gate="A" pin="CC1"/>
 <pinref part="RUSB2" gate="G$1" pin="1"/>
@@ -17157,7 +17157,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="10.16" y1="91.44" x2="10.16" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$63" class="0">
+<net name="CC2_I2C" class="0">
 <segment>
 <pinref part="I2C_USBC_IN" gate="A" pin="CC2"/>
 <wire x1="111.76" y1="88.9" x2="127" y2="88.9" width="0.1524" layer="91"/>
@@ -17165,7 +17165,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="RUSB3" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$67" class="0">
+<net name="ILIM_SERVO_S" class="0">
 <segment>
 <pinref part="SERVO_PSWITCH" gate="G$1" pin="ILIM"/>
 <pinref part="RILIM1" gate="G$1" pin="2"/>
@@ -17173,7 +17173,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="91.44" y1="-109.22" x2="91.44" y2="-116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$68" class="0">
+<net name="FAULT_SERVO_S" class="0">
 <segment>
 <pinref part="SERVO_PSWITCH" gate="G$1" pin="!FAULT"/>
 <pinref part="RFAULT3" gate="G$1" pin="1"/>
@@ -17245,7 +17245,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="124.46" y="152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$66" class="0">
+<net name="CC1_STEPPER" class="0">
 <segment>
 <pinref part="STEPPER_USBC_IN" gate="A" pin="CC1"/>
 <pinref part="RUSB6" gate="G$1" pin="1"/>
@@ -17253,7 +17253,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-162.56" y1="91.44" x2="-162.56" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$69" class="0">
+<net name="CC2_STEPPER" class="0">
 <segment>
 <pinref part="STEPPER_USBC_IN" gate="A" pin="CC2"/>
 <wire x1="-60.96" y1="88.9" x2="-45.72" y2="88.9" width="0.1524" layer="91"/>
@@ -17261,7 +17261,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="RUSB7" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$70" class="0">
+<net name="ILIM_STEPPER_S" class="0">
 <segment>
 <pinref part="STEPPER_P_SWITCH" gate="G$1" pin="ILIM"/>
 <pinref part="RILIM2" gate="G$1" pin="2"/>
@@ -17269,7 +17269,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-81.28" y1="-109.22" x2="-81.28" y2="-116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$71" class="0">
+<net name="FAULT_STEPPER_S" class="0">
 <segment>
 <pinref part="STEPPER_P_SWITCH" gate="G$1" pin="!FAULT"/>
 <pinref part="RFAULT4" gate="G$1" pin="1"/>
@@ -17341,7 +17341,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="-162.56" y="-142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$74" class="0">
+<net name="2+I_OP_AMP" class="0">
 <segment>
 <pinref part="RLEDOUT2" gate="G$1" pin="1"/>
 <wire x1="-389.636" y1="88.9" x2="-368.3" y2="88.9" width="0.1524" layer="91"/>
@@ -17352,7 +17352,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-368.3" y="88.9"/>
 </segment>
 </net>
-<net name="N$75" class="0">
+<net name="2-I_OP_AMP" class="0">
 <segment>
 <pinref part="RLEDOUT3" gate="G$1" pin="1"/>
 <pinref part="OP_AMP_LEDS" gate="A" pin="2IN-"/>
@@ -17360,7 +17360,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-342.9" y1="104.14" x2="-342.9" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$76" class="0">
+<net name="2O_OP_AMP" class="0">
 <segment>
 <pinref part="OP_AMP_LEDS" gate="A" pin="2OUT"/>
 <wire x1="-307.34" y1="114.3" x2="-281.94" y2="114.3" width="0.1524" layer="91"/>
@@ -17368,7 +17368,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-281.94" y1="114.3" x2="-281.94" y2="125.984" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$77" class="0">
+<net name="1I+_OP_AMP" class="0">
 <segment>
 <pinref part="RLEDOUT" gate="G$1" pin="1"/>
 <wire x1="-389.636" y1="185.42" x2="-365.76" y2="185.42" width="0.1524" layer="91"/>
@@ -17379,7 +17379,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-365.76" y="185.42"/>
 </segment>
 </net>
-<net name="N$78" class="0">
+<net name="1I-_OP_AMP" class="0">
 <segment>
 <pinref part="RLEDOUT1" gate="G$1" pin="1"/>
 <wire x1="-389.636" y1="203.2" x2="-347.98" y2="203.2" width="0.1524" layer="91"/>
@@ -17388,7 +17388,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-347.98" y1="114.3" x2="-342.9" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$79" class="0">
+<net name="1O_OP_AMP" class="0">
 <segment>
 <pinref part="OP_AMP_LEDS" gate="A" pin="1OUT"/>
 <wire x1="-261.62" y1="116.84" x2="-307.34" y2="116.84" width="0.1524" layer="91"/>
@@ -17396,7 +17396,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-261.62" y1="116.84" x2="-261.62" y2="125.984" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$80" class="0">
+<net name="LED2_RLED8" class="0">
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="RLEDOUT8" gate="G$1" pin="1"/>
@@ -17528,7 +17528,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="111.76" y="160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$81" class="0">
+<net name="DSR_NC" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="DSR"/>
 <pinref part="U$2" gate="G$1" pin="P$1"/>
@@ -17538,23 +17538,24 @@ In this library the device names are the same as the pin names of the symbols, t
 <net name="N$85" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="DCD"/>
-<pinref part="U$6" gate="G$1" pin="P$1"/>
+<pinref part="DCD_NC" gate="G$1" pin="P$1"/>
 </segment>
 </net>
-<net name="N$86" class="0">
+<net name="CTS_NC" class="0">
 <segment>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="CTS"/>
-<pinref part="U$7" gate="G$1" pin="P$1"/>
+<pinref part="CTS_NC" gate="G$1" pin="P$1"/>
+<wire x1="-454.66" y1="-144.78" x2="-464.82" y2="-144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$51" class="0">
+<net name="LED3_RLED9" class="0">
 <segment>
 <pinref part="RLEDOUT9" gate="G$1" pin="1"/>
 <pinref part="LED3" gate="G$1" pin="C"/>
 <wire x1="-261.62" y1="136.144" x2="-261.62" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$54" class="0">
+<net name="LED1_RSDCS" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="279.4" y1="121.92" x2="279.4" y2="114.3" width="0.1524" layer="91"/>
@@ -17579,7 +17580,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="279.4" y="96.52" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$55" class="0">
+<net name="LED_CONVERTER" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="279.4" y1="129.54" x2="279.4" y2="142.24" width="0.1524" layer="91"/>
@@ -17589,7 +17590,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="337.82" y1="121.92" x2="335.28" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$57" class="0">
+<net name="SD_CLK" class="0">
 <segment>
 <pinref part="SD_CONNECTOR" gate="G$1" pin="SCLK"/>
 <wire x1="365.76" y1="134.62" x2="345.44" y2="134.62" width="0.1524" layer="91"/>
@@ -17598,7 +17599,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="345.44" y1="129.54" x2="335.28" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$59" class="0">
+<net name="DATA_I_SD" class="0">
 <segment>
 <pinref part="SD_CONNECTOR" gate="G$1" pin="DATA_IN"/>
 <wire x1="342.9" y1="137.16" x2="365.76" y2="137.16" width="0.1524" layer="91"/>
@@ -17607,14 +17608,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="342.9" y1="127" x2="335.28" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$91" class="0">
+<net name="5ASD" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="P$1"/>
 <pinref part="DA_CONVERTER_SD" gate="A" pin="5A"/>
 <wire x1="274.32" y1="119.38" x2="299.72" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$92" class="0">
+<net name="6ASD" class="0">
 <segment>
 <pinref part="DA_CONVERTER_SD" gate="A" pin="6A"/>
 <pinref part="U$11" gate="G$1" pin="P$1"/>
