@@ -10790,7 +10790,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="SERVO_REGULATOR" gate="G$1" pin="OUTPUT"/>
 <label x="-99.06" y="48.26" size="1.778" layer="95" xref="yes"/>
-<wire x1="-114.3" y1="48.26" x2="-99.06" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="48.26" x2="-104.14" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="SERVO_REGULATOR" gate="G$1" pin="VOUT"/>
+<wire x1="-104.14" y1="48.26" x2="-99.06" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="43.18" x2="-104.14" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="43.18" x2="-104.14" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-104.14" y="48.26"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -10906,7 +10911,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <approved hash="104,1,88.9,96.52,SERVO_CONTROLLER,VDD,3.3VOUTUSB1,,,"/>
 <approved hash="104,1,-104.14,121.92,I2C_USBC_OUT,VBUS_2,VBUS12,,,"/>
 <approved hash="104,1,-68.58,111.76,I2C_USBC_OUT,VBUS,VBUS12,,,"/>
-<approved hash="113,1,70.3152,-9.96442,SERVO_PINOUT,,,,,"/>
+<approved hash="113,1,70.3152,-9.93394,SERVO_PINOUT,,,,,"/>
 <approved hash="113,1,13.0217,105.41,LED4,,,,,"/>
 </errors>
 </schematic>
