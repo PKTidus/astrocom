@@ -10262,38 +10262,6 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
-<description>SPICE compatible library parts</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<gates>
-<gate name="G$1" symbol="0" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="SPICEGROUND" value=""/>
-<attribute name="_EXTERNAL_" value=""/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="USB-AP-S-RA-SMT">
 <packages>
 <package name="CONN_USB-AP-S-RA-SMT_ADM">
@@ -14962,13 +14930,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="C3.3MCU" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22uF"/>
 <part name="C3.3MCU1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="CENS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
-<part name="X_4" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RENMCU1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="0R"/>
 <part name="RENMCU2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="0R"/>
-<part name="X_5" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="CUSB1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="CUSB2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7uF"/>
-<part name="X_6" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RU1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="RU2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2k"/>
 <part name="RU3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="47.5k"/>
@@ -14979,20 +14944,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="RU5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="RU6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="CENS1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
-<part name="X_11" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="MCU_P_JP" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1Q" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 <part name="CBUS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF"/>
 <part name="UART_USBC_IN" library="USB4110-GF-A" deviceset="USB4110-GF-A" device=""/>
 <part name="D1" library="1N5819HW-7-F" deviceset="1N5819HW-7-F" device=""/>
 <part name="CUSB" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_13" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RUSB" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="RUSB1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="D2" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D3" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D4" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="SENSOR_PSWITCH" library="AP22653W6-7" deviceset="AP22653W6-7" device=""/>
-<part name="X_14" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RILIM" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="20k"/>
 <part name="C3.3OUT1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="C3.3OUT2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="120uF"/>
@@ -15002,14 +14964,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="I2C_USBC_IN" library="USB4110-GF-A" deviceset="USB4110-GF-A" device=""/>
 <part name="D5" library="1N5819HW-7-F" deviceset="1N5819HW-7-F" device=""/>
 <part name="CUSB3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_15" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RUSB2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="RUSB3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="D6" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D7" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D8" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="SERVO_PSWITCH" library="AP22653W6-7" deviceset="AP22653W6-7" device=""/>
-<part name="X_17" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RILIM1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="20k"/>
 <part name="C3.3OUT5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="C3.3OUT6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="120uF"/>
@@ -15019,7 +14979,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="STEPPER_USBC_IN" library="USB4110-GF-A" deviceset="USB4110-GF-A" device=""/>
 <part name="D13" library="1N5819HW-7-F" deviceset="1N5819HW-7-F" device=""/>
 <part name="CUSB5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_18" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RUSB6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="RUSB7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="D14" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
@@ -15032,7 +14991,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="RFAULT4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="C3.3OUT11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="C3.3OUT12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_19" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="SW4" library="1825910-6" deviceset="1825910-6" device=""/>
 <part name="SW5" library="1825910-6" deviceset="1825910-6" device=""/>
 <part name="LED2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="" package3d_urn="urn:adsk.eagle:package:6240563/1"/>
@@ -15047,9 +15005,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="U14" library="MMSZ5225BT1G" deviceset="MMSZ5225BT1G" device=""/>
 <part name="U15" library="MMSZ5230BT1G" deviceset="MMSZ5230BT1G" device=""/>
 <part name="19_PINOUT" library="PPTC191LFBN-RC" deviceset="PPTC191LFBN-RC" device=""/>
-<part name="X_27" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="4PIN_I2C_TEST" library="PPTC041LFBN-RC" deviceset="PPTC041LFBN-RC" device=""/>
-<part name="X_3" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="U$2" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="DCD_NC" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="CTS_NC" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
@@ -15062,6 +15018,18 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="U$10" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$11" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY17" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY19" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15302,7 +15270,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-505.079" y="-87.884" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-510.159" y="-87.884" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="X_4" gate="G$1" x="-518.16" y="-93.98" smashed="yes"/>
 <instance part="RENMCU1" gate="G$1" x="-444.5" y="-137.16" smashed="yes" rot="R180">
 <attribute name="NAME" x="-440.69" y="-138.6586" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-440.69" y="-133.858" size="1.778" layer="96" rot="R180"/>
@@ -15311,7 +15278,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-427.99" y="-141.1986" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-427.99" y="-136.398" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_5" gate="G$1" x="-406.4" y="-203.2" smashed="yes"/>
 <instance part="CUSB1" gate="G$1" x="-535.94" y="-114.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="-537.464" y="-114.681" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-537.464" y="-109.601" size="1.778" layer="96" rot="R180"/>
@@ -15320,7 +15286,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-552.704" y="-114.681" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-552.704" y="-109.601" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X_6" gate="G$1" x="-551.18" y="-124.46" smashed="yes"/>
 <instance part="RU1" gate="G$1" x="-401.32" y="-185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="-402.8186" y="-189.23" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-398.018" y="-189.23" size="1.778" layer="96" rot="R90"/>
@@ -15361,7 +15326,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-454.279" y="-87.884" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-459.359" y="-87.884" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="X_11" gate="G$1" x="-467.36" y="-93.98" smashed="yes"/>
 <instance part="MCU_P_JP" gate="A" x="281.94" y="-81.28" smashed="yes" rot="R90">
 <attribute name="NAME" x="287.02" y="-83.82" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="287.02" y="-76.835" size="1.778" layer="96" rot="R180"/>
@@ -15382,7 +15346,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-171.196" y="173.101" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-171.196" y="168.021" size="1.778" layer="96"/>
 </instance>
-<instance part="X_13" gate="G$1" x="-172.72" y="147.32" smashed="yes"/>
 <instance part="RUSB" gate="G$1" x="-160.02" y="172.72" smashed="yes" rot="R270">
 <attribute name="NAME" x="-158.5214" y="176.53" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-163.322" y="176.53" size="1.778" layer="96" rot="R270"/>
@@ -15407,7 +15370,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-22.86" y="-194.31" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-22.86" y="-215.9" size="1.778" layer="96"/>
 </instance>
-<instance part="X_14" gate="G$1" x="-73.66" y="-162.56" smashed="yes" rot="R180"/>
 <instance part="RILIM" gate="G$1" x="7.62" y="-218.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="6.1214" y="-222.25" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="10.922" y="-222.25" size="1.778" layer="96" rot="R90"/>
@@ -15444,7 +15406,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-1.016" y="76.581" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-1.016" y="71.501" size="1.778" layer="96"/>
 </instance>
-<instance part="X_15" gate="G$1" x="-2.54" y="50.8" smashed="yes"/>
 <instance part="RUSB2" gate="G$1" x="10.16" y="76.2" smashed="yes" rot="R270">
 <attribute name="NAME" x="11.6586" y="80.01" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="6.858" y="80.01" size="1.778" layer="96" rot="R270"/>
@@ -15469,7 +15430,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="60.96" y="-97.79" size="1.778" layer="95"/>
 <attribute name="VALUE" x="60.96" y="-119.38" size="1.778" layer="96"/>
 </instance>
-<instance part="X_17" gate="G$1" x="10.16" y="-66.04" smashed="yes" rot="R180"/>
 <instance part="RILIM1" gate="G$1" x="91.44" y="-121.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.9414" y="-125.73" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="94.742" y="-125.73" size="1.778" layer="96" rot="R90"/>
@@ -15506,7 +15466,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-173.736" y="76.581" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-173.736" y="71.501" size="1.778" layer="96"/>
 </instance>
-<instance part="X_18" gate="G$1" x="-175.26" y="50.8" smashed="yes"/>
 <instance part="RUSB6" gate="G$1" x="-162.56" y="76.2" smashed="yes" rot="R270">
 <attribute name="NAME" x="-161.0614" y="80.01" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-165.862" y="80.01" size="1.778" layer="96" rot="R270"/>
@@ -15555,7 +15514,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-142.621" y="-94.996" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-137.541" y="-94.996" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="X_19" gate="G$1" x="-162.56" y="-66.04" smashed="yes" rot="R180"/>
 <instance part="SW4" gate="G$1" x="-505.46" y="-71.12" smashed="yes">
 <attribute name="NAME" x="-510.5497" y="-65.26685" size="1.803440625" layer="95"/>
 <attribute name="VALUE" x="-510.548309375" y="-78.75246875" size="1.802940625" layer="96"/>
@@ -15611,12 +15569,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="19_PINOUT" gate="A" x="132.08" y="182.88" smashed="yes">
 <attribute name="NAME" x="136.2456" y="185.6486" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 </instance>
-<instance part="X_27" gate="G$1" x="124.46" y="132.08" smashed="yes"/>
 <instance part="4PIN_I2C_TEST" gate="G$1" x="48.26" y="170.18" smashed="yes">
 <attribute name="NAME" x="40.64" y="176.53" size="1.778" layer="95"/>
 <attribute name="VALUE" x="40.64" y="160.02" size="1.778" layer="96"/>
 </instance>
-<instance part="X_3" gate="G$1" x="63.5" y="152.4" smashed="yes"/>
 <instance part="U$2" gate="G$1" x="-457.2" y="-147.32" smashed="yes" rot="R180"/>
 <instance part="DCD_NC" gate="G$1" x="-515.62" y="-127" smashed="yes"/>
 <instance part="CTS_NC" gate="G$1" x="-449.58" y="-144.78" smashed="yes" rot="R180"/>
@@ -15644,6 +15600,42 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="U$11" gate="G$1" x="259.08" y="116.84" smashed="yes"/>
 <instance part="SUPPLY9" gate="GND" x="360.68" y="93.98" smashed="yes">
 <attribute name="VALUE" x="358.775" y="90.805" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY10" gate="GND" x="-162.56" y="-63.5" smashed="yes" rot="R180">
+<attribute name="VALUE" x="-160.655" y="-60.325" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="SUPPLY11" gate="GND" x="-175.26" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-177.165" y="45.085" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY12" gate="GND" x="10.16" y="-63.5" smashed="yes" rot="R180">
+<attribute name="VALUE" x="12.065" y="-60.325" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="SUPPLY13" gate="GND" x="-2.54" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-4.445" y="45.085" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY14" gate="GND" x="-73.66" y="-160.02" smashed="yes" rot="R180">
+<attribute name="VALUE" x="-71.755" y="-156.845" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="SUPPLY15" gate="GND" x="-172.72" y="144.78" smashed="yes">
+<attribute name="VALUE" x="-174.625" y="141.605" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY16" gate="GND" x="-467.36" y="-96.52" smashed="yes">
+<attribute name="VALUE" x="-469.265" y="-99.695" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY17" gate="GND" x="-551.18" y="-127" smashed="yes">
+<attribute name="VALUE" x="-553.085" y="-130.175" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY18" gate="GND" x="63.5" y="149.86" smashed="yes">
+<attribute name="VALUE" x="61.595" y="146.685" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY19" gate="GND" x="124.46" y="129.54" smashed="yes">
+<attribute name="VALUE" x="122.555" y="126.365" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY20" gate="GND" x="-406.4" y="-205.74" smashed="yes">
+<attribute name="VALUE" x="-408.305" y="-208.915" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY21" gate="GND" x="-518.16" y="-96.52" smashed="yes">
+<attribute name="VALUE" x="-520.065" y="-99.695" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15987,7 +15979,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="271.78" y="-119.38"/>
 </segment>
 <segment>
-<pinref part="X_4" gate="G$1" pin="0"/>
 <pinref part="CENS" gate="G$1" pin="2"/>
 <wire x1="-518.16" y1="-86.36" x2="-518.16" y2="-93.98" width="0.1524" layer="91"/>
 <wire x1="-510.54" y1="-86.36" x2="-518.16" y2="-86.36" width="0.1524" layer="91"/>
@@ -15995,10 +15986,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="SW4" gate="G$1" pin="1"/>
 <wire x1="-515.62" y1="-68.58" x2="-518.16" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="-518.16" y1="-68.58" x2="-518.16" y2="-86.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY21" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <wire x1="-406.4" y1="-167.64" x2="-406.4" y2="-195.58" width="0.1524" layer="91"/>
-<pinref part="X_5" gate="G$1" pin="0"/>
 <pinref part="UART_USB_CONVERTER" gate="G$1" pin="GND"/>
 <wire x1="-406.4" y1="-195.58" x2="-406.4" y2="-203.2" width="0.1524" layer="91"/>
 <wire x1="-464.82" y1="-167.64" x2="-406.4" y2="-167.64" width="0.1524" layer="91"/>
@@ -16014,6 +16005,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="CBUS" gate="G$1" pin="2"/>
 <wire x1="-513.08" y1="-190.5" x2="-513.08" y2="-195.58" width="0.1524" layer="91"/>
 <junction x="-513.08" y="-195.58"/>
+<pinref part="SUPPLY20" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CUSB2" gate="G$1" pin="1"/>
@@ -16023,10 +16015,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-535.94" y1="-121.92" x2="-535.94" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-551.18" y1="-121.92" x2="-551.18" y2="-124.46" width="0.1524" layer="91"/>
 <junction x="-551.18" y="-121.92"/>
-<pinref part="X_6" gate="G$1" pin="0"/>
+<pinref part="SUPPLY17" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X_11" gate="G$1" pin="0"/>
 <pinref part="CENS1" gate="G$1" pin="2"/>
 <wire x1="-467.36" y1="-86.36" x2="-467.36" y2="-93.98" width="0.1524" layer="91"/>
 <wire x1="-459.74" y1="-86.36" x2="-467.36" y2="-86.36" width="0.1524" layer="91"/>
@@ -16034,11 +16025,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="SW5" gate="G$1" pin="1"/>
 <wire x1="-464.82" y1="-68.58" x2="-467.36" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="-467.36" y1="-68.58" x2="-467.36" y2="-86.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY16" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CUSB" gate="G$1" pin="2"/>
 <wire x1="-172.72" y1="167.64" x2="-172.72" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="X_13" gate="G$1" pin="0"/>
 <pinref part="RUSB" gate="G$1" pin="2"/>
 <wire x1="-172.72" y1="149.86" x2="-172.72" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="-160.02" y1="167.64" x2="-160.02" y2="149.86" width="0.1524" layer="91"/>
@@ -16070,10 +16061,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="D4" gate="G$1" pin="K"/>
 <wire x1="-114.3" y1="157.48" x2="-114.3" y2="149.86" width="0.1524" layer="91"/>
 <junction x="-114.3" y="149.86"/>
+<pinref part="SUPPLY15" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <wire x1="-73.66" y1="-231.14" x2="-73.66" y2="-193.04" width="0.1524" layer="91"/>
-<pinref part="X_14" gate="G$1" pin="0"/>
 <pinref part="SENSOR_PSWITCH" gate="G$1" pin="GND"/>
 <wire x1="-73.66" y1="-193.04" x2="-73.66" y2="-177.8" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-177.8" x2="-73.66" y2="-162.56" width="0.1524" layer="91"/>
@@ -16100,11 +16091,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-73.66" y1="-231.14" x2="-76.2" y2="-231.14" width="0.1524" layer="91"/>
 <junction x="-73.66" y="-231.14"/>
 <label x="-76.2" y="-231.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="SUPPLY14" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CUSB3" gate="G$1" pin="2"/>
 <wire x1="-2.54" y1="71.12" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="X_15" gate="G$1" pin="0"/>
 <pinref part="RUSB2" gate="G$1" pin="2"/>
 <wire x1="-2.54" y1="53.34" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="71.12" x2="10.16" y2="53.34" width="0.1524" layer="91"/>
@@ -16136,10 +16127,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="D8" gate="G$1" pin="K"/>
 <wire x1="66.04" y1="60.96" x2="66.04" y2="53.34" width="0.1524" layer="91"/>
 <junction x="66.04" y="53.34"/>
+<pinref part="SUPPLY13" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <wire x1="10.16" y1="-134.62" x2="10.16" y2="-96.52" width="0.1524" layer="91"/>
-<pinref part="X_17" gate="G$1" pin="0"/>
 <pinref part="SERVO_PSWITCH" gate="G$1" pin="GND"/>
 <wire x1="10.16" y1="-96.52" x2="10.16" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="-81.28" x2="10.16" y2="-66.04" width="0.1524" layer="91"/>
@@ -16163,11 +16154,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="C3.3OUT8" gate="G$1" pin="1"/>
 <wire x1="27.94" y1="-96.52" x2="10.16" y2="-96.52" width="0.1524" layer="91"/>
 <junction x="10.16" y="-96.52"/>
+<pinref part="SUPPLY12" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CUSB5" gate="G$1" pin="2"/>
 <wire x1="-175.26" y1="71.12" x2="-175.26" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="X_18" gate="G$1" pin="0"/>
 <pinref part="RUSB6" gate="G$1" pin="2"/>
 <wire x1="-175.26" y1="53.34" x2="-175.26" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-162.56" y1="71.12" x2="-162.56" y2="53.34" width="0.1524" layer="91"/>
@@ -16199,6 +16190,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="D16" gate="G$1" pin="K"/>
 <wire x1="-106.68" y1="60.96" x2="-106.68" y2="53.34" width="0.1524" layer="91"/>
 <junction x="-106.68" y="53.34"/>
+<pinref part="SUPPLY11" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <wire x1="-162.56" y1="-134.62" x2="-162.56" y2="-96.52" width="0.1524" layer="91"/>
@@ -16225,19 +16217,19 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="C3.3OUT12" gate="G$1" pin="1"/>
 <wire x1="-144.78" y1="-96.52" x2="-162.56" y2="-96.52" width="0.1524" layer="91"/>
 <junction x="-162.56" y="-96.52"/>
-<pinref part="X_19" gate="G$1" pin="0"/>
+<pinref part="SUPPLY10" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="19_PINOUT" gate="A" pin="19"/>
 <wire x1="132.08" y1="137.16" x2="124.46" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="137.16" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="X_27" gate="G$1" pin="0"/>
+<pinref part="SUPPLY19" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="4PIN_I2C_TEST" gate="G$1" pin="4"/>
 <wire x1="53.34" y1="165.1" x2="63.5" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="165.1" x2="63.5" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="X_3" gate="G$1" pin="0"/>
+<pinref part="SUPPLY18" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="SENSOR_USBA_IN" gate="A" pin="4"/>
@@ -17626,54 +17618,50 @@ In this library the device names are the same as the pin names of the symbols, t
 </sheet>
 </sheets>
 <errors>
-<approved hash="102,1,-101.6,-200.66,VSS,GND,,,,"/>
-<approved hash="102,1,-101.6,-198.12,VDD,3.3VOUT,,,,"/>
-<approved hash="102,1,-101.6,-205.74,GND1,GND,,,,"/>
-<approved hash="104,1,63.5,-165.1,MCU,3V3,N$52,,,"/>
-<approved hash="104,1,17.78,-73.66,3.3V_REGULATOR,BOOT,N$1,,,"/>
-<approved hash="104,1,17.78,-119.38,3.3V_REGULATOR,AGND,GND,,,"/>
-<approved hash="104,1,-22.86,-73.66,3.3V_REGULATOR,VIN_2,12VIN,,,"/>
-<approved hash="104,1,17.78,-96.52,3.3V_REGULATOR,PGND_2,GND,,,"/>
-<approved hash="104,1,17.78,-99.06,3.3V_REGULATOR,PGND_3,GND,,,"/>
-<approved hash="104,1,17.78,-101.6,3.3V_REGULATOR,PGND_4,GND,,,"/>
-<approved hash="104,1,17.78,-104.14,3.3V_REGULATOR,PGND_5,GND,,,"/>
-<approved hash="104,1,17.78,-106.68,3.3V_REGULATOR,PGND_6,GND,,,"/>
-<approved hash="104,1,17.78,-109.22,3.3V_REGULATOR,PGND_7,GND,,,"/>
-<approved hash="104,1,17.78,-111.76,3.3V_REGULATOR,PGND_8,GND,,,"/>
-<approved hash="104,1,17.78,-114.3,3.3V_REGULATOR,PGND,GND,,,"/>
-<approved hash="104,1,-22.86,-81.28,3.3V_REGULATOR,VCC,N$3,,,"/>
-<approved hash="104,1,17.78,-81.28,3.3V_REGULATOR,SW,N$2,,,"/>
-<approved hash="104,1,-22.86,-76.2,3.3V_REGULATOR,VIN,12VIN,,,"/>
-<approved hash="104,1,17.78,22.86,5V_REGULATOR,BOOT,N$11,,,"/>
-<approved hash="104,1,17.78,-22.86,5V_REGULATOR,AGND,GND,,,"/>
-<approved hash="104,1,-22.86,22.86,5V_REGULATOR,VIN_2,12VIN,,,"/>
-<approved hash="104,1,17.78,0,5V_REGULATOR,PGND_2,GND,,,"/>
-<approved hash="104,1,17.78,-2.54,5V_REGULATOR,PGND_3,GND,,,"/>
-<approved hash="104,1,17.78,-5.08,5V_REGULATOR,PGND_4,GND,,,"/>
-<approved hash="104,1,17.78,-7.62,5V_REGULATOR,PGND_5,GND,,,"/>
-<approved hash="104,1,17.78,-10.16,5V_REGULATOR,PGND_6,GND,,,"/>
-<approved hash="104,1,17.78,-12.7,5V_REGULATOR,PGND_7,GND,,,"/>
-<approved hash="104,1,17.78,-15.24,5V_REGULATOR,PGND_8,GND,,,"/>
-<approved hash="104,1,17.78,-17.78,5V_REGULATOR,PGND,GND,,,"/>
-<approved hash="104,1,-22.86,15.24,5V_REGULATOR,VCC,N$14,,,"/>
-<approved hash="104,1,17.78,15.24,5V_REGULATOR,SW,N$13,,,"/>
-<approved hash="104,1,-22.86,20.32,5V_REGULATOR,VIN,12VIN,,,"/>
-<approved hash="104,1,274.32,-254,UART_USB_CONVERTER,GND,0,,,"/>
-<approved hash="104,1,274.32,-200.66,UART_USB_CONVERTER,VDD,3.3VOUT,,,"/>
-<approved hash="104,1,251.46,223.52,UART_USBC_IN,VBUS_2,VBUS,,,"/>
-<approved hash="104,1,-132.08,-185.42,DA_CONVERTER_SD,VCC,3.3VOUT,,,"/>
-<approved hash="104,1,259.08,109.22,SENSOR_PSWITCH,GND,0,,,"/>
-<approved hash="104,1,78.74,223.52,I2C_USBC_IN,VBUS_2,VBUS11,,,"/>
-<approved hash="104,1,114.3,213.36,I2C_USBC_IN,VBUS,VBUS11,,,"/>
-<approved hash="104,1,76.2,106.68,SERVO_PSWITCH,GND,0,,,"/>
-<approved hash="104,1,-93.98,223.52,STEPPER_USBC_IN,VBUS_2,VBUS21,,,"/>
-<approved hash="104,1,-58.42,213.36,STEPPER_USBC_IN,VBUS,VBUS21,,,"/>
-<approved hash="104,1,-96.52,106.68,STEPPER_P_SWITCH,GND,0,,,"/>
-<approved hash="104,1,213.36,-40.64,OP_AMP_LEDS,VCC,3.3VOUT,,,"/>
-<approved hash="113,1,-17.78,-166.596,MCU_P_JP,,,,,"/>
-<approved hash="113,1,-187.638,-194.31,LED1,,,,,"/>
-<approved hash="113,1,239.082,-19.05,LED2,,,,,"/>
-<approved hash="113,1,259.402,-19.05,LED3,,,,,"/>
+<approved hash="102,1,365.76,119.38,VSS,GND,,,,"/>
+<approved hash="102,1,365.76,121.92,VDD,3.3VOUT,,,,"/>
+<approved hash="102,1,365.76,114.3,GND1,GND,,,,"/>
+<approved hash="104,1,363.22,-81.28,MCU,3V3,3V3_MCU,,,"/>
+<approved hash="104,1,-502.92,88.9,3.3V_REGULATOR,BOOT,BOOT_3VREG,,,"/>
+<approved hash="104,1,-502.92,43.18,3.3V_REGULATOR,AGND,GND,,,"/>
+<approved hash="104,1,-543.56,88.9,3.3V_REGULATOR,VIN_2,12VIN,,,"/>
+<approved hash="104,1,-502.92,66.04,3.3V_REGULATOR,PGND_2,GND,,,"/>
+<approved hash="104,1,-502.92,63.5,3.3V_REGULATOR,PGND_3,GND,,,"/>
+<approved hash="104,1,-502.92,60.96,3.3V_REGULATOR,PGND_4,GND,,,"/>
+<approved hash="104,1,-502.92,58.42,3.3V_REGULATOR,PGND_5,GND,,,"/>
+<approved hash="104,1,-502.92,55.88,3.3V_REGULATOR,PGND_6,GND,,,"/>
+<approved hash="104,1,-502.92,53.34,3.3V_REGULATOR,PGND_7,GND,,,"/>
+<approved hash="104,1,-502.92,50.8,3.3V_REGULATOR,PGND_8,GND,,,"/>
+<approved hash="104,1,-502.92,48.26,3.3V_REGULATOR,PGND,GND,,,"/>
+<approved hash="104,1,-543.56,81.28,3.3V_REGULATOR,VCC,VCC_3VREG,,,"/>
+<approved hash="104,1,-502.92,81.28,3.3V_REGULATOR,SW,SW_3VREG,,,"/>
+<approved hash="104,1,-543.56,86.36,3.3V_REGULATOR,VIN,12VIN,,,"/>
+<approved hash="104,1,-502.92,185.42,5V_REGULATOR,BOOT,BOOT_5VREG,,,"/>
+<approved hash="104,1,-502.92,139.7,5V_REGULATOR,AGND,GND,,,"/>
+<approved hash="104,1,-543.56,185.42,5V_REGULATOR,VIN_2,12VIN,,,"/>
+<approved hash="104,1,-502.92,162.56,5V_REGULATOR,PGND_2,GND,,,"/>
+<approved hash="104,1,-502.92,160.02,5V_REGULATOR,PGND_3,GND,,,"/>
+<approved hash="104,1,-502.92,157.48,5V_REGULATOR,PGND_4,GND,,,"/>
+<approved hash="104,1,-502.92,154.94,5V_REGULATOR,PGND_5,GND,,,"/>
+<approved hash="104,1,-502.92,152.4,5V_REGULATOR,PGND_6,GND,,,"/>
+<approved hash="104,1,-502.92,149.86,5V_REGULATOR,PGND_7,GND,,,"/>
+<approved hash="104,1,-502.92,147.32,5V_REGULATOR,PGND_8,GND,,,"/>
+<approved hash="104,1,-502.92,144.78,5V_REGULATOR,PGND,GND,,,"/>
+<approved hash="104,1,-543.56,177.8,5V_REGULATOR,VCC,VCC_5VREG,,,"/>
+<approved hash="104,1,-502.92,177.8,5V_REGULATOR,SW,SW_5VREG,,,"/>
+<approved hash="104,1,-543.56,182.88,5V_REGULATOR,VIN,12VIN,,,"/>
+<approved hash="104,1,-464.82,-114.3,UART_USB_CONVERTER,VDD,3.3VOUT,,,"/>
+<approved hash="104,1,-104.14,190.5,UART_USBC_IN,VBUS_2,VBUS,,,"/>
+<approved hash="104,1,76.2,93.98,I2C_USBC_IN,VBUS_2,VBUS11,,,"/>
+<approved hash="104,1,111.76,83.82,I2C_USBC_IN,VBUS,VBUS11,,,"/>
+<approved hash="104,1,-96.52,93.98,STEPPER_USBC_IN,VBUS_2,VBUS21,,,"/>
+<approved hash="104,1,-60.96,83.82,STEPPER_USBC_IN,VBUS,VBUS21,,,"/>
+<approved hash="104,1,-307.34,121.92,OP_AMP_LEDS,VCC,3.3VOUT,,,"/>
+<approved hash="104,1,335.28,134.62,DA_CONVERTER_SD,VCC,3.3VOUT,,,"/>
+<approved hash="113,1,281.94,-82.7761,MCU_P_JP,,,,,"/>
+<approved hash="113,1,-281.618,143.51,LED2,,,,,"/>
+<approved hash="113,1,-261.298,143.51,LED3,,,,,"/>
+<approved hash="113,1,279.722,125.73,LED1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

@@ -8213,38 +8213,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
-<description>SPICE compatible library parts</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<gates>
-<gate name="G$1" symbol="0" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="SPICEGROUND" value=""/>
-<attribute name="_EXTERNAL_" value=""/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="jumper" urn="urn:adsk.eagle:library:252">
 <description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -10391,6 +10359,41 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2" urn="urn:adsk.eagle:library:372">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26990/1" library_version="2">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:27037/1" prefix="SUPPLY" library_version="2">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10402,9 +10405,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 </classes>
 <parts>
 <part name="SERVO_CONTROLLER" library="PCA9685PW_112" deviceset="PCA9685PW,112" device=""/>
-<part name="X_8" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="CVCCSERVO" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_9" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="ROE" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="SPULRSCL" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="SPULSDA" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
@@ -10420,14 +10421,16 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <part name="I2C_USBC_OUT" library="USB4110-GF-A" deviceset="USB4110-GF-A" device=""/>
 <part name="D9" library="1N5819HW-7-F" deviceset="1N5819HW-7-F" device=""/>
 <part name="CUSB4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="X_16" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="RUSB4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="RUSB5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="5.1k"/>
 <part name="D10" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D11" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="D12" library="CPDQ5V0-HF" deviceset="CPDQ5V0-HF" device=""/>
 <part name="SERVO_REGULATOR" library="AZ1117IH-3.3TRG1" deviceset="AZ1117IH-3.3TRG1" device=""/>
-<part name="X_21" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10440,12 +10443,10 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="96.23346875" y="110.7578" size="2.08556875" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="96.01018125" y="106.4809" size="2.08405" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="X_8" gate="G$1" x="86.36" y="-35.56" smashed="yes"/>
 <instance part="CVCCSERVO" gate="G$1" x="22.86" y="88.9" smashed="yes">
 <attribute name="NAME" x="24.384" y="89.281" size="1.778" layer="95"/>
 <attribute name="VALUE" x="24.384" y="84.201" size="1.778" layer="96"/>
 </instance>
-<instance part="X_9" gate="G$1" x="22.86" y="50.8" smashed="yes"/>
 <instance part="ROE" gate="G$1" x="50.8" y="91.44" smashed="yes" rot="R180">
 <attribute name="NAME" x="54.61" y="89.9414" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="54.61" y="94.742" size="1.778" layer="96" rot="R180"/>
@@ -10505,7 +10506,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="-181.356" y="104.521" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-181.356" y="99.441" size="1.778" layer="96"/>
 </instance>
-<instance part="X_16" gate="G$1" x="-182.88" y="78.74" smashed="yes"/>
 <instance part="RUSB4" gate="G$1" x="-170.18" y="104.14" smashed="yes" rot="R270">
 <attribute name="NAME" x="-168.6814" y="107.95" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-173.482" y="107.95" size="1.778" layer="96" rot="R270"/>
@@ -10530,7 +10530,18 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="-144.78" y="51.308" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-144.78" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="X_21" gate="G$1" x="-99.06" y="15.24" smashed="yes"/>
+<instance part="SUPPLY1" gate="GND" x="86.36" y="-38.1" smashed="yes">
+<attribute name="VALUE" x="84.455" y="-41.275" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY2" gate="GND" x="22.86" y="48.26" smashed="yes">
+<attribute name="VALUE" x="20.955" y="45.085" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY3" gate="GND" x="-182.88" y="76.2" smashed="yes">
+<attribute name="VALUE" x="-184.785" y="73.025" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY4" gate="GND" x="-99.06" y="12.7" smashed="yes">
+<attribute name="VALUE" x="-100.965" y="9.525" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10746,6 +10757,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="SERVO_PINOUT" gate="B" pin="3"/>
 <pinref part="SERVO_PINOUT" gate="B" pin="4"/>
 <pinref part="SERVO_PINOUT" gate="B" pin="9"/>
+<junction x="33.02" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="SERVO_REGULATOR" gate="G$1" pin="INPUT"/>
@@ -10793,10 +10805,10 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="60.96" y1="-10.16" x2="50.8" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="-10.16" x2="50.8" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="50.8" y="-17.78"/>
-<pinref part="X_8" gate="G$1" pin="0"/>
 <pinref part="SERVO_PINOUT" gate="B" pin="5"/>
 <pinref part="SERVO_PINOUT" gate="B" pin="6"/>
 <pinref part="SERVO_PINOUT" gate="B" pin="11"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CVCCSERVO" gate="G$1" pin="2"/>
@@ -10811,7 +10823,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="22.86" y1="53.34" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="53.34" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <junction x="22.86" y="53.34"/>
-<pinref part="X_9" gate="G$1" pin="0"/>
 <pinref part="SERVO_CONTROLLER" gate="A" pin="EXTCLK"/>
 <wire x1="88.9" y1="86.36" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="86.36" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
@@ -10843,11 +10854,11 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="RS6" gate="G$1" pin="1"/>
 <wire x1="12.7" y1="83.82" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CUSB4" gate="G$1" pin="2"/>
 <wire x1="-182.88" y1="99.06" x2="-182.88" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="X_16" gate="G$1" pin="0"/>
 <pinref part="RUSB4" gate="G$1" pin="2"/>
 <wire x1="-182.88" y1="81.28" x2="-182.88" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="99.06" x2="-170.18" y2="81.28" width="0.1524" layer="91"/>
@@ -10879,17 +10890,25 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="D12" gate="G$1" pin="K"/>
 <wire x1="-114.3" y1="88.9" x2="-114.3" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-114.3" y="81.28"/>
+<pinref part="SUPPLY3" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="SERVO_REGULATOR" gate="G$1" pin="GND"/>
 <wire x1="-114.3" y1="38.1" x2="-99.06" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="38.1" x2="-99.06" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="X_21" gate="G$1" pin="0"/>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,88.9,96.52,SERVO_CONTROLLER,VDD,3.3VOUTUSB1,,,"/>
+<approved hash="104,1,-104.14,121.92,I2C_USBC_OUT,VBUS_2,VBUS12,,,"/>
+<approved hash="104,1,-68.58,111.76,I2C_USBC_OUT,VBUS,VBUS12,,,"/>
+<approved hash="113,1,70.3152,-9.96442,SERVO_PINOUT,,,,,"/>
+<approved hash="113,1,13.0217,105.41,LED4,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

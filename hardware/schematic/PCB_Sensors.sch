@@ -8157,38 +8157,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
-<description>SPICE compatible library parts</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="18">
-<description>Simulation ground symbol (spice node 0)</description>
-<gates>
-<gate name="G$1" symbol="0" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="SPICEGROUND" value=""/>
-<attribute name="_EXTERNAL_" value=""/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="USB-AP-S-RA-SMT">
 <packages>
 <package name="CONN_USB-AP-S-RA-SMT_ADM">
@@ -8456,6 +8424,41 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2" urn="urn:adsk.eagle:library:372">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26990/1" library_version="2">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:27037/1" prefix="SUPPLY" library_version="2">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8472,7 +8475,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="SENSOR4" library="VEML7700-TT" deviceset="VEML7700-TT" device=""/>
 <part name="SENSOR5" library="VEML7700-TT" deviceset="VEML7700-TT" device=""/>
 <part name="SENSOR_MUX" library="TCA9548APWR" deviceset="TCA9548APWR" device=""/>
-<part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="PUSC0" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSC1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSD0" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
@@ -8483,7 +8485,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="PUSD2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSD3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSD4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
-<part name="X_2" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="PURESET" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSCL" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
 <part name="PUSDA" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
@@ -8491,6 +8492,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="SENCDC1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="200pF"/>
 <part name="SENCDC2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="200pF"/>
 <part name="SW3" library="1825910-6" deviceset="1825910-6" device=""/>
+<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8523,7 +8526,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="NAME" x="-58.42" y="36.56" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="-58.42" y="-24.32" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="X_1" gate="G$1" x="132.08" y="-58.42" smashed="yes"/>
 <instance part="PUSC0" gate="G$1" x="81.28" y="61.976" smashed="yes" rot="R90">
 <attribute name="NAME" x="79.7814" y="58.166" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="84.582" y="58.166" size="1.778" layer="96" rot="R90"/>
@@ -8564,7 +8566,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="NAME" x="87.4014" y="-38.354" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="92.202" y="-38.354" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="X_2" gate="G$1" x="-20.32" y="-43.18" smashed="yes"/>
 <instance part="PURESET" gate="G$1" x="-121.92" y="61.976" smashed="yes" rot="R90">
 <attribute name="NAME" x="-123.4186" y="58.166" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-118.618" y="58.166" size="1.778" layer="96" rot="R90"/>
@@ -8591,6 +8592,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="SW3" gate="G$1" x="-91.44" y="-22.86" smashed="yes">
 <attribute name="NAME" x="-96.5297" y="-17.00685" size="1.803440625" layer="95"/>
 <attribute name="VALUE" x="-96.528309375" y="-30.49246875" size="1.802940625" layer="96"/>
+</instance>
+<instance part="SUPPLY1" gate="GND" x="-20.32" y="-45.72" smashed="yes">
+<attribute name="VALUE" x="-22.225" y="-48.895" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY2" gate="GND" x="132.08" y="-60.96" smashed="yes">
+<attribute name="VALUE" x="130.175" y="-64.135" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -8923,13 +8930,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="SENSOR5" gate="G$1" pin="GND"/>
 <wire x1="116.84" y1="-50.8" x2="132.08" y2="-50.8" width="0.1524" layer="91"/>
 <junction x="132.08" y="-50.8"/>
-<pinref part="X_1" gate="G$1" pin="0"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="SENSOR_MUX" gate="G$1" pin="GND"/>
 <wire x1="-27.94" y1="-17.78" x2="-20.32" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="-17.78" x2="-20.32" y2="-38.1" width="0.1524" layer="91"/>
-<pinref part="X_2" gate="G$1" pin="0"/>
 <pinref part="SENCDC1" gate="G$1" pin="2"/>
 <wire x1="-20.32" y1="-38.1" x2="-20.32" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="5.08" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
@@ -8971,11 +8977,20 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-63.5" y1="20.32" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="20.32" x2="-66.04" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="-66.04" y="-38.1"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,116.84,55.88,SENSOR1,VDD,3.3OUTCON,,,"/>
+<approved hash="104,1,116.84,30.48,SENSOR2,VDD,3.3OUTCON,,,"/>
+<approved hash="104,1,116.84,7.62,SENSOR3,VDD,3.3OUTCON,,,"/>
+<approved hash="104,1,116.84,-15.24,SENSOR4,VDD,3.3OUTCON,,,"/>
+<approved hash="104,1,116.84,-38.1,SENSOR5,VDD,3.3OUTCON,,,"/>
+<approved hash="104,1,-27.94,33.02,SENSOR_MUX,VCC,3.3OUTCON,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
