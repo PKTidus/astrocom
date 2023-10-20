@@ -1,1 +1,6 @@
-A
+Schematics, PDF and Relevant Libraries:
+	Full_Schematic: include all four PCB boards schematic design
+	PCB_MCU: schematic and board for MCU PCB
+	PCB_Sensors: schematic and board for Sensor PCB
+	Servo: schematic and board for Servo Motor Controller PCB
+	Stepper: schematic and board for Stepper Motor Controller PCB
