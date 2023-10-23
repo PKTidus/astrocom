@@ -13626,6 +13626,10 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <part name="U$8" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$9" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="STEPPER_PINOUT2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA05-1" device="" package3d_urn="urn:adsk.eagle:package:8332/1"/>
+<part name="CREG1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
+<part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="X_2" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="CREG2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -13775,6 +13779,16 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <instance part="STEPPER_PINOUT2" gate="G$1" x="-45.72" y="60.96" smashed="yes">
 <attribute name="VALUE" x="-46.99" y="50.8" size="1.778" layer="96"/>
 <attribute name="NAME" x="-46.99" y="69.342" size="1.778" layer="95"/>
+</instance>
+<instance part="CREG1" gate="G$1" x="-190.5" y="-50.8" smashed="yes">
+<attribute name="NAME" x="-188.976" y="-50.419" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-188.976" y="-55.499" size="1.778" layer="96"/>
+</instance>
+<instance part="X_1" gate="G$1" x="-190.5" y="-58.42" smashed="yes"/>
+<instance part="X_2" gate="G$1" x="-129.54" y="-60.96" smashed="yes"/>
+<instance part="CREG2" gate="G$1" x="-129.54" y="-53.34" smashed="yes">
+<attribute name="NAME" x="-128.016" y="-52.959" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-128.016" y="-58.039" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -14023,7 +14037,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <label x="-76.2" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="5VOUTUSB22" class="0">
+<net name="5VOUTUSB2" class="0">
 <segment>
 <pinref part="D17" gate="G$1" pin="K"/>
 <wire x1="-190.5" y1="60.96" x2="-218.44" y2="60.96" width="0.1524" layer="91"/>
@@ -14060,8 +14074,12 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 </segment>
 <segment>
 <pinref part="STEPPER_REGULATOR" gate="G$1" pin="INPUT"/>
-<wire x1="-182.88" y1="-45.72" x2="-200.66" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-182.88" y1="-45.72" x2="-190.5" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-200.66" y="-45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="CREG1" gate="G$1" pin="1"/>
+<wire x1="-190.5" y1="-45.72" x2="-200.66" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-190.5" y1="-48.26" x2="-190.5" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-190.5" y="-45.72"/>
 </segment>
 <segment>
 <pinref part="U19" gate="A" pin="VCC"/>
@@ -14105,6 +14123,12 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-147.32" y1="-33.02" x2="-38.1" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="-147.32" y="-33.02"/>
 <pinref part="LED5" gate="G$1" pin="A"/>
+<pinref part="STEPPER_REGULATOR" gate="G$1" pin="VOUT"/>
+<wire x1="-147.32" y1="-50.8" x2="-147.32" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-147.32" y="-45.72"/>
+<pinref part="CREG2" gate="G$1" pin="1"/>
+<wire x1="-129.54" y1="-50.8" x2="-147.32" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="-147.32" y="-50.8"/>
 </segment>
 </net>
 <net name="N$82" class="0">
@@ -14199,6 +14223,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-15.24" y1="27.94" x2="-15.24" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-2.54" x2="0" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="0" y="-2.54"/>
+<label x="78.74" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CVMOT2" gate="G$1" pin="1"/>
@@ -14217,6 +14242,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="X_10" gate="G$1" pin="0"/>
 <pinref part="CVMOT" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="106.68" x2="66.04" y2="99.06" width="0.1524" layer="91"/>
+<label x="119.38" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CUSB6" gate="G$1" pin="2"/>
@@ -14253,6 +14279,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="D20" gate="G$1" pin="K"/>
 <wire x1="-149.86" y1="27.94" x2="-149.86" y2="20.32" width="0.1524" layer="91"/>
 <junction x="-149.86" y="20.32"/>
+<label x="-215.9" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="STEPPER_REGULATOR" gate="G$1" pin="GND"/>
@@ -14267,11 +14294,50 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-114.3" y1="-88.9" x2="-48.26" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="-88.9" x2="-48.26" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="-114.3" y="-88.9"/>
+<label x="-139.7" y="-91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X_1" gate="G$1" pin="0"/>
+<pinref part="CREG1" gate="G$1" pin="2"/>
+<wire x1="-190.5" y1="-58.42" x2="-190.5" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-195.58" y="-58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X_2" gate="G$1" pin="0"/>
+<pinref part="CREG2" gate="G$1" pin="2"/>
+<wire x1="-129.54" y1="-60.96" x2="-129.54" y2="-58.42" width="0.1524" layer="91"/>
+<label x="-129.54" y="-60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,76.2,-7.62,0,GND,,,,"/>
+<approved hash="102,1,127,106.68,0,GND,,,,"/>
+<approved hash="102,1,-218.44,17.78,0,GND,,,,"/>
+<approved hash="102,1,-139.7,-91.44,0,GND,,,,"/>
+<approved hash="102,1,-190.5,-58.42,0,GND,,,,"/>
+<approved hash="102,1,-129.54,-60.96,0,GND,,,,"/>
+<approved hash="104,1,60.96,53.34,STEPPER_CONTROLLER,VM,5VOUTUSB22,,,"/>
+<approved hash="104,1,60.96,50.8,STEPPER_CONTROLLER,VINT,3.3VOUTUSB2,,,"/>
+<approved hash="104,1,60.96,22.86,STEPPER_CONTROLLER,EXP(GND),GND,,,"/>
+<approved hash="104,1,-139.7,60.96,STEPPER_USBC_OUT,VBUS_2,VBUS22,,,"/>
+<approved hash="104,1,-104.14,50.8,STEPPER_USBC_OUT,VBUS,VBUS22,,,"/>
+<approved hash="104,1,-48.26,-50.8,U19,VCC,5VOUTUSB22,,,"/>
+<approved hash="206,1,-147.32,-45.72,3.3VOUTUSB2,,,,,"/>
+<approved hash="206,1,-147.32,-50.8,3.3VOUTUSB2,,,,,"/>
+<approved hash="110,1,76.2,40.64,N$27,3.3VOUTUSB2,,,,"/>
+<approved hash="110,1,76.2,33.02,N$29,GND,,,,"/>
+<approved hash="111,1,76.2,40.64,N$27,,,,,"/>
+<approved hash="111,1,76.2,35.56,N$28,,,,,"/>
+<approved hash="111,1,76.2,33.02,N$29,,,,,"/>
+<approved hash="113,1,111.028,30.2209,STEPPER_PINOUT1,,,,,"/>
+<approved hash="113,1,-25.4,65.1104,SJ1,,,,,"/>
+<approved hash="113,1,-25.4,49.8704,SJ2,,,,,"/>
+<approved hash="113,1,-37.7783,-36.83,LED5,,,,,"/>
+<approved hash="113,1,-34.8285,62.4891,STEPPER_PINOUT2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
