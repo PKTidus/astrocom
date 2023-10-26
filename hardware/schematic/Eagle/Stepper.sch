@@ -13549,33 +13549,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 </deviceset>
 </devicesets>
 </library>
-<library name="NC_MARKER">
-<packages>
-</packages>
-<symbols>
-<symbol name="NO_CONNECT_MARKER">
-<pin name="P$1" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="NC_MARKER">
-<gates>
-<gate name="G$1" symbol="NO_CONNECT_MARKER" x="-5.08" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="_EXTERNAL_" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -13604,8 +13577,8 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <part name="STEPPER_PINOUT1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device="" package3d_urn="urn:adsk.eagle:package:8337/1"/>
 <part name="CVCP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.01uF"/>
 <part name="R1" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="3223G" package3d_urn="urn:adsk.eagle:package:22722/1" value="10k"/>
-<part name="SJ1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
-<part name="SJ2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
+<part name="VREF" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
+<part name="CFG" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
 <part name="STEPPER_USBC_OUT" library="USB4110-GF-A" deviceset="USB4110-GF-A" device=""/>
 <part name="D17" library="1N5819HW-7-F" deviceset="1N5819HW-7-F" device=""/>
 <part name="CUSB6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
@@ -13623,13 +13596,16 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <part name="RLEDOUT4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="RLEDOUT5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="10k"/>
 <part name="RLEDOUT10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="2.2k"/>
-<part name="U$8" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$9" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="STEPPER_PINOUT2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA05-1" device="" package3d_urn="urn:adsk.eagle:package:8332/1"/>
 <part name="CREG1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="X_2" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="CREG2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22uF"/>
+<part name="PWR" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
+<part name="CISO2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.01uF"/>
+<part name="CISO1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.01uF"/>
+<part name="RISO2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="1.5k"/>
+<part name="RISO1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="1.5k"/>
 </parts>
 <sheets>
 <sheet>
@@ -13704,11 +13680,11 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="-20.32" y="33.02" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-17.78" y="33.02" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SJ1" gate="1" x="-25.4" y="63.5" smashed="yes">
+<instance part="VREF" gate="1" x="-25.4" y="63.5" smashed="yes">
 <attribute name="NAME" x="-27.94" y="66.04" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-27.94" y="59.69" size="1.778" layer="96"/>
 </instance>
-<instance part="SJ2" gate="1" x="-25.4" y="48.26" smashed="yes">
+<instance part="CFG" gate="1" x="-25.4" y="48.26" smashed="yes">
 <attribute name="NAME" x="-27.94" y="50.8" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-27.94" y="44.45" size="1.778" layer="96"/>
 </instance>
@@ -13762,9 +13738,9 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="-78.74" y="-47.26" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="-78.74" y="-77.66" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="RLEDOUT4" gate="G$1" x="-130.556" y="-43.18" smashed="yes" rot="R180">
-<attribute name="NAME" x="-126.746" y="-44.6786" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-126.746" y="-39.878" size="1.778" layer="96" rot="R180"/>
+<instance part="RLEDOUT4" gate="G$1" x="-133.096" y="-35.56" smashed="yes" rot="R180">
+<attribute name="NAME" x="-129.286" y="-37.0586" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-129.286" y="-32.258" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="RLEDOUT5" gate="G$1" x="-130.556" y="-30.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="-126.746" y="-31.9786" size="1.778" layer="95" rot="R180"/>
@@ -13774,8 +13750,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <attribute name="NAME" x="-36.6014" y="-45.466" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-41.402" y="-45.466" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U$8" gate="G$1" x="-96.52" y="-60.96" smashed="yes"/>
-<instance part="U$9" gate="G$1" x="-88.9" y="-63.5" smashed="yes"/>
 <instance part="STEPPER_PINOUT2" gate="G$1" x="-45.72" y="60.96" smashed="yes">
 <attribute name="VALUE" x="-46.99" y="50.8" size="1.778" layer="96"/>
 <attribute name="NAME" x="-46.99" y="69.342" size="1.778" layer="95"/>
@@ -13789,6 +13763,26 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <instance part="CREG2" gate="G$1" x="-129.54" y="-53.34" smashed="yes">
 <attribute name="NAME" x="-128.016" y="-52.959" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-128.016" y="-58.039" size="1.778" layer="96"/>
+</instance>
+<instance part="PWR" gate="1" x="-147.32" y="-40.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="-149.86" y="-43.18" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-143.51" y="-43.18" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CISO2" gate="G$1" x="-96.52" y="-60.96" smashed="yes">
+<attribute name="NAME" x="-94.996" y="-65.659" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-94.996" y="-68.199" size="1.778" layer="96"/>
+</instance>
+<instance part="CISO1" gate="G$1" x="-99.06" y="-58.42" smashed="yes">
+<attribute name="NAME" x="-107.696" y="-55.499" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-107.696" y="-58.039" size="1.778" layer="96"/>
+</instance>
+<instance part="RISO2" gate="G$1" x="7.62" y="83.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="6.1214" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="10.922" y="80.01" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RISO1" gate="G$1" x="0" y="83.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="-1.4986" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="3.302" y="80.01" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -13854,32 +13848,36 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <label x="129.54" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="AOUT1" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="AOUT1"/>
 <pinref part="STEPPER_PINOUT1" gate="1" pin="1"/>
 <wire x1="60.96" y1="35.56" x2="114.3" y2="35.56" width="0.1524" layer="91"/>
+<label x="91.44" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="AOUT2" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="AOUT2"/>
 <pinref part="STEPPER_PINOUT1" gate="1" pin="2"/>
 <wire x1="60.96" y1="33.02" x2="114.3" y2="33.02" width="0.1524" layer="91"/>
+<label x="96.52" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="BOUT1" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="BOUT1"/>
 <pinref part="STEPPER_PINOUT1" gate="1" pin="3"/>
 <wire x1="60.96" y1="30.48" x2="114.3" y2="30.48" width="0.1524" layer="91"/>
+<label x="91.44" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$31" class="0">
+<net name="BOUT2" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="BOUT2"/>
 <pinref part="STEPPER_PINOUT1" gate="1" pin="4"/>
 <wire x1="60.96" y1="27.94" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
+<label x="96.52" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -13899,7 +13897,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="R1" gate="G$1" pin="E"/>
 <wire x1="-15.24" y1="43.18" x2="-15.24" y2="63.5" width="0.1524" layer="91"/>
 <label x="-15.24" y="76.2" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="SJ1" gate="1" pin="2"/>
+<pinref part="VREF" gate="1" pin="2"/>
 <wire x1="-15.24" y1="63.5" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="63.5" x2="-20.32" y2="63.5" width="0.1524" layer="91"/>
 <junction x="-15.24" y="63.5"/>
@@ -13917,46 +13915,50 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <junction x="7.62" y="35.56"/>
 </segment>
 </net>
-<net name="N$34" class="0">
+<net name="VREFOUT" class="0">
 <segment>
-<pinref part="SJ1" gate="1" pin="1"/>
+<pinref part="VREF" gate="1" pin="1"/>
 <wire x1="-30.48" y1="63.5" x2="-38.1" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="STEPPER_PINOUT2" gate="G$1" pin="4"/>
+<label x="-40.64" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$35" class="0">
+<net name="CONFIGOUT" class="0">
 <segment>
-<pinref part="SJ2" gate="1" pin="1"/>
+<pinref part="CFG" gate="1" pin="1"/>
 <wire x1="-38.1" y1="60.96" x2="-30.48" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="60.96" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="STEPPER_PINOUT2" gate="G$1" pin="3"/>
+<label x="-30.48" y="48.26" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="SJ2" gate="1" pin="2"/>
+<pinref part="CFG" gate="1" pin="2"/>
 <wire x1="-20.32" y1="48.26" x2="-12.7" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="48.26" x2="-12.7" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="CONFIG"/>
 <wire x1="-12.7" y1="40.64" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$37" class="0">
+<net name="M1OUT" class="0">
 <segment>
 <wire x1="-38.1" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="55.88" x2="-10.16" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="M1"/>
 <wire x1="-10.16" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="STEPPER_PINOUT2" gate="G$1" pin="1"/>
+<label x="-35.56" y="55.88" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$38" class="0">
+<net name="M0OUT" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="M0/APHASE"/>
 <wire x1="25.4" y1="45.72" x2="-7.62" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="58.42" x2="-7.62" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="58.42" x2="-7.62" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="STEPPER_PINOUT2" gate="G$1" pin="2"/>
+<label x="-7.62" y="58.42" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="N$72" class="0">
@@ -13997,11 +13999,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 </net>
 <net name="GPIO9M" class="0">
 <segment>
-<pinref part="STEPPER_CONTROLLER" gate="G$1" pin="DIR/BPHASE"/>
-<wire x1="25.4" y1="48.26" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
-<label x="5.08" y="48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="STEPPER_USBC_OUT" gate="A" pin="DN2"/>
 <wire x1="-104.14" y1="60.96" x2="-88.9" y2="60.96" width="0.1524" layer="91"/>
 <label x="-88.9" y="60.96" size="1.778" layer="95" xref="yes"/>
@@ -14015,13 +14012,13 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-149.86" y1="53.34" x2="-149.86" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-149.86" y="53.34"/>
 </segment>
+<segment>
+<pinref part="RISO1" gate="G$1" pin="2"/>
+<wire x1="0" y1="88.9" x2="0" y2="93.98" width="0.1524" layer="91"/>
+<label x="0" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
 </net>
 <net name="GPIO8M" class="0">
-<segment>
-<pinref part="STEPPER_CONTROLLER" gate="G$1" pin="STEP/BENBL"/>
-<wire x1="25.4" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
-<label x="15.24" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="STEPPER_USBC_OUT" gate="A" pin="DP1"/>
 <wire x1="-139.7" y1="55.88" x2="-160.02" y2="55.88" width="0.1524" layer="91"/>
@@ -14035,6 +14032,11 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="STEPPER_USBC_OUT" gate="A" pin="DP2"/>
 <wire x1="-104.14" y1="58.42" x2="-76.2" y2="58.42" width="0.1524" layer="91"/>
 <label x="-76.2" y="58.42" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RISO2" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="88.9" x2="7.62" y2="93.98" width="0.1524" layer="91"/>
+<label x="7.62" y="93.98" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="5VOUTUSB2" class="0">
@@ -14108,39 +14110,35 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <junction x="119.38" y="40.64"/>
 </segment>
 <segment>
-<pinref part="STEPPER_REGULATOR" gate="G$1" pin="OUTPUT"/>
-<wire x1="-147.32" y1="-45.72" x2="-147.32" y2="-43.18" width="0.1524" layer="91"/>
 <label x="-147.32" y="-27.94" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="RLEDOUT4" gate="G$1" pin="2"/>
-<wire x1="-147.32" y1="-43.18" x2="-147.32" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="-35.56" x2="-147.32" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="-33.02" x2="-147.32" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="-30.48" x2="-147.32" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="-43.18" x2="-135.636" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-147.32" y="-43.18"/>
+<wire x1="-147.32" y1="-35.56" x2="-138.176" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="RLEDOUT5" gate="G$1" pin="2"/>
 <wire x1="-147.32" y1="-30.48" x2="-135.636" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="-147.32" y="-30.48"/>
 <wire x1="-147.32" y1="-33.02" x2="-38.1" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="-147.32" y="-33.02"/>
 <pinref part="LED5" gate="G$1" pin="A"/>
-<pinref part="STEPPER_REGULATOR" gate="G$1" pin="VOUT"/>
-<wire x1="-147.32" y1="-50.8" x2="-147.32" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="-147.32" y="-45.72"/>
-<pinref part="CREG2" gate="G$1" pin="1"/>
-<wire x1="-129.54" y1="-50.8" x2="-147.32" y2="-50.8" width="0.1524" layer="91"/>
-<junction x="-147.32" y="-50.8"/>
+<pinref part="PWR" gate="1" pin="2"/>
+<junction x="-147.32" y="-35.56"/>
 </segment>
 </net>
 <net name="N$82" class="0">
 <segment>
-<pinref part="RLEDOUT4" gate="G$1" pin="1"/>
 <pinref part="U16" gate="A" pin="CATHODE"/>
-<wire x1="-125.476" y1="-43.18" x2="-114.3" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-114.3" y1="-43.18" x2="-99.06" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-114.3" y="-43.18"/>
 <pinref part="U19" gate="A" pin="1IN+"/>
 <wire x1="-99.06" y1="-43.18" x2="-99.06" y2="-55.88" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-55.88" x2="-83.82" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-43.18" x2="-114.3" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-114.3" y="-43.18"/>
+<pinref part="RLEDOUT4" gate="G$1" pin="1"/>
+<wire x1="-114.3" y1="-35.56" x2="-128.016" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="CISO1" gate="G$1" pin="1"/>
+<junction x="-99.06" y="-55.88"/>
 </segment>
 </net>
 <net name="N$83" class="0">
@@ -14150,6 +14148,8 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-96.52" y1="-30.48" x2="-96.52" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="U19" gate="A" pin="1IN-"/>
 <wire x1="-96.52" y1="-58.42" x2="-83.82" y2="-58.42" width="0.1524" layer="91"/>
+<pinref part="CISO2" gate="G$1" pin="1"/>
+<junction x="-96.52" y="-58.42"/>
 </segment>
 </net>
 <net name="N$84" class="0">
@@ -14167,26 +14167,14 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-38.1" y1="-44.196" x2="-38.1" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$87" class="0">
-<segment>
-<pinref part="U19" gate="A" pin="2IN-"/>
-<pinref part="U$9" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$89" class="0">
-<segment>
-<pinref part="U19" gate="A" pin="2IN+"/>
-<pinref part="U$8" gate="G$1" pin="P$1"/>
-<wire x1="-83.82" y1="-60.96" x2="-91.44" y2="-60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$90" class="0">
+<net name="NENBL" class="0">
 <segment>
 <pinref part="STEPPER_CONTROLLER" gate="G$1" pin="NENBL/AENBL"/>
 <wire x1="25.4" y1="53.34" x2="-5.08" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="53.34" x2="-5.08" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="STEPPER_PINOUT2" gate="G$1" pin="5"/>
 <wire x1="-5.08" y1="66.04" x2="-38.1" y2="66.04" width="0.1524" layer="91"/>
+<label x="17.78" y="53.34" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14291,10 +14279,29 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <wire x1="-139.7" y1="-88.9" x2="-114.3" y2="-88.9" width="0.1524" layer="91"/>
 <junction x="-139.7" y="-88.9"/>
 <pinref part="U19" gate="A" pin="GND"/>
-<wire x1="-114.3" y1="-88.9" x2="-48.26" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-88.9" x2="-99.06" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-88.9" x2="-83.82" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-88.9" x2="-48.26" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="-88.9" x2="-48.26" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="-114.3" y="-88.9"/>
 <label x="-139.7" y="-91.44" size="1.778" layer="95"/>
+<pinref part="U19" gate="A" pin="2IN+"/>
+<pinref part="U19" gate="A" pin="2IN-"/>
+<wire x1="-83.82" y1="-60.96" x2="-83.82" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-63.5" x2="-83.82" y2="-88.9" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-63.5"/>
+<junction x="-83.82" y="-88.9"/>
+<pinref part="CISO1" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="-63.5" x2="-99.06" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="-99.06" y="-88.9"/>
+<pinref part="CISO2" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="-68.58" x2="-99.06" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-66.04" x2="-96.52" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-68.58" x2="-99.06" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="-99.06" y="-68.58"/>
+<pinref part="U19" gate="A" pin="2OUT"/>
+<wire x1="-48.26" y1="-58.42" x2="-48.26" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="-48.26" y="-71.12"/>
 </segment>
 <segment>
 <pinref part="X_1" gate="G$1" pin="0"/>
@@ -14307,6 +14314,35 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/CPDQ5V0-HF.pd
 <pinref part="CREG2" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="-60.96" x2="-129.54" y2="-58.42" width="0.1524" layer="91"/>
 <label x="-129.54" y="-60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="3.3VREGOUT" class="0">
+<segment>
+<pinref part="STEPPER_REGULATOR" gate="G$1" pin="OUTPUT"/>
+<pinref part="STEPPER_REGULATOR" gate="G$1" pin="VOUT"/>
+<wire x1="-147.32" y1="-50.8" x2="-147.32" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-147.32" y="-50.8"/>
+<pinref part="CREG2" gate="G$1" pin="1"/>
+<wire x1="-129.54" y1="-50.8" x2="-147.32" y2="-50.8" width="0.1524" layer="91"/>
+<pinref part="PWR" gate="1" pin="1"/>
+<junction x="-147.32" y="-45.72"/>
+<label x="-147.32" y="-45.72" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="STEPPER_CONTROLLER" gate="G$1" pin="DIR/BPHASE"/>
+<wire x1="25.4" y1="48.26" x2="0" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="0" y1="48.26" x2="0" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="RISO1" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="STEPPER_CONTROLLER" gate="G$1" pin="STEP/BENBL"/>
+<wire x1="25.4" y1="50.8" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="50.8" x2="7.62" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="RISO2" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
