@@ -1,0 +1,633 @@
+Importer Log Report
+Project : Stepper.PrjPcb
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\1825910-6.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\1825910-6.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\1N5819HW-7-F.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\1N5819HW-7-F.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\AP22653W6-7.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\AP22653W6-7.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\AZ1117IH-3.3TRG1.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\AZ1117IH-3.3TRG1.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CD74HC4050MT.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CD74HC4050MT.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CP2102N-A02-GQFN28.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CP2102N-A02-GQFN28.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CPDQ5V0-HF.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\CPDQ5V0-HF.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\DRV8834PWP.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\DRV8834PWP.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\ESP32-C6-WROOM-1U.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\ESP32-C6-WROOM-1U.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\LM358DR.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\LM358DR.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\MMSZ5225BT1G.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\MMSZ5225BT1G.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 3
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\MMSZ5230BT1G.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\MMSZ5230BT1G.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 3
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\Motors.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\Motors.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 5
+    Load Symbols 5
+    Load DeviceSets 5
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\NC_MARKER.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\NC_MARKER.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 0
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PCA9685PW_112.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PCA9685PW_112.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PPTC041LFBN-RC.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PPTC041LFBN-RC.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PPTC191LFBN-RC.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\PPTC191LFBN-RC.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 3
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\TCA9548APWR.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\TCA9548APWR.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\Terminal_Block2P.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\Terminal_Block2P.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\TPS54JA20RWWR.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\TPS54JA20RWWR.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 6
+    Load Symbols 8
+    Load DeviceSets 13
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\USB4110-GF-A.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\USB4110-GF-A.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\USB-AP-S-RA-SMT.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\USB-AP-S-RA-SMT.lbr
+    Load settings
+    Load layers 62
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 3
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\VEML7700-TT.lbr
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Libraries\VEML7700-TT.lbr
+    Load settings
+    Load layers 46
+    Load library
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Stepper.brd
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Stepper.brd
+    Load settings
+    Load layers 131
+    Load board
+    Load Library "rcl"
+    Load Packages 2
+    ERROR: Unhandled typepackages3d
+    Load Library "1N5819HW-7-F"
+    Load Packages 1
+    Load Library "CPDQ5V0-HF"
+    Load Packages 1
+    Load Library "adafruit"
+    Load Packages 1
+    ERROR: Unhandled typepackages3d
+    Load Library "pot"
+    Load Packages 1
+    ERROR: Unhandled typepackages3d
+    Load Library "jumper"
+    Load Packages 1
+    ERROR: Unhandled typepackages3d
+    Load Library "DRV8834PWP"
+    Load Packages 1
+    Load Library "con-lstb"
+    Load Packages 2
+    ERROR: Unhandled typepackages3d
+    Load Library "AZ1117IH-3.3TRG1"
+    Load Packages 1
+    Load Library "USB4110-GF-A"
+    Load Packages 1
+    Load Library "MMSZ5225BT1G"
+    Load Packages 1
+    Load Library "LM358DR"
+    Load Packages 1
+    ERROR: Unhandled typemfgpreviewcolors
+EndSection
+
+Section : Analyze Document - C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Stepper.sch
+    Analyzing data of C:\Users\afise\Desktop\astroscom\hardware\schematic\Eagle\Stepper.sch
+    Load settings
+    Load layers 145
+    Load schematic
+    Load Libraries 13
+    Load Library "DRV8834PWP"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "rcl"
+    Load Packages 164
+    ERROR: Unhandled typepackages3d
+    Load Symbols 2
+    Load DeviceSets 2
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Library "ngspice-simulation"
+    Load Packages 0
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "con-lstb"
+    Load Packages 2
+    ERROR: Unhandled typepackages3d
+    Load Symbols 2
+    Load DeviceSets 2
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Library "pot"
+    Load Packages 44
+    ERROR: Unhandled typepackages3d
+    Load Symbols 1
+    Load DeviceSets 1
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Library "jumper"
+    Load Packages 2
+    ERROR: Unhandled typepackages3d
+    Load Symbols 1
+    Load DeviceSets 1
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Library "adafruit"
+    Load Packages 31
+    ERROR: Unhandled typepackages3d
+    Load Symbols 1
+    Load DeviceSets 1
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Library "USB4110-GF-A"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "1N5819HW-7-F"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "CPDQ5V0-HF"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "AZ1117IH-3.3TRG1"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "MMSZ5225BT1G"
+    Load Packages 3
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "LM358DR"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Attributes 0
+    Load Classes 1
+    Load Parts 47
+    Load Sheets 1
+    ERROR: Unhandled type <errors>
+EndSection
