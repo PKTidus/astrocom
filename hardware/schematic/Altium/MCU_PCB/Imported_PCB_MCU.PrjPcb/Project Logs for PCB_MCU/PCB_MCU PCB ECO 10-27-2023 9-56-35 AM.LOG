@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=JP_MCU Old Footprint=61300211121 New Footprint=61300211121
+Added Component: Designator=SJ?(SJ)
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "jumper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"

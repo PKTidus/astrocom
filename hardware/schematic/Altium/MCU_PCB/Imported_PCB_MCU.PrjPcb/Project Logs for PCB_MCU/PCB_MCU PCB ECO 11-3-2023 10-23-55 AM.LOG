@@ -1,0 +1,83 @@
+Removed Pin From Net: NetName=5VOUT Pin=CUSB-1
+Removed Pin From Net: NetName=5VOUT Pin=D1-C
+Removed Member From Class: ClassName=PCB_MCU Member=SJ?
+Added Component: Designator=3.3V_SJ(SJ)
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "jumper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"
+Added Component: Designator=3.3VREG_OUT(SJ)
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "jumper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"
+Added Component: Designator=5VUSB_to_3.3VOUT_REG(SOT230P700X185-4N)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/AZ1117IH-3.3TRG1/Diodes+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "AZ1117IH-3.3TRG1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "AZ1117IH-3.3TRG1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Diodes Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "AZ1117IH-3.3TRG1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT230P700X185-4N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=490259&manufacturer=Diodes Inc.&part_name=AZ1117IH-3.3TRG1&search_term=az1117ih-3.3trg1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AZ1117IH-3.3TRG1/Diodes+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "AZ1117IH-3.3TRG1"; VariantName = "[No Variations]"
+Added Component: Designator=5VUSB(SJ)
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "jumper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"
+Added Component: Designator=CREG2(C0805)
+Add component (AddParameter): Name = "DeviceName"; Value = "C0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "C-EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "rcl"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "88"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SPICEPREFIX"; Value = "C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "C-EU"; VariantName = "[No Variations]"
+Added Component: Designator=CREG(C0805)
+Add component (AddParameter): Name = "DeviceName"; Value = "C0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "C-EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "rcl"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "POPULARITY"; Value = "88"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SPICEPREFIX"; Value = "C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "C-EU"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3VOUT Pin=3.3V_SJ-2
+Added Pin To Net: NetName=5VOUT Pin=5VUSB-1
+Added Pin To Net: NetName=GND Pin=5VUSB_to_3.3VOUT_REG-1
+Added Pin To Net: NetName=GND Pin=CREG2-2
+Added Pin To Net: NetName=GND Pin=CREG-2
+Added Pin To Net: NetName=5VUSBOUT Pin=5VUSB_to_3.3VOUT_REG-3
+Added Pin To Net: NetName=5VUSBOUT Pin=CREG-1
+Added Net: Name=5VUSBOUT
+Added Pin To Net: NetName=Net3.3V_SJ_1 Pin=3.3V_SJ-1
+Added Pin To Net: NetName=Net3.3V_SJ_1 Pin=3.3VREG_OUT-2
+Added Pin To Net: NetName=Net3.3V_SJ_1 Pin=5VUSB_to_3.3VOUT_REG-2
+Added Net: Name=Net3.3V_SJ_1
+Added Pin To Net: NetName=Net3.3VREG_OUT_1 Pin=3.3VREG_OUT-1
+Added Pin To Net: NetName=Net3.3VREG_OUT_1 Pin=5VUSB_to_3.3VOUT_REG-4
+Added Pin To Net: NetName=Net3.3VREG_OUT_1 Pin=CREG2-1
+Added Net: Name=Net3.3VREG_OUT_1
+Added Pin To Net: NetName=Net5VUSB_2 Pin=5VUSB-2
+Added Pin To Net: NetName=Net5VUSB_2 Pin=CUSB-1
+Added Pin To Net: NetName=Net5VUSB_2 Pin=D1-C
+Added Net: Name=Net5VUSB_2
+Added Member To Class: ClassName=PCB_MCU Member=Component 3.3V_SJ
+Added Member To Class: ClassName=PCB_MCU Member=Component 3.3VREG_OUT
+Added Member To Class: ClassName=PCB_MCU Member=Component 5VUSB_to_3.3VOUT_REG
+Added Member To Class: ClassName=PCB_MCU Member=Component 5VUSB SMD solder JUMPER
+Added Member To Class: ClassName=PCB_MCU Member=Component CREG2 22uF
+Added Member To Class: ClassName=PCB_MCU Member=Component CREG 10uF

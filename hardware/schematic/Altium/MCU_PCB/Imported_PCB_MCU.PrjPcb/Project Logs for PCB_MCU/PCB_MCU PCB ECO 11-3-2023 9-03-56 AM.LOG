@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=D- Pin=D3-2
+Added Pin To Net: NetName=D+ Pin=D3-2
+Added Member To Class: ClassName=PCB_MCU Member=Component SJ? SMD solder JUMPER
