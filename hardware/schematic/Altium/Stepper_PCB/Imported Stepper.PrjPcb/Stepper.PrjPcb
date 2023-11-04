@@ -831,7 +831,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document47]
-DocumentPath=AC0805JR-071K5L.PcbLib
+DocumentPath=AC0805JR-071K5L.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -848,7 +848,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document48]
-DocumentPath=AC0805JR-071K5L.SchLib
+DocumentPath=AC0805JR-071K5L.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
