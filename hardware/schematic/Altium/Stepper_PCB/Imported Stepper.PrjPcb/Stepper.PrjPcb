@@ -1295,7 +1295,7 @@ AutoOpenFile=-1
 AutoOpenOutJob=-1
 
 [Generic_SmartPDFSettings]
-ProjectMode=-1
+ProjectMode=0
 ZoomPrecision=50
 AddNetsInformation=-1
 AddNetPins=-1
