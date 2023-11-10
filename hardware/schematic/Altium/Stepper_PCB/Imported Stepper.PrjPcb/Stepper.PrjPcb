@@ -1096,6 +1096,10 @@ OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+Configuration1_Name1=ForceUpdateSettings
+Configuration1_Item1=False
+Configuration1_Name2=OutputConfigurationParameter1
+Configuration1_Item2=Record=AdvSimNetlistView|SimulationName=Mixed Sim|ProfileId=HSRAJMBD|OldCfgLoaded=True|DocumentPath=C:\Users\binhp\OneDrive\Desktop\Working\School\Senior_Design\Github\astroscom\hardware\schematic\Altium\Stepper_PCB\Imported Stepper.PrjPcb\Stepper.SchDoc
 
 [OutputGroup3]
 Name=Documentation Outputs
