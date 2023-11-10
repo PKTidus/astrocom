@@ -2225,14 +2225,10 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for PCB_MCU\Design Rule Check - PCB_MCU.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
 DocumentPath=PCB_MCU.IntLib
 DItemRevisionGUID=
 
-[GeneratedDocument3]
+[GeneratedDocument2]
 DocumentPath=PCB_MCU.LOG
 DItemRevisionGUID=
 
