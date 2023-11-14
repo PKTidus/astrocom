@@ -916,14 +916,18 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Stepper.IntLib
+DocumentPath=Project Outputs for Stepper\Design Rule Check - Stepper.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Stepper.LOG
+DocumentPath=Stepper.IntLib
 DItemRevisionGUID=
 
 [GeneratedDocument3]
+DocumentPath=Stepper.LOG
+DItemRevisionGUID=
+
+[GeneratedDocument4]
 DocumentPath=Project Outputs for Stepper\Stepper.xlsx
 DItemRevisionGUID=
 
