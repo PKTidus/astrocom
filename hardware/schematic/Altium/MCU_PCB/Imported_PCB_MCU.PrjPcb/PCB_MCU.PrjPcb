@@ -32,6 +32,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
+ConstraintManagerFlow=0
 IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
@@ -981,7 +982,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=CQRZJLDS
 
 [Document56]
 DocumentPath=PCB_MCU.PcbDoc
@@ -1015,7 +1016,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=CHCIJATM
 
 [Document58]
 DocumentPath=jumper.PCBLIB
@@ -1066,7 +1067,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GOKJFASL
 
 [Document61]
 DocumentPath=08055C104JAT2A.PcbLib
@@ -1100,7 +1101,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UKENIEXG
 
 [Document63]
 DocumentPath=AC0805FR-072K2L.PcbLib
@@ -1134,7 +1135,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=NSEMLWEJ
 
 [Document65]
 DocumentPath=AC0805JR-071K5L.PcbLib
@@ -1168,7 +1169,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JHWQPZFK
 
 [Document67]
 DocumentPath=C0805C106J8RACAUTO.PcbLib
@@ -1202,7 +1203,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JVHTISAB
 
 [Document69]
 DocumentPath=C0805C475M4RACAUTO.PcbLib
@@ -1236,7 +1237,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DSCSJZFR
 
 [Document71]
 DocumentPath=CRM0805AFX-R100ELF.PcbLib
@@ -1270,7 +1271,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=ZTCPLLEN
 
 [Document73]
 DocumentPath=GRM21BR61C226ME44L.PcbLib
@@ -1304,7 +1305,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=USOQNTON
 
 [Document75]
 DocumentPath=KGM21NR71H104JT.PcbLib
@@ -1338,7 +1339,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=KBUBTEIP
 
 [Document77]
 DocumentPath=LEDC1608X35N.PcbLib
@@ -1372,7 +1373,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=ZCERRPKI
 
 [Document79]
 DocumentPath=PPTC051LFBN-RC.PcbLib
@@ -1406,7 +1407,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=TJVBVKLL
 
 [Document81]
 DocumentPath=RC0805FR-1047KL.PcbLib
@@ -1440,7 +1441,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=BHBAILAP
 
 [Document83]
 DocumentPath=RC0805JR-071RL.PcbLib
@@ -1474,7 +1475,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GAFPTPVN
 
 [Document85]
 DocumentPath=RC0805JR-075K1L.PcbLib
@@ -1508,7 +1509,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=KXGYHSCZ
 
 [Document87]
 DocumentPath=TC33X-2-103E.PcbLib
@@ -1542,7 +1543,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=NOQCBJVE
 
 [Document89]
 DocumentPath=TNPW080510K0FEEA.PcbLib
@@ -1576,7 +1577,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=ESLXDVZV
 
 [Document91]
 DocumentPath=C0805C105K3RACAUTO.PcbLib
@@ -1644,7 +1645,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JDAGFFSF
 
 [Document95]
 DocumentPath=CC0805KRX7R8BB823.PcbLib
@@ -1678,7 +1679,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=CRSRMRBH
 
 [Document97]
 DocumentPath=C0805X104K5RAC3316.PcbLib
@@ -1712,7 +1713,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=BMACIGMR
 
 [Document99]
 DocumentPath=GRM21BC80G107ME15L.PcbLib
@@ -1746,7 +1747,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UXGODZEC
 
 [Document101]
 DocumentPath=RC0805FR-0766K5L.PcbLib
@@ -1780,7 +1781,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LJHODCQO
 
 [Document103]
 DocumentPath=CRCW080530K1FKEA.PcbLib
@@ -1814,7 +1815,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WGTFCOCH
 
 [Document105]
 DocumentPath=WK73R2ATTD1212F.PcbLib
@@ -1848,7 +1849,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LOIYIZRF
 
 [Document107]
 DocumentPath=CRCW08056K98FKEA.PcbLib
@@ -1882,7 +1883,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=NJEXREOK
 
 [Document109]
 DocumentPath=CRCW080545K3FKEA.PcbLib
@@ -1916,7 +1917,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=ZHQPAOEX
 
 [Document111]
 DocumentPath=CRCW080526K7FKEA.PcbLib
@@ -1950,7 +1951,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GQLIIUZD
 
 [Document113]
 DocumentPath=CRCW08051K00JNEA.PcbLib
@@ -2018,7 +2019,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=QNKBSTOE
 
 [Document117]
 DocumentPath=CR0805-FX-2212ELF.PcbLib
@@ -2052,7 +2053,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=VBCDRZIX
 
 [Document119]
 DocumentPath=CRCW080520K0FKTA.PcbLib
@@ -2086,7 +2087,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=AAPHTOXM
 
 [Document121]
 DocumentPath=DRA124-1R0-R.PcbLib
@@ -2120,7 +2121,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=EAJZHMVH
 
 [Document123]
 DocumentPath=IHLM2525CZERR68M01.PcbLib
@@ -2154,7 +2155,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=RNKYSRGX
 
 [Document125]
 DocumentPath=PTS18126V300.PcbLib
@@ -2188,7 +2189,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PXMVWTMH
 
 [Document127]
 DocumentPath=1660.PcbLib
@@ -2222,6 +2223,23 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
+DocumentUniqueId=IFGTMJSU
+
+[Document129]
+DocumentPath=PCB_MCU.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
@@ -2229,11 +2247,87 @@ DocumentPath=Project Outputs for PCB_MCU\Design Rule Check - PCB_MCU.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=PCB_MCU.IntLib
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=PCB_MCU.IntLib
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
 DocumentPath=PCB_MCU.LOG
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU.REP
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_NPTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_PTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for PCB_MCU\PCB_MCU_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for PCB_MCU\Pick Place for PCB_MCU.csv
 DItemRevisionGUID=
 
 [Configuration1]
@@ -2245,6 +2339,44 @@ Variant=[No Variations]
 OutputJobsCount=0
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
+
+[Generic_SmartPDF]
+AutoOpenFile=-1
+AutoOpenOutJob=-1
+
+[Generic_SmartPDFSettings]
+ProjectMode=-1
+ZoomPrecision=50
+AddNetsInformation=-1
+AddNetPins=-1
+AddNetNetLabels=-1
+AddNetPorts=-1
+ShowComponentParameters=-1
+GlobalBookmarks=0
+ExportBOM=-1
+TemplateFilename=
+TemplateStoreRelative=-1
+PCB_PrintColor=1
+SCH_PrintColor=0
+PrintQuality=-3
+SCH_ShowNoErc=-1
+SCH_ShowParameter=-1
+SCH_ShowProbes=-1
+SCH_ShowBlankets=-1
+SCH_NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle
+SCH_ShowNote=-1
+SCH_ShowNoteCollapsed=-1
+Wir_PrintColor=0
+Ldr_PrintColor=0
+SCH_ExpandLogicalToPhysical=-1
+SCH_VariantName=[No Variations]
+SCH_ExpandComponentDesignators=-1
+SCH_ExpandNetlabels=0
+SCH_ExpandPorts=0
+SCH_ExpandSheetNumber=0
+SCH_ExpandDocumentNumber=0
+SCH_HasExpandLogicalToPhysicalSheets=-1
+SaveSettingsToOutJob=-1
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -2469,44 +2601,48 @@ Name=Assembly Outputs
 Description=
 TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=Assembly
-OutputName1=Assembly Drawings
+OutputType1=Test Points For Assembly
+OutputName1=Test Point Report
 OutputDocumentPath1=
 OutputVariantName1=[No Variations]
 OutputDefault1=0
-PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 OutputType2=Pick Place
 OutputName2=Generates pick and place files
 OutputDocumentPath2=
 OutputVariantName2=[No Variations]
 OutputDefault2=0
-OutputType3=Test Points For Assembly
-OutputName3=Test Point Report
+Configuration2_Name1=ForceUpdateSettings
+Configuration2_Item1=False
+Configuration2_Name2=OutputConfigurationParameter1
+Configuration2_Item2=Record=PickPlaceView|Units=Imperial|GenerateCSVFormat=True|GenerateTextFormat=False|ShowUnits=False|Separator=.|ExcludeFilterParam=False|IncludeVariations=False|IncludeStandardNoBOM=True|Filter= |FilterActive=False|YFlip=False|DifferentFootprints=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:None,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:2|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:True,Sort:None,Position:3|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:4|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:5|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:7|Column#9=Name:Description,Fixed:True,Metric:False,Visible:True,Sort:None,Position:8|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:9|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:10|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:11|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:12|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:14|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:15|Column#17=Name:Max Collector Current,Fixed:False,Metric:False,Visible:False,Sort:None,Position:56,Type:0|Column#18=Name:CHECK_PRICES,Fixed:False,Metric:False,Visible:False,Sort:None,Position:21,Type:0|Column#19=Name:SymbolName_1,Fixed:False,Metric:False,Visible:False,Sort:None,Position:89,Type:0|Column#20=Name:REACH SVHC,Fixed:False,Metric:False,Visible:False,Sort:None,Position:83,Type:0|Column#21=Name:Mouser-Purchase-URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:63,Type:0|Column#22=Name:Pitch,Fixed:False,Metric:False,Visible:False,Sort:None,Position:77,Type:0|Column#23=Name:Power Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:79,Type:0|Column#24=Name:MFR_NAME,Fixed:False,Metric:False,Visible:False,Sort:None,Position:60,Type:0|Column#25=Name:Arrow_Electronics-Purchase-URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:16,Type:0|Column#26=Name:Housing Material,Fixed:False,Metric:False,Visible:False,Sort:None,Position:44,Type:0|Column#27=Name:SNAPEDA_LINK,Fixed:False,Metric:False,Visible:False,Sort:None,Position:88,Type:0|Column#28=Name:RoHS Compliant,Fixed:False,Metric:False,Visible:False,Sort:None,Position:87,Type:0|Column#29=Name:Case Code (Metric),Fixed:False,Metric:False,Visible:False,Sort:None,Position:19,Type:0|Column#30=Name:Length,Fixed:False,Metric:False,Visible:False,Sort:None,Position:48,Type:0|Column#31=Name:Max Operating Temperature,Fixed:False,Metric:False,Visible:False,Sort:None,Position:57,Type:0|Column#32=Name:Min Operating Temperature,Fixed:False,Metric:False,Visible:False,Sort:None,Position:61,Type:0|Column#33=Name:Package Quantity,Fixed:False,Metric:False,Visible:False,Sort:None,Position:75,Type:0|Column#34=Name:Connector Type,Fixed:False,Metric:False,Visible:False,Sort:None,Position:25,Type:0|Column#35=Name:Operating Supply Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:72,Type:0|Column#36=Name:MP,Fixed:False,Metric:False,Visible:False,Sort:None,Position:64,Type:0|Column#37=Name:Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:96,Type:0|Column#38=Name:Wavelength,Fixed:False,Metric:False,Visible:False,Sort:None,Position:98,Type:0|Column#39=Name:Lens Style,Fixed:False,Metric:False,Visible:False,Sort:None,Position:50,Type:0|Column#40=Name:Mount,Fixed:False,Metric:False,Visible:False,Sort:None,Position:62,Type:0|Column#41=Name:MANUFACTURER_PART_NUMBER,Fixed:False,Metric:False,Visible:False,Sort:None,Position:54,Type:0|Column#42=Name:Contact Plating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:29,Type:0|Column#43=Name:Packaging,Fixed:False,Metric:False,Visible:False,Sort:None,Position:76,Type:0|Column#44=Name:Contact Mating Length,Fixed:False,Metric:False,Visible:False,Sort:None,Position:28,Type:0|Column#45=Name:Number of Pins,Fixed:False,Metric:False,Visible:False,Sort:None,Position:69,Type:0|Column#46=Name:LibraryName,Fixed:False,Metric:False,Visible:False,Sort:None,Position:52,Type:0|Column#47=Name:Gender,Fixed:False,Metric:False,Visible:False,Sort:None,Position:42,Type:0|Column#48=Name:Case/Package,Fixed:False,Metric:False,Visible:False,Sort:None,Position:20,Type:0|Column#49=Name:Illumination Color,Fixed:False,Metric:False,Visible:False,Sort:None,Position:45,Type:0|Column#50=Name:Lens Transparency,Fixed:False,Metric:False,Visible:False,Sort:None,Position:51,Type:0|Column#51=Name:Luminous Intensity,Fixed:False,Metric:False,Visible:False,Sort:None,Position:53,Type:0|Column#52=Name:NexarPartId,Fixed:False,Metric:False,Visible:False,Sort:None,Position:65,Type:0|Column#53=Name:DeviceSetName,Fixed:False,Metric:False,Visible:False,Sort:None,Position:35,Type:0|Column#54=Name:Width,Fixed:False,Metric:False,Visible:False,Sort:None,Position:99,Type:0|Column#55=Name:Collector Emitter Breakdown Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:22,Type:0|Column#56=Name:GateName_1,Fixed:False,Metric:False,Visible:False,Sort:None,Position:41,Type:0|Column#57=Name:Lead Pitch,Fixed:False,Metric:False,Visible:False,Sort:None,Position:47,Type:0|Column#58=Name:AVAILABILITY,Fixed:False,Metric:False,Visible:False,Sort:None,Position:17,Type:0|Column#59=Name:Viewing Angle,Fixed:False,Metric:False,Visible:False,Sort:None,Position:95,Type:0|Column#60=Name:Contact Gender,Fixed:False,Metric:False,Visible:False,Sort:None,Position:26,Type:0|Column#61=Name:Forward Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:40,Type:0|Column#62=Name:Number of Contacts,Fixed:False,Metric:False,Visible:False,Sort:None,Position:66,Type:0|Column#63=Name:Forward Current,Fixed:False,Metric:False,Visible:False,Sort:None,Position:39,Type:0|Column#64=Name:COPYRIGHT,Fixed:False,Metric:False,Visible:False,Sort:None,Position:31,Type:0|Column#65=Name:Reverse Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:85,Type:0|Column#66=Name:Lens Color,Fixed:False,Metric:False,Visible:False,Sort:None,Position:49,Type:0|Column#67=Name:Contact Resistance,Fixed:False,Metric:False,Visible:False,Sort:None,Position:30,Type:0|Column#68=Name:MF,Fixed:False,Metric:False,Visible:False,Sort:None,Position:59,Type:0|Column#69=Name:DigiKey-Purchase-URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:37,Type:0|Column#70=Name:Orientation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:73,Type:0|Column#71=Name:TYPE,Fixed:False,Metric:False,Visible:False,Sort:None,Position:93,Type:0|Column#72=Name:RoHS,Fixed:False,Metric:False,Visible:False,Sort:None,Position:86,Type:0|Column#73=Name:Max Breakdown Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:55,Type:0|Column#74=Name:Number of Rows,Fixed:False,Metric:False,Visible:False,Sort:None,Position:71,Type:0|Column#75=Name:Current Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:32,Type:0|Column#76=Name:DeviceName,Fixed:False,Metric:False,Visible:False,Sort:None,Position:34,Type:0|Column#77=Name:Radiation Hardening,Fixed:False,Metric:False,Visible:False,Sort:None,Position:82,Type:0|Column#78=Name:Lead Free,Fixed:False,Metric:False,Visible:False,Sort:None,Position:46,Type:0|Column#79=Name:Termination,Fixed:False,Metric:False,Visible:False,Sort:None,Position:90,Type:0|Column#80=Name:PURCHASE-URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:81,Type:0|Column#81=Name:Power Dissipation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:78,Type:0|Column#82=Name:Max Power Dissipation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:58,Type:0|Column#83=Name:PACKAGE,Fixed:False,Metric:False,Visible:False,Sort:None,Position:74,Type:0|Column#84=Name:Value,Fixed:False,Metric:False,Visible:False,Sort:None,Position:94,Type:0|Column#85=Name:Number of Positions,Fixed:False,Metric:False,Visible:False,Sort:None,Position:70,Type:0|Column#86=Name:Color,Fixed:False,Metric:False,Visible:False,Sort:None,Position:24,Type:0|Column#87=Name:Contact Material,Fixed:False,Metric:False,Visible:False,Sort:None,Position:27,Type:0|Column#88=Name:Collector Emitter Voltage (VCEO),Fixed:False,Metric:False,Visible:False,Sort:None,Position:23,Type:0|Column#89=Name:Case Code (Imperial),Fixed:False,Metric:False,Visible:False,Sort:None,Position:18,Type:0|Column#90=Name:Number of Elements,Fixed:False,Metric:False,Visible:False,Sort:None,Position:67,Type:0|Column#91=Name:Test Current,Fixed:False,Metric:False,Visible:False,Sort:None,Position:91,Type:0|Column#92=Name:Transition Frequency,Fixed:False,Metric:False,Visible:False,Sort:None,Position:92,Type:0|Column#93=Name:Voltage Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:97,Type:0|Column#94=Name:RefDes,Fixed:False,Metric:False,Visible:False,Sort:None,Position:84,Type:0|Column#95=Name:Digi-Key_Part_Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:36,Type:0|Column#96=Name:Height,Fixed:False,Metric:False,Visible:False,Sort:None,Position:43,Type:0|Column#97=Name:Dominant Wavelength,Fixed:False,Metric:False,Visible:False,Sort:None,Position:38,Type:0|Column#98=Name:PRICE,Fixed:False,Metric:False,Visible:False,Sort:None,Position:80,Type:0|Column#99=Name:Depth,Fixed:False,Metric:False,Visible:False,Sort:None,Position:33,Type:0|Column#100=Name:Number of LEDs,Fixed:False,Metric:False,Visible:False,Sort:None,Position:68,Type:0|DocumentPath=C:\Users\binhp\OneDrive\Desktop\Working\School\Senior_Design\Github\astroscom\hardware\schematic\Altium\MCU_PCB\Imported_PCB_MCU.PrjPcb\PCB_MCU.PcbDoc
+OutputType3=Assembly
+OutputName3=Assembly Drawings
 OutputDocumentPath3=
 OutputVariantName3=[No Variations]
 OutputDefault3=0
+PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
 TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=Board Stack Report
-OutputName1=Report Board Stack
+OutputType1=CompositeDrill
+OutputName1=Composite Drill Drawing
 OutputDocumentPath1=
-OutputVariantName1=
+OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType2=CompositeDrill
-OutputName2=Composite Drill Drawing
+OutputType2=Drill
+OutputName2=Drill Drawing/Guides
 OutputDocumentPath2=
 OutputVariantName2=[No Variations]
 OutputDefault2=0
 PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType3=Drill
-OutputName3=Drill Drawing/Guides
+OutputType3=Board Stack Report
+OutputName3=Report Board Stack
 OutputDocumentPath3=
-OutputVariantName3=[No Variations]
+OutputVariantName3=
 OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 OutputType4=Final
@@ -2515,47 +2651,55 @@ OutputDocumentPath4=
 OutputVariantName4=[No Variations]
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType5=Gerber
-OutputName5=Gerber Files
+OutputType5=Gerber X2
+OutputName5=Gerber X2 Files
 OutputDocumentPath5=
 OutputVariantName5=[No Variations]
 OutputDefault5=0
-OutputType6=Gerber X2
-OutputName6=Gerber X2 Files
+Configuration5_Name1=ForceUpdateSettings
+Configuration5_Item1=False
+Configuration5_Name2=OutputConfigurationParameter1
+Configuration5_Item2=BoardID=QIGLPWKQ|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=False|GenerateReports=True|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=50|NumberOfDecimals=6|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPairs=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16842751~1,16973830~1,16973831~1,16973834~1,16973835~1,16973832~1,16973833~1,16973849~1,16973848~1|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False|UncheckPlotDrillDrawingPair0_Backdrill=False|UncheckPlotDrillDrawingPair0_Checked=False|UncheckPlotDrillDrawingPair0_DrillType=Regular|UncheckPlotDrillDrawingPair0_FileName= |UncheckPlotDrillDrawingPair0_HighLayer=Bottom Layer|UncheckPlotDrillDrawingPair0_LowLayer=Top Layer|UncheckPlotDrillGuidePair0_Backdrill=False|UncheckPlotDrillGuidePair0_Checked=False|UncheckPlotDrillGuidePair0_DrillType=Regular|UncheckPlotDrillGuidePair0_FileName= |UncheckPlotDrillGuidePair0_HighLayer=Bottom Layer|UncheckPlotDrillGuidePair0_LowLayer=Top Layer|DocumentPath=C:\Users\binhp\OneDrive\Desktop\Working\School\Senior_Design\Github\astroscom\hardware\schematic\Altium\MCU_PCB\Imported_PCB_MCU.PrjPcb\PCB_MCU.PcbDoc
+OutputType6=ODB
+OutputName6=ODB++ Files
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
-OutputType7=IPC2581
-OutputName7=IPC-2581 Files
+OutputType7=Mask
+OutputName7=Solder/Paste Mask Prints
 OutputDocumentPath7=
 OutputVariantName7=[No Variations]
 OutputDefault7=0
-OutputType8=Mask
-OutputName8=Solder/Paste Mask Prints
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType8=NC Drill
+OutputName8=NC Drill Files
 OutputDocumentPath8=
-OutputVariantName8=[No Variations]
+OutputVariantName8=
 OutputDefault8=0
-PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType9=NC Drill
-OutputName9=NC Drill Files
+Configuration8_Name1=ForceUpdateSettings
+Configuration8_Item1=False
+Configuration8_Name2=OutputConfigurationParameter1
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\binhp\OneDrive\Desktop\Working\School\Senior_Design\Github\astroscom\hardware\schematic\Altium\MCU_PCB\Imported_PCB_MCU.PrjPcb\PCB_MCU.PcbDoc
+OutputType9=IPC2581
+OutputName9=IPC-2581 Files
 OutputDocumentPath9=
-OutputVariantName9=
+OutputVariantName9=[No Variations]
 OutputDefault9=0
-OutputType10=ODB
-OutputName10=ODB++ Files
+OutputType10=Plane
+OutputName10=Power-Plane Prints
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
-OutputType11=Plane
-OutputName11=Power-Plane Prints
+PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType11=Test Points
+OutputName11=Test Point Report
 OutputDocumentPath11=
-OutputVariantName11=[No Variations]
+OutputVariantName11=
 OutputDefault11=0
-PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType12=Test Points
-OutputName12=Test Point Report
+OutputType12=Gerber
+OutputName12=Gerber Files
 OutputDocumentPath12=
-OutputVariantName12=
+OutputVariantName12=[No Variations]
 OutputDefault12=0
 
 [OutputGroup6]
@@ -2569,6 +2713,18 @@ OutputDocumentPath1=
 OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+Configuration1_Name1=ColumnNameFormat
+Configuration1_Item1=CaptionAsName
+Configuration1_Name2=ForceUpdateSettings
+Configuration1_Item2=False
+Configuration1_Name3=General
+Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=1200|FormHeight=710|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration1_Name4=GroupOrder
+Configuration1_Item4=Comment=True|Footprint=True
+Configuration1_Name5=SortOrder
+Configuration1_Item5=Designator=Up|Comment=Up|Footprint=Up
+Configuration1_Name6=VisibleOrder
+Configuration1_Item6=Comment=120|Description=120|Designator=120|Footprint=120|LibRef=120|Quantity=120
 OutputType2=BOM_ReportCompare
 OutputName2=BOM Compare
 OutputDocumentPath2=
