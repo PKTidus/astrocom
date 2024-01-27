@@ -560,166 +560,74 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Servo_PCB\Design Rule Check - Servo_PCB.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for Servo_PCB\Pick Place for Servo_PCB.csv
-DItemRevisionGUID=
-
-[GeneratedDocument3]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.DRR
 DItemRevisionGUID=
 
-[GeneratedDocument4]
+[GeneratedDocument2]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument5]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GD1
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GG1
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM3
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM4
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM7
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM11
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM12
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GM18
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GPB
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument26]
+[GeneratedDocument3]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.REP
 DItemRevisionGUID=
 
-[GeneratedDocument28]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument29]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument30]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument31]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Legend_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument32]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Legend_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument33]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_NPTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument34]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Pads_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument35]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Pads_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument36]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument37]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument38]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument39]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_PTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument40]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument41]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for Servo_PCB\Servo_PCB_Soldermask_Top.gbr
 DItemRevisionGUID=
 
@@ -1536,6 +1444,8 @@ Type133=1
 Type134=1
 Type135=1
 Type136=1
+Type137=1
+Type138=1
 
 [Difference Levels]
 Type1=1
@@ -1765,6 +1675,8 @@ Type148=2
 Type149=2
 Type150=2
 Type151=2
+Type152=1
+Type153=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
