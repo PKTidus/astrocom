@@ -1,0 +1,5 @@
+idf_component_register(
+    SRCS "example_light_measure.c" "../src/veml7700.c"
+    INCLUDE_DIRS "." "../include"
+)
+
