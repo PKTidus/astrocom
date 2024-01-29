@@ -1,0 +1,293 @@
+[0;32mI (107) esp_image: segment 2: paddr=00020020 vaddr=420000ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x1c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x408033c8
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d0
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jan 27 2024 09:39:29[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=08958h ( 35160) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=00018980 vaddr=40800000 size=07698h ( 30360) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=100f4h ( 65780) map[0m
+[0;32mI (122) esp_image: segment 3: paddr=0003011c vaddr=40807698 size=035ach ( 13740) load[0m
+[0;32mI (126) esp_image: segment 4: paddr=000336d0 vaddr=4080ac50 size=010a4h (  4260) load[0m
+[0;32mI (131) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (133) boot: Disabling RNG early entropy source...[0m
+[0;32mI (150) cpu_start: Unicore app[0m
+[0;32mI (150) cpu_start: Pro cpu up.[0m
+[0;33mW (159) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (166) cpu_start: Application information:[0m
+[0;32mI (169) cpu_start: Project name:     veml7700-esp-idf-main[0m
+[0;32mI (175) cpu_start: App version:      v5.1.1[0m
+[0;32mI (180) cpu_start: Compile time:     Jan 27 2024 09:38:58[0m
+[0;32mI (186) cpu_start: ELF file SHA256:  f69929a956cc15e8...[0m
+[0;32mI (192) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (197) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (202) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (206) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (211) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (218) heap_init: At 4080CBB0 len 0006FA60 (446 KiB): D/IRAM[0m
+[0;32mI (225) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (232) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (239) spi_flash: detected chip: generic[0m
+[0;32mI (243) spi_flash: flash io: dio[0m
+[0;33mW (246) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (260) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (266) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (273) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (279) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (284) app_start: Starting scheduler on CPU0[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+ESP32 Initialized for I2C.
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 160.7040 lux, 14.9299 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 176.0256 lux, 16.3533 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 161.0496 lux, 14.9620 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 176.4864 lux, 16.3961 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 161.2800 lux, 14.9834 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 177.0624 lux, 16.4496 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 169.3440 lux, 15.7326 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.0320 lux, 0.3746 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 180.4032 lux, 16.7600 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 2.5344 lux, 0.2355 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 176.0256 lux, 16.3533 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 3.4560 lux, 0.3211 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 164.6208 lux, 15.2938 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.4960 lux, 15.8396 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 163.6992 lux, 15.2081 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.3440 lux, 15.7326 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 164.0448 lux, 15.2403 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.1504 lux, 15.8075 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 163.5840 lux, 15.1974 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.6896 lux, 15.7647 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 163.2384 lux, 15.1653 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.6896 lux, 15.7647 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 164.0448 lux, 15.2403 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.3808 lux, 15.8289 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 164.1600 lux, 15.2510 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.2656 lux, 15.8182 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.3168 lux, 15.0797 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.2288 lux, 15.7219 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.5472 lux, 15.1011 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.2288 lux, 15.7219 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.0864 lux, 15.0583 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.1136 lux, 15.7112 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 160.8192 lux, 14.9406 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.0352 lux, 15.7968 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.6624 lux, 15.1118 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 168.9984 lux, 15.7005 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.4320 lux, 15.0904 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 168.5376 lux, 15.6576 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 162.4320 lux, 15.0904 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.8416 lux, 15.8717 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 161.8560 lux, 15.0369 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.1504 lux, 15.8075 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 161.9712 lux, 15.0476 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 170.2656 lux, 15.8182 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 159.2064 lux, 14.7908 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.4592 lux, 15.7433 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 158.1696 lux, 14.6944 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 167.5008 lux, 15.5613 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 160.0128 lux, 14.8657 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 169.4592 lux, 15.7433 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
+Channel 2 on the TCA9548 is now open.
+
+Sensor 2 (Channel 2) - ALS: 159.2064 lux, 14.7908 fc
+Sensor 2 (Channel 2) - White: 0.0000 lux, 0.0000 fc
+
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 168.7680 lux, 15.6791 fc
+Sensor 3 (Channel 3) - White: 0.0000 lux, 0.0000 fc
+
