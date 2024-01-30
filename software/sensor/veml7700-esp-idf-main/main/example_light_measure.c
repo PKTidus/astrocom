@@ -60,7 +60,7 @@ void app_main() {
             printf("Sensor 2 (Channel 2) - ALS: %0.4f lux, %0.4f fc\n", lux_als_2, fc_als_2);
         }
 
-        select_channel(3); // Select channel 2
+        select_channel(3); // Select channel 3
 
         printf("Channel 3 on the TCA9548 is now open.\n");
 
