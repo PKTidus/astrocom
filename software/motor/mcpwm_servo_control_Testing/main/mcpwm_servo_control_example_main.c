@@ -7,7 +7,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "driver/mcpwm_prelude.h"
+#include "driver/mcpwm.h"
 #include "driver/i2c_master.h"
 
 static const char *TAG = "example";
