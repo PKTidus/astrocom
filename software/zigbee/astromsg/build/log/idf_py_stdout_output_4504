@@ -1,0 +1,71 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d0
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Feb 15 2024 16:55:05[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42058020 size=0dc10h ( 56336) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001dc38 vaddr=40800000 size=023e0h (  9184) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=57088h (356488) map[0m
+[0;32mI (197) esp_image: segment 3: paddr=000770b0 vaddr=408023e0 size=0d518h ( 54552) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (214) boot: Disabling RNG early entropy source...[0m
+[0;32mI (225) cpu_start: Unicore app[0m
+[0;32mI (225) cpu_start: Pro cpu up.[0m
+[0;33mW (234) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (244) cpu_start: Project name:     light_bulb[0m
+[0;32mI (249) cpu_start: App version:      1[0m
+[0;32mI (253) cpu_start: Compile time:     Feb 15 2024 16:53:52[0m
+[0;32mI (259) cpu_start: ELF file SHA256:  741b54b027cd3148...[0m
+[0;32mI (265) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (270) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (275) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (280) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (284) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (292) heap_init: At 40815C60 len 000669B0 (410 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (305) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (316) spi_flash: flash io: dio[0m
+[0;33mW (320) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (333) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (340) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (347) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (352) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (357) app_start: Starting scheduler on CPU0[0m
+[0;32mI (362) main_task: Started on CPU0[0m
+[0;32mI (362) main_task: Calling app_main()[0m
+[0;32mI (362) beeboop: top of main[0m
+[0;32mI (372) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (382) beeboop: log msg before xTaskCreate[0m
+[0;32mI (382) beeboop: top of zb task[0m
+[0;32mI (392) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (432) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (442) beeboop: log msg at end of main[0m
+[0;32mI (442) main_task: Returned from app_main()[0m
+[0;32mI (452) beeboop: log msg before esp_zb-main_loop_iteration, in zb_task[0m
+[0;32mI (452) ESP_ZB_ON_OFF_LIGHT: ZDO signal: 23, status: -1[0m
+[0;32mI (452) ESP_ZB_ON_OFF_LIGHT: Zigbee stack initialized[0m
+[0;32mI (8682) ESP_ZB_ON_OFF_LIGHT: Start network steering[0m
+[0;32mI (8692) ESP_ZB_ON_OFF_LIGHT: Joined network successfully (Extended PAN ID: 2e:f3:b2:c7:44:ab:a5:09, PAN ID: 0xabc5, Channel:11)[0m
