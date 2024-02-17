@@ -41,6 +41,7 @@
 #include "ha/esp_zigbee_ha_standard.h"
 #include "esp_zb_light.h"
 #include "nvs_flash.h"
+#include "mqtt_client.h"
 
 /**
  * @note Make sure set idf.py menuconfig in zigbee component as zigbee end device!
@@ -50,6 +51,7 @@
 #endif
 
 static const char *TAG = "ESP_ZB_ON_OFF_LIGHT";
+static const char *TAG2 = "MQTT_LOG";
 /********************* Define functions **************************/
 static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
 {
@@ -110,6 +112,36 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
     }
 }
 
+// MQTT event handler
+// type esp_event_handler_t
+static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
+{
+    switch (event->event_id) {
+        case MQTT_EVENT_CONNECTED:
+            ESP_LOGI(TAG2, "MQTT_EVENT_CONNECTED");
+            break;
+        case MQTT_EVENT_DISCONNECTED:
+            ESP_LOGI(TAG2, "MQTT_EVENT_DISCONNECTED");
+            break;
+        case MQTT_EVENT_SUBSCRIBED:
+            ESP_LOGI(TAG2, "MQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
+            break;
+        case MQTT_EVENT_UNSUBSCRIBED:
+            ESP_LOGI(TAG2, "MQTT_EVENT_UNSUBSCRIBED, msg_id=%d", event->msg_id);
+            break;
+        case MQTT_EVENT_ERROR:
+            ESP_LOGI(TAG2, "MQTT_EVENT_ERROR, msg_id=%d", event->msg_id);
+            break;
+        case MQTT_EVENT_DATA:
+            ESP_LOGI(TAG2, "MQTT_EVENT_DATA, msg_id=%d", event->msg_id);
+            break;
+        default:
+            ESP_LOGI(TAG2, "Other event id:%d", event->event_id);
+            break;
+    }
+    return ESP_OK;
+}
+
 static void esp_zb_task(void *pvParameters)
 {
     ESP_LOGI("beeboop", "top of zb task"); // 3
@@ -124,7 +156,6 @@ static void esp_zb_task(void *pvParameters)
     esp_zb_set_primary_network_channel_set(ESP_ZB_PRIMARY_CHANNEL_MASK);
     ESP_ERROR_CHECK(esp_zb_start(false));
     ESP_LOGI("beeboop", "log msg before esp_zb-main_loop_iteration, in zb_task"); // 5
-    // sub and pub here
     esp_zb_main_loop_iteration();
     ESP_LOGI("beeboop", "log msg after esp_zb-main_loop_iteration, in zb_task"); // unreachable
 }
@@ -142,6 +173,34 @@ void app_main(void)
     /* hardware related and device init */
     light_driver_init(LIGHT_DEFAULT_OFF);
     ESP_LOGI("beeboop", "log msg before xTaskCreate"); // 2
+    // Zigbee task
     xTaskCreate(esp_zb_task, "Zigbee_main", 4096, NULL, 5, NULL);
-    ESP_LOGI("beeboop", "log msg at end of main"); // 4
+    ESP_LOGI("beeboop", "log msg after creating zb task"); // 4
+
+    // this is probably where the problem is
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .broker.address.uri = "mqtt://localhost:8080", // mqtt://10.173.220.77:1883/zigbee2mqtt :8080
+        //.credentials.username = "astrocom",
+        //.credentials.authentication.password = "password123"
+        // Add more configurations if needed
+    };
+
+    ESP_LOGI("vibe check", "about to init mqtt client");
+    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    ESP_LOGI("vibe check", "logging the client register event");
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
+    ESP_LOGI("vibe check", "about to start mqtt client");
+    vTaskDelay(pdMS_TO_TICKS(20000)); // Wait 20 seconds to connect
+    esp_mqtt_client_start(client);
+    ESP_LOGI("vibe check", "after starting client");
+
+    for (int i = 0; i < 5; i++) {
+        // orlando city pubsubs
+        ESP_LOGI("vibe check", "before pub");
+        esp_mqtt_client_publish(client, "zigbee2mqtt", "astro!", 2000, 1, 0);
+        vTaskDelay(pdMS_TO_TICKS(30000)); // 30 seconds between pubs
+    }
+    ESP_LOGI("vibe check", "before stop");
+    esp_mqtt_client_stop(client);
+    esp_mqtt_client_destroy(client);
 }

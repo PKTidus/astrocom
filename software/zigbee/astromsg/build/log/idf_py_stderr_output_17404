@@ -1,0 +1,213 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.2.1 on \\.\COM5 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42000816: uart_ll_get_txfifo_len at C:/Users/Pedro/esp/esp-idf/components/hal/esp32c6/include/hal/uart_ll.h:378 (discriminator 1)
+ (inlined by) panic_print_char_uart at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:78 (discriminator 1)
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpl_h4gwrd"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpl_h4gwrd': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpwnmrrec0"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpwnmrrec0': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpjt4s2lw1"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpjt4s2lw1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpuh846bev"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpuh846bev': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp6e8tyv33"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp6e8tyv33': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1gfd1b_h"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1gfd1b_h': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmppom0hzqv"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmppom0hzqv': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp37d6sx8q"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp37d6sx8q': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1_59v25o"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1_59v25o': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[0;33mWriting to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[0;33mStack dump detected[0m
+[1;31m--- unknown menu character Ctrl+[ --[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpmaj8zk3x"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpmaj8zk3x': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp3zw9frm9"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp3zw9frm9': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mWriting to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1y8xjp0y"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmp1y8xjp0y': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpvsbxz8e_"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpvsbxz8e_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mWriting to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpsbjbw368"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpsbjbw368': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x4080062e: panic_abort at C:/Users/Pedro/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x408085dc: __ubsan_include at C:/Users/Pedro/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Pedro\\esp\\astromsg\\build\\light_bulb.elf', '-ex', 'target remote | "C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe" -m "esp_idf_panic_decoder" --target esp32c6 "C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpakc9s2gz"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\Pedro\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\Pedro\\AppData\\Local\\Temp\\tmpakc9s2gz': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mWriting to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0m
