@@ -2,13 +2,14 @@
 #include "driver/i2c.h"
 #include "veml7700.h"
 #include "esp_log.h"
+#include "driver/gpio.h"
 
-
-#define I2C_MASTER_SCL_IO 22          // GPIO pin for I2C clock
-#define I2C_MASTER_SDA_IO 21          // GPIO pin for I2C data
+#define I2C_MASTER_SCL_IO 10         // GPIO pin for I2C clock
+#define I2C_MASTER_SDA_IO 11          // GPIO pin for I2C data
 #define I2C_MASTER_NUM I2C_NUM_0      // I2C port number
-#define TCA9548_ADDR 0x70             // TCA9548 I2C address
+#define TCA9548_ADDR 0x71             // TCA9548 I2C address
 #define CHANNEL_1_BIT 0x02            // Channel 1 selection bit
+#define USBA_PIN GPIO_NUM_1
 
 void i2c_master_init() {
     i2c_config_t conf;
@@ -37,6 +38,10 @@ void select_channel(uint8_t channel) {
 
 
 void app_main() {
+    esp_rom_gpio_pad_select_gpio(USBA_PIN);
+    gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(USBA_PIN, 1);
+
     i2c_master_init();
     printf("ESP32 Initialized for I2C.\n");
 

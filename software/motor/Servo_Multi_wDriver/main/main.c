@@ -2,7 +2,7 @@
 #include "freertos/FreeRTOS.h"          // Operating system library
 #include "freertos/task.h"              // task call library
 #include "freertos/semphr.h"            // Semaphore API
-#include "driver/mcpwm.h"               // PwM to run servos
+#include "driver/mcpwm_prelude.h"               // PwM to run servos
 #include "driver/i2c.h"                 // i2c library
 #include "esp_log.h"                    // esp library
 
@@ -41,7 +41,7 @@ void pca9685_init() {
     i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                           // write to PCA9685
     i2c_master_write_byte(cmd, PRESCALE, true);                                                         // Set to frequency to prescale of 50Hz
     i2c_master_stop(cmd);                                                                               // stop command
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);                                 // delay for 1000 ms
+    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);                                 // delay for 1000 ms
     i2c_cmd_link_delete(cmd);                                                                           // delete command
 
     // set PWM frequency to prescale value
@@ -51,7 +51,7 @@ void pca9685_init() {
     i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                           // write to PCA9685
     i2c_master_write_byte(cmd, MODE1, true);                                                            // Set to normal mode
     i2c_master_stop(cmd);                                                                               // stop command
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);                                 // delay for 1000 ms
+    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);                                 // delay for 1000 ms
     i2c_cmd_link_delete(cmd);                                                                           // delete command
 
 }
@@ -59,7 +59,7 @@ void pca9685_init() {
 void set_pwm(uint8_t channel, uint16_t on, uint16_t off) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();                                                       // create new command
     i2c_master_start(cmd);                                                                              // start command
-    i2c_master_write_byte(cmd_handle, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                    // write to PCA9685 
+    i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                    // write to PCA9685 
     i2c_master_write_byte(cmd, ADDR0 + 4 * channel, true);                                              // switching between servo wil call value
     i2c_master_write_byte(cmd, on & 0xFF, true);                                                        // turn on by masking
     i2c_master_write_byte(cmd, on>>8, true);                                                            // check bit 
@@ -79,9 +79,39 @@ void set_servo_angle(uint8_t servo_num, double angle){
 
 
 // Main function
-void main(void)
+int main(void)
 {
     pca9685_init();
+
+    while(1){
+
+        // Set angles for testing
+
+        set_servo_angle(0,0);                        // set angle of setvo 0  to 0 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(0,90);                        // set angle of setvo 0  to 90 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(0,180);                        // set angle of setvo 0  to 180 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+
+        set_servo_angle(1,0);                        // set angle of setvo 1  to 0 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(1,90);                        // set angle of setvo 1  to 90 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(1,180);                        // set angle of setvo 1  to 180 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+
+        set_servo_angle(2,0);                        // set angle of setvo 2  to 0 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(2,90);                        // set angle of setvo 2  to 90 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+        set_servo_angle(2,180);                        // set angle of setvo 2  to 180 degree
+        vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
+    }
+
+
+
+
     // ESP_LOGI(TAG, "Create timer and operator");
     // mcpwm_timer_handle_t timer = NULL;
     // mcpwm_timer_config_t timer_config = {
