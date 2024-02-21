@@ -380,58 +380,54 @@ DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB.REP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument8]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument9]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument10]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Legend_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument11]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Legend_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_NPTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Pads_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Pads_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_PTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for Sensor_PCB\Sensor_PCB_Soldermask_Top.gbr
 DItemRevisionGUID=
 
