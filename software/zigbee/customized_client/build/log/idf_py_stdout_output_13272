@@ -1,0 +1,81 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d0
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Feb 21 2024 16:31:15[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 000a2800[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 000b3000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 000b7000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=0fb60h ( 64352) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001fb88 vaddr=40800000 size=00490h (  1168) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=61438h (398392) map[0m
+[0;32mI (207) esp_image: segment 3: paddr=00081460 vaddr=40800490 size=0d1b4h ( 53684) load[0m
+[0;32mI (220) esp_image: segment 4: paddr=0008e61c vaddr=4080d650 size=01890h (  6288) load[0m
+[0;32mI (225) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (226) boot: Disabling RNG early entropy source...[0m
+[0;32mI (240) cpu_start: Unicore app[0m
+[0;32mI (241) cpu_start: Pro cpu up.[0m
+[0;33mW (249) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (256) cpu_start: Pro cpu start user code[0m
+[0;32mI (256) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (256) cpu_start: Application information:[0m
+[0;32mI (259) cpu_start: Project name:     HA_customized_switch[0m
+[0;32mI (265) cpu_start: App version:      1[0m
+[0;32mI (270) cpu_start: Compile time:     Feb 21 2024 16:30:31[0m
+[0;32mI (276) cpu_start: ELF file SHA256:  e461d863fe6f431c...[0m
+[0;32mI (282) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (287) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (291) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (296) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (301) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (308) heap_init: At 40817B50 len 00064AC0 (402 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (321) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (349) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (356) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (363) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (368) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (374) app_start: Starting scheduler on CPU0[0m
+[0;32mI (378) main_task: Started on CPU0[0m
+[0;32mI (378) main_task: Calling app_main()[0m
+[0;32mI (388) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (388) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (428) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (438) main_task: Returned from app_main()[0m
+[0;32mI (448) ESP_HA_ON_OFF_SWITCH: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (718) ESP_HA_ON_OFF_SWITCH: Joined network successfully (Extended PAN ID: 2e:f3:b2:c7:44:ab:a5:09, PAN ID: 0xabc5, Channel:11, Short Address: 0xe870)[0m
+[0;32mI (718) ESP_HA_ON_OFF_SWITCH: Match desc response: status(0), address(0xffff), endpoint(255)[0m
+[0;32mI (5808) ESP_ZIGBEE_API_ZDO: ZDO match descriptor request timeout! NO DEVICE FOUND ![0m
+[0;33mW (5808) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found[0m
+[0;33mW (5808) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found and can't remove[0m
+[0;32mI (5818) ESP_ZIGBEE_API_ZDO: ZDO active endpoint request timeout![0m
+[0;33mW (5818) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found[0m
+[0;33mW (5828) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found and can't remove[0m
+[0;32mI (5838) ESP_ZIGBEE_API_ZDO: ZDO simple descriptor request timeout![0m
+[0;33mW (5848) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found[0m
+[0;33mW (5848) ESP_ZIGBEE_API_ZDO: The tsn of callback is not found and can't remove[0m
+[0;32mI (5858) ESP_ZIGBEE_API_ZDO: ZDO IEEE address request timeout![0m
+[0;32mI (8158) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0xffff) endpoint(1)[0m
+[0;32mI (9888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0xffff) endpoint(1)[0m
+[0;32mI (11538) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0xffff) endpoint(1)[0m
+[0;32mI (13918) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0xffff) endpoint(1)[0m
+[0;32mI (15258) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0xffff) endpoint(1)[0m

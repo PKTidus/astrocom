@@ -1,0 +1,1303 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d0
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Feb 21 2024 16:31:15[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 000a2800[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 000b3000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 000b7000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=0fb60h ( 64352) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001fb88 vaddr=40800000 size=00490h (  1168) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=6142ch (398380) map[0m
+[0;32mI (207) esp_image: segment 3: paddr=00081454 vaddr=40800490 size=0d1b4h ( 53684) load[0m
+[0;32mI (220) esp_image: segment 4: paddr=0008e610 vaddr=4080d650 size=01890h (  6288) load[0m
+[0;32mI (225) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (226) boot: Disabling RNG early entropy source...[0m
+[0;32mI (240) cpu_start: Unicore app[0m
+[0;32mI (241) cpu_start: Pro cpu up.[0m
+[0;33mW (249) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (256) cpu_start: Pro cpu start user code[0m
+[0;32mI (256) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (256) cpu_start: Application information:[0m
+[0;32mI (259) cpu_start: Project name:     HA_customized_switch[0m
+[0;32mI (265) cpu_start: App version:      1[0m
+[0;32mI (270) cpu_start: Compile time:     Feb 22 2024 15:31:46[0m
+[0;32mI (276) cpu_start: ELF file SHA256:  72efc86dc5952e89...[0m
+[0;32mI (282) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (287) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (291) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (296) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (301) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (308) heap_init: At 40817B50 len 00064AC0 (402 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (321) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (349) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (356) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (363) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (369) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (374) app_start: Starting scheduler on CPU0[0m
+[0;32mI (378) main_task: Started on CPU0[0m
+[0;32mI (378) main_task: Calling app_main()[0m
+[0;32mI (388) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (388) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (428) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (428) main_task: Returned from app_main()[0m
+[0;32mI (438) ESP_HA_ON_OFF_SWITCH: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (1358) ESP_HA_ON_OFF_SWITCH: Joined network successfully (Extended PAN ID: 40:4c:ca:ff:fe:42:41:7c, PAN ID: 0x6b2c, Channel:13, Short Address: 0xcfe1)[0m
+[0;32mI (1388) ESP_HA_ON_OFF_SWITCH: Match desc response: status(0), address(0x0), endpoint(10)[0m
+[0;32mI (1438) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1458) ESP_HA_ON_OFF_SWITCH: Active endpoint response: status(0) and endpoint count(2)[0m
+[0;32mI (1458) ESP_HA_ON_OFF_SWITCH: Endpoint ID List: 10[0m
+[0;32mI (1458) ESP_HA_ON_OFF_SWITCH: Endpoint ID List: 242[0m
+[0;32mI (1508) ESP_HA_ON_OFF_SWITCH: IEEE address: 40:4c:ca:ff:fe:42:41:7c[0m
+[0;32mI (1548) ESP_HA_ON_OFF_SWITCH: Read attribute response: status(0), cluster(0x6), attribute(0x0), type(0x10), value(0)[0m
+[0;32mI (1578) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1588) ESP_HA_ON_OFF_SWITCH: Bind response from address(0x0), endpoint(1) with status(0)[0m
+[0;32mI (1608) ESP_HA_ON_OFF_SWITCH: Configure report response: status(0), cluster(0x6), attribute(0xffff)[0m
+[0;32mI (4478) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (4488) ESP_HA_ON_OFF_SWITCH: Simple desc resposne: status(0), device_id(256), app_version(0), profile_id(0x104), endpoint_ID(10)[0m
+[0;32mI (4488) ESP_HA_ON_OFF_SWITCH: Cluster ID list: 0x0[0m
+[0;32mI (4498) ESP_HA_ON_OFF_SWITCH: Cluster ID list: 0x3[0m
+[0;32mI (4498) ESP_HA_ON_OFF_SWITCH: Cluster ID list: 0x4[0m
+[0;32mI (4508) ESP_HA_ON_OFF_SWITCH: Cluster ID list: 0x5[0m
+[0;32mI (4508) ESP_HA_ON_OFF_SWITCH: Cluster ID list: 0x6[0m
+[0;32mI (4668) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (4668) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (13598) ESP_HA_ON_OFF_SWITCH: ZDO signal: ZDO Device Unavailable (0x3c), status: ESP_OK[0m
+[0;32mI (13598) ESP_HA_ON_OFF_SWITCH: ZDO signal: ZDO Device Unavailable (0x3c), status: ESP_OK[0m
+[0;32mI (13598) ESP_HA_ON_OFF_SWITCH: ZDO signal: ZDO Device Unavailable (0x3c), status: ESP_OK[0m
+[0;32mI (16488) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (16508) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (16558) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (16558) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (16928) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (16948) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (16968) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (16968) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (19518) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (19538) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (19558) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (19558) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (20238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (20258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (22848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (22868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (23308) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (23308) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (23338) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (23338) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (24828) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (24848) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (24868) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (24878) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (24878) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (26668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (26688) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (26708) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (26708) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (28038) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (28058) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (28068) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (28068) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (55858) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (55878) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (56628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (56648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (58938) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (58938) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (58968) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (58968) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (59988) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (60008) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (60038) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (60038) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (61078) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (61098) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (61118) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (61808) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (61828) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (62338) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (62358) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (64148) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (64148) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (64168) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (64168) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (94218) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (94228) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (96488) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (96508) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (96538) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (96538) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (96748) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (96768) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (98758) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (98778) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (99228) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (99248) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (99818) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (99818) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (99848) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (99848) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (112398) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (112418) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (112928) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (112948) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (114548) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (114568) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (115048) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (115068) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (115468) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (115468) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (115498) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (115498) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (115888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (115908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (115918) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (115918) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (116328) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (116348) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (116898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (116918) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (117478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (117498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (119338) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (119358) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (119388) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (119388) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (119438) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (119438) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (119888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (119908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (119928) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (120628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (120648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (121148) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (121168) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (121578) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (121598) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (122258) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (122278) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (122958) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (122958) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (122978) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (122978) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (123778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (123798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (123818) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (123818) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (124168) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (124188) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (124198) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (124198) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (127848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (127868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (127888) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (128708) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (128728) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (130918) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (130918) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (130958) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (130958) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (151308) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (151328) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (151348) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (151348) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (153168) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (153188) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (153208) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (153208) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (153218) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (157688) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (157708) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (157718) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (157718) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (158968) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (158988) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (160698) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (160718) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (161938) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (161958) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (162038) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (162038) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (162068) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (162068) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (163598) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (163618) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (163638) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (163648) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (163648) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (164518) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (164538) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (164548) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (164548) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (191318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (191338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (191358) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (191358) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (192028) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (192048) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (192058) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (192058) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (222098) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (222098) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (252148) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (252148) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (282198) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (282198) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (312238) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (312238) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (340008) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (340028) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (340048) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (340048) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (340968) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (340988) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (340998) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (340998) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (348258) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (348278) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (349058) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (349078) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (349458) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (349478) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (350118) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (350138) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (350738) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (350758) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (351138) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (351158) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (351308) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (351308) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (351348) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (351348) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (351368) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (358708) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (358728) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (358748) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (358758) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (358758) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (359178) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (359198) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (359218) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (359218) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (359898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (359918) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (359938) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (361208) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (361228) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (361758) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (361778) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (362438) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (362458) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (362968) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (362968) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (362988) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (362988) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (365348) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (365368) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (365388) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (365388) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (365788) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (365808) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (365818) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (365818) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (367958) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (367978) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (368008) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (368008) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (368478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (368498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (368518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (368518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (369568) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (369588) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (369608) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (369608) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (369958) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (369978) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (370008) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (370178) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (370198) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (370558) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (370578) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (370818) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (370838) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (371208) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (371228) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (372778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (372798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (373018) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (373018) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (373048) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (373048) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (373238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (373258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (373288) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (373288) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (403338) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (403338) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (433398) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (433398) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (463458) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (463458) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (493508) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (493508) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (523548) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (523548) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (553598) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (553598) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (583648) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (583648) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (613708) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (613708) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (643758) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (643758) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (673808) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (673808) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (703858) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (703858) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (733908) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (733908) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (763958) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (763958) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (794018) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (794018) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (824068) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (824068) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (854118) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (854118) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (884168) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (884168) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (914218) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (914218) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (944268) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (944268) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (974338) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (974338) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (984618) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (984638) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (984658) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (984678) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (984678) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (985248) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (985268) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (988318) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (988318) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1018368) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1018368) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1048428) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1048428) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1062728) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1062748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1062778) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1062778) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1063568) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1063588) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1063608) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1063608) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1065438) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1065458) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1065488) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1065798) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1065818) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1066068) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1066088) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1066428) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1066448) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1067318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1067338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1067518) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1067538) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1068018) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1068038) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1068218) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1068238) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1068518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1068518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1068548) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1068548) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1068628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1068648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1068658) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1068658) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1069038) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1069058) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1069068) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1069068) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1073878) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1073898) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1073918) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1073928) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1073928) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1074448) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1074468) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1077378) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1077398) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1077508) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1077508) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1077538) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1077538) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1077828) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1077848) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1077868) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1077868) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1077878) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1078238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1078258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1078278) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1078278) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1078588) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1078608) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1078888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1078908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1079238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1079258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1079668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1079688) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1080898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;32mI (1080918) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1081658) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1081658) ESP[0;32mI (1081668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1081708) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1081738) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1081738) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;33mW (1081758) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1081788) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1081788) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1082198) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1082218) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1082428) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1082448) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1082598) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1082618) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1083968) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1085278) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1085278) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1085308) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1085308) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1085738) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1085758) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1085778) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1086268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1086288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1086438) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1086458) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1086598) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1086618) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1086748) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1086768) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1086918) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1086938) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087098) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087118) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087428) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087448) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087578) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087598) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087718) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087738) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1087888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1087908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088068) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1088088) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1088258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088408) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1088428) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088568) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1088588) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088808) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1088808) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1088828) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1088828) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1088878) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1088898) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1088928) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1088928) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1089158) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1089178) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1089198) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1089358) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1089378) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1089548) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1089568) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1089728) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1089748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1089898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1089918) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090088) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090108) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090458) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090478) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090638) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090658) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090798) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090818) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1090948) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1090968) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1091138) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1091158) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1091348) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1091368) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1091548) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1091568) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1091728) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1091748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1091848) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1091878) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1091898) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1092058) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1092078) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1092228) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1092228) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1092248) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1092248) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1092378) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1092398) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1092418) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1092418) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1092538) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1092558) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1092568) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1092568) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1092868) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1092888) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1092908) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1092908) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1093068) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1093088) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1093098) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1093098) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1093268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1093288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1093468) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1093488) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1093668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1093688) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094018) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094038) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094198) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094218) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094378) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094398) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094578) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094598) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094768) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094788) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1094968) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1094988) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1095148) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1095168) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1095258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1095328) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1095348) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1095528) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1095548) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1095748) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1095768) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1095968) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1095988) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1096158) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1096178) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1096318) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1096318) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1096358) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;32mI (1096358) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1096358) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;33mW (1096398) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1096428) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1096428) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1096568) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1096588) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1096608) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1096778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1096798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1096978) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1096998) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1097168) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1097188) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1097328) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1097348) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1097528) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1097548) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1097698) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1097718) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1097908) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1097928) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1098108) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1098128) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1098318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1098338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1098498) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1098518) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1098688) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1098708) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1099648) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1099648) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1099668) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1099668) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1100148) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1100168) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1100198) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1100328) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1100348) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1100508) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1100528) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1100818) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1100838) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1101478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1101498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1101778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1101798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1101948) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1101968) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1102268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1102288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1102708) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1102728) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1102888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1102908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1103218) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1103218) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1103238) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1103238) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1104608) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1104628) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1104648) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1104648) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1104788) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1104808) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1104828) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1104828) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1104958) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1104978) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1104988) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1104988) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1105128) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1105148) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1105168) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1105168) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1105318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1105338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1105368) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1105368) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1105518) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1105538) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1105558) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1105558) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1105718) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1105738) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1105748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1105758) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1105758) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1105888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1105908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1105938) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1105938) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1105948) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1106088) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1106108) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1106118) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1106118) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;33mW (1106268) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1106278) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1106298) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1106318) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1106328) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1106468) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1106488) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1106508) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1106508) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1106838) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1106858) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1106858) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1106868) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1107048) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1107068) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1107078) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1107078) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1107248) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1107268) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1107468) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1107488) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1107668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1107688) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1107878) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1107898) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1108078) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1108098) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1108268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1108288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1108478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1108498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1108848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1108868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1109618) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1109638) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1110218) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1110238) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1110318) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1110318) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1110348) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1110348) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1110488) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1110508) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1110518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1110518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1110728) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1110748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1110768) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1110768) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1111288) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1111308) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1111328) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1111328) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1111618) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1111638) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1111898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1111918) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1111998) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1112148) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1112168) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1112338) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1112358) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1112628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1112648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1112898) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1112918) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1113308) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1113328) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1113518) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1113538) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1113748) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1113768) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1113968) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1113988) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1114208) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1114228) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1114418) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1114438) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1114608) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1114628) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1114668) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1114668) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1114698) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1114698) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1114818) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1114838) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1115028) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1115048) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1115238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1115258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1115468) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1115488) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1115858) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1115878) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1116058) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1116078) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1116418) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1116438) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1116628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1116648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1116918) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1116938) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1117798) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1117818) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1117878) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1117878) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1117908) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1117908) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1119318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1119338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1119358) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1119358) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1120408) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1120428) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1120448) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1120448) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1120958) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1120978) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1121008) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1121008) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1121448) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1121468) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1124508) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1124508) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1124548) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1124568) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1124728) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1124748) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1125358) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1125378) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1125778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1125798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1126108) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1126128) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1126268) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1126288) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1127618) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1127618) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1127648) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1127648) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1132038) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1132058) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1132078) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1132078) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1132088) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1132238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1132258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1132278) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1132278) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1132438) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1132458) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1132658) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1132678) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1132868) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1132888) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1133118) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1133138) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1133388) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1133408) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1134288) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1134308) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1134708) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1134728) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1134958) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1134978) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1135238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1135258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1135518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1135518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1135548) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1135548) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1135588) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1135608) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1135628) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1135628) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1135828) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1135848) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1135878) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1135878) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1136058) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1136078) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1136098) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1136118) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1136118) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1136288) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1136308) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1136338) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1136348) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1136348) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1136528) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1136548) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1136568) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1136578) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1136578) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1136768) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1136788) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1136808) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1136808) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1137018) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1137038) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1137068) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1137068) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1137238) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1137258) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1137268) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1137268) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1137478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1137498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1137518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1137518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1137688) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1137708) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1137718) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1137718) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1137938) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1137958) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1138128) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1138178) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1138198) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1138388) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1138408) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1138598) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1138618) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1138798) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1138818) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1139008) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1139028) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1139398) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1139418) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1139628) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1139648) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1139908) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1139928) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1140118) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1140138) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1140398) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1140418) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1140598) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1140618) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1140998) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1140998) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1141028) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1141028) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;33mW (1145238) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;33mW (1145428) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1158888) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1158908) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1158928) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1158938) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1158938) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1159848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1159868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1159888) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1160118) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1160138) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1160398) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1160418) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1160778) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1160798) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1161448) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1161468) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1161768) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1161788) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1162088) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1162108) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1162668) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1162688) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1162918) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;32mI (1162948) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1162948) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;33mW (1162958) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1162978) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1162978) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1163148) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1163168) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1163338) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1163358) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1163538) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1163558) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1163808) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1163828) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1166208) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1166208) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1166238) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1166238) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1166638) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1166658) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1166688) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1166688) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1168088) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1168108) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1168128) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1168128) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1169478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1169498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1169518) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1169518) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1169758) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1169778) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1169788) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1169788) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1171478) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1171498) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1172318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1172338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1174538) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1174538) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1174568) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1174568) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1183768) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1183788) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1183848) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1183848) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1184418) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1184438) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1187498) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1187498) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1204258) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1204278) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1204298) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1204308) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1204308) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1204868) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1204888) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1204908) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1204908) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1234968) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1234968) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1245248) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1245268) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1245288) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1245298) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1245298) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1246278) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1246298) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1246318) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1246328) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1246328) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1248828) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1248848) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1248858) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1248858) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1249848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1249868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1249878) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1249878) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1250808) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1250828) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1250848) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1250858) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1250858) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1251258) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1251278) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1251298) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1251308) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1251308) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1254078) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1254098) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1254118) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1254118) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1255038) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1255058) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1255088) ESP_HA_ON_OFF_SWITCH: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (1258108) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1258108) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1265378) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1265398) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1268448) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1268448) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1269298) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1269318) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1269328) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1269328) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1273198) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1273218) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1273228) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1273228) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(1)
+[0m
+[0;32mI (1275848) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1275868) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1278918) ESP_HA_ON_OFF_SWITCH: Reveived report from address(0x0) src endpoint(10) to dst endpoint(1) cluster(0x6)[0m
+[0;32mI (1278918) ESP_HA_ON_OFF_SWITCH: Received report information: attribute(0x0), type(0x10), value(0)
+[0m
+[0;32mI (1279688) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1279708) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1280278) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1280298) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1280678) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1280698) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1280988) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1281008) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1281318) ESP_HA_ON_OFF_SWITCH: Send 'on_off toggle' command to address(0x0) endpoint(10)[0m
+[0;33mW (1281338) ESP_HA_ON_OFF_SWITCH: Receive Zigbee action(0x1005) callback[0m
+[0;32mI (1281648) ESP_HA_
