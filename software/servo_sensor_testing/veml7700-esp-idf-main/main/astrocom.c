@@ -145,7 +145,7 @@ void initialize_veml_device(VEML_Data *data, int channel) {
 }
 //-----------------------------------------------------------------------
 //Set stepper task
-void stepper_task(void *pvParameter) {  
+void stepper_task() {  
     esp_rom_gpio_pad_select_gpio(STEP_PIN);         //selecting CLK pin
     esp_rom_gpio_pad_select_gpio(DIR_PIN);          //selecting DIR pin
     gpio_set_direction(STEP_PIN, GPIO_MODE_OUTPUT); //set CLK pin to output
@@ -162,6 +162,14 @@ void stepper_task(void *pvParameter) {
         vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
     }
     vTaskDelay(pdMS_TO_TICKS(200)); // Delay between rotations
+
+    esp_rom_gpio_pad_select_gpio(USBA_PIN);
+    gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(USBA_PIN, 1);
+
+    gpio_reset_pin(USBC_PIN);
+
+    return;
 }
 void app_main() {
     esp_rom_gpio_pad_select_gpio(USBA_PIN);
@@ -229,7 +237,34 @@ void timer_isr(void* arg) {
             ESP_LOGE("VEML7700", "VEML7700 device not initialized for Channel %d\n", i);
         }
     }
-    printf("\n\n");
+
+    float servo_spin = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
+    float stepper_spin = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2));
+    float angle_spin = 0.0;
+
+    printf("Vert value is %.4f\n", servo_spin);
+    printf("Horiz value is %.4f\n", stepper_spin);
+
+    if(servo_spin < 1)
+    {
+
+    }
+    else if(servo_spin > 1)
+    {
+        
+    }
+    if(stepper_spin < 1)
+    {
+
+    }
+    else if(stepper_spin > 1)
+    {
+
+    }
+    
+
+    /*printf("\n\nBegin Servo spinning\n\n");
+
 
     for(int j=SERVO_MIN_AN; j<=SERVO_MAX_AN; j++){
         for(int i=0; i<3; i++){
@@ -243,9 +278,13 @@ void timer_isr(void* arg) {
             vTaskDelay(pdMS_TO_TICKS(10));
         }
     }
-    printf("\n\n");
+    printf("Servo done spinning\n\n");
 
     //--------------
-    xTaskCreate(stepper_task, "stepper_task", 2048, NULL, 5, NULL);
+    //xTaskCreate(stepper_task, "stepper_task", 2048, NULL, 5, NULL);
+
+    printf("\n\nBegin Stepper spinning\n\n");
+    stepper_task();
+    printf("Stepper done spinning\n\n");*/
 
 }
