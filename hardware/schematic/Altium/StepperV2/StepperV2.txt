@@ -1,0 +1,10 @@
+Board Information Report
+Filename     : C:\Users\binhp\OneDrive\Desktop\Working\School\Senior_Design\Github\astroscom\hardware\schematic\Altium\StepperV2\StepperV2.PcbDoc
+Date         : 2/26/2024
+Time         : 11:22:44 AM
+Time Elapsed : 00:00:00
+
+General
+    Board Size, 4995milsx4000mils
+    Components on board, 58
+count : 2

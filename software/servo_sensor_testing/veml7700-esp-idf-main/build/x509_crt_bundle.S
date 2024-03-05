@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/Pedro/esp/esp-idf/examples/veml7700-esp-idf-main/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/binhp/esp/v5.2/servo_sensor_testing/veml7700-esp-idf-main/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

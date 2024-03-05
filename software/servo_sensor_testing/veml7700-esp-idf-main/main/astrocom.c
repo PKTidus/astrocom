@@ -10,9 +10,7 @@
 #include "esp_timer.h"
 //----------------------------------test
 #include "freertos/FreeRTOS.h"
-#include "freertos/task.h"              // task call library
-#include "freertos/semphr.h"            // Semaphore API
-#include "driver/mcpwm_prelude.h"
+#include "freertos/task.h"
 // commenting zigbee stuff
 //#include "managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h"
 //#include "managed_components/espressif__esp-zigbee-lib/include/esp_zb_light.h"
@@ -23,23 +21,88 @@
 #define I2C_MASTER_NUM I2C_NUM_0
 #define TCA9548_ADDR 0x71
 //-----------------------------------------------------------------------------------------
-#define CHANNEL_1_BIT 0x02
-#define SERVO_MIN_PULSEWIDTH 500        // Minimum pulse width in microsecond
-#define SERVO_MAX_PULSEWIDTH 2500       // Maximum pulse width in microsecond
-#define SERVO_MIN_DEGREE     -135       // Minimum angle
-#define SERVO_MAX_DEGREE     135        // Maximum angle >>>270o // rotate counter clockwise   
-//#define I2C_MASTER_SCL_IO 22            // GPIO pin for servo I2C clock
-//#define I2C_MASTER_SDA_IO 21            // GPIO pin for servo I2C data
-//#define I2C_MASTER_NUM I2C_NUM_0      // I2C port number
-#define PCA9685_ADDR 0x40               // Driver address
-#define I2C_MASTER_FREQ_HZ 100000       // !MHz, 1us per tick
-#define MODE1   0x00                    // Register mode 1 (standard)  
-#define ADDR0   0x06                    // Call first servo register
-#define PRESCALE 0xFE                   // prescale bit for servo frequency
+#define USBC_PIN GPIO_NUM_12 // Define GPIO pin 12
+#define USBA_PIN GPIO_NUM_1 // Define GPIO pin 1
+#define STEP_PIN GPIO_NUM_22        // CLK pin 22
+#define DIR_PIN GPIO_NUM_23         // DIR pin 23
 
-//>>> switch to I2C
-#define SERVO_TIMEBASE_PERIOD        20000    // 20000 ticks, 20ms
+// PCA9685 I2C address
+#define PCA9685_ADDR    0x40
 
+// Registers
+#define PCA9685_MODE1   0x00
+#define PCA9685_PRESCALE 0xFE
+#define LED0_ON_L       0x06
+#define LED0_ON_H       0x07
+#define LED0_OFF_L      0x08
+#define LED0_OFF_H      0x09
+
+#define SERVO_NUM       3
+
+// I2C Configuration
+#define I2C_PORT        0
+#define I2C_FREQ_HZ     1000000
+
+// Configuration for servo motors
+#define SERVO_FREQ_HZ   50
+#define SERVO_MIN_US    500
+#define SERVO_MAX_US    2500
+#define SERVO_MIN_AN    90
+#define SERVO_MAX_AN    360
+
+
+void pca9685_write_byte(i2c_port_t i2c_num, uint8_t reg_addr, uint8_t data) {
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    i2c_master_start(cmd);
+    i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);
+    i2c_master_write_byte(cmd, reg_addr, true);
+    i2c_master_write_byte(cmd, data, true);
+    i2c_master_stop(cmd);
+    i2c_master_cmd_begin(i2c_num, cmd, pdMS_TO_TICKS(1000));
+    i2c_cmd_link_delete(cmd);
+}
+
+void pca9685_set_pwm(i2c_port_t i2c_num, uint8_t channel, uint16_t on_time, uint16_t off_time) {
+    uint8_t reg_addr = LED0_ON_L + 4 * channel;
+    uint8_t on_l = on_time & 0xFF;
+    uint8_t on_h = (on_time >> 8) & 0x0F;
+    uint8_t off_l = off_time & 0xFF;
+    uint8_t off_h = (off_time >> 8) & 0x0F;
+
+    pca9685_write_byte(i2c_num, reg_addr, on_l);
+    pca9685_write_byte(i2c_num, reg_addr + 1, on_h);
+    pca9685_write_byte(i2c_num, reg_addr + 2, off_l);   
+    pca9685_write_byte(i2c_num, reg_addr + 3, off_h);
+
+}
+
+void pca9685_init(i2c_port_t i2c_num) {
+    pca9685_write_byte(i2c_num, PCA9685_MODE1, 0x00); // Reset PCA9685
+
+    // Set PWM frequency
+    uint8_t prescale_val = (uint8_t)(25000000 / (4096 * SERVO_FREQ_HZ) - 1);
+    pca9685_write_byte(i2c_num, PCA9685_PRESCALE, prescale_val);
+
+    // Restart PCA9685
+    pca9685_write_byte(i2c_num, PCA9685_MODE1, 0xA1);
+    vTaskDelay(pdMS_TO_TICKS(5)); // Delay at least 500us after restart
+
+    // Set all channels off initially
+    for (int i = 0; i < SERVO_NUM; i++) {
+        pca9685_set_pwm(i2c_num, i, 0, 0);
+    }
+}
+
+void set_servo_angle(i2c_port_t i2c_num, uint8_t channel, double angle) {
+    // Calculate pulse length
+    uint16_t pulse = (uint16_t)(SERVO_MIN_US + (angle / 180.0) * (SERVO_MAX_US - SERVO_MIN_US));
+    uint16_t pwm_val = (uint16_t)(pulse * 4096 / 20000); // 20ms (50Hz) period for servos
+
+    // Set PWM for the servo channel
+    pca9685_set_pwm(i2c_num, channel, 0, pwm_val);
+}
+
+//-------------------------------------------------------------------------------
 void timer_isr(void* arg);
 
 typedef struct {
@@ -55,65 +118,10 @@ void i2c_master_init() {
     conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
     conf.scl_io_num = I2C_MASTER_SCL_IO;
     conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
-    conf.master.clk_speed = 100000; // 100 kHz clock speed
+    conf.master.clk_speed = I2C_FREQ_HZ; // 100 kHz clock speed
     conf.clk_flags = 0;
     i2c_param_config(I2C_MASTER_NUM, &conf);
     i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
-}
-
-
-void pca9685_init() {
-    i2c_config_t conf;                                          // set up configuartion for I2C
-    conf.mode = I2C_MODE_MASTER;                                // Switch to master mode
-    conf.sda_io_num = I2C_MASTER_SDA_IO;                        // set SDA pin
-    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;                    // pull up SDA
-    conf.scl_io_num = I2C_MASTER_SCL_IO;                        // set SCL pin
-    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;                    // pull up SCL
-    conf.master.clk_speed = I2C_MASTER_FREQ_HZ;                 // 100 kHz clock speed
-    conf.clk_flags = 0;                                         // Choosing a source clock <optional>
-    i2c_param_config(I2C_MASTER_NUM, &conf);                    // set other parameter to defautl value
-    i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);     // install driver for master, port (0), the rest of param are default
-
-    // set PCA9865 to normal MODE
-
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();                                                       // create new command
-    i2c_master_start(cmd);                                                                              // start command
-    i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                           // write to PCA9685
-    i2c_master_write_byte(cmd, PRESCALE, true);                                                         // Set to frequency to prescale of 50Hz
-    i2c_master_stop(cmd);                                                                               // stop command
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);                                 // delay for 1000 ms
-    i2c_cmd_link_delete(cmd);                                                                           // delete command
-
-    // set PWM frequency to prescale value
-
-    cmd = i2c_cmd_link_create();                                                       // create new command
-    i2c_master_start(cmd);                                                                              // start command
-    i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                           // write to PCA9685
-    i2c_master_write_byte(cmd, MODE1, true);                                                            // Set to normal mode
-    i2c_master_stop(cmd);                                                                               // stop command
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);                                 // delay for 1000 ms
-    i2c_cmd_link_delete(cmd);                                                                           // delete command
-
-}
-
-void set_pwm(uint8_t channel, uint16_t on, uint16_t off) {
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();                                                       // create new command
-    i2c_master_start(cmd);                                                                              // start command
-    i2c_master_write_byte(cmd, (PCA9685_ADDR << 1) | I2C_MASTER_WRITE, true);                    // write to PCA9685 
-    i2c_master_write_byte(cmd, ADDR0 + 4 * channel, true);                                              // switching between servo wil call value
-    i2c_master_write_byte(cmd, on & 0xFF, true);                                                        // turn on by masking
-    i2c_master_write_byte(cmd, on>>8, true);                                                            // check bit 
-    i2c_master_write_byte(cmd, off & 0xFF, true);                                                       // turn off by maskeing
-    i2c_master_write_byte(cmd, off>>8, true);                                                           // check bit
-    i2c_master_stop(cmd);                                                                               // stop command
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);                               // delay for 1000 ms
-    i2c_cmd_link_delete(cmd);                                                                           // delete command
-}
-
-void set_servo_angle(uint8_t servo_num, double angle){
-    uint16_t pulse_width = SERVO_MIN_PULSEWIDTH + (SERVO_MAX_PULSEWIDTH - SERVO_MIN_PULSEWIDTH)* angle / (SERVO_MAX_DEGREE - SERVO_MIN_DEGREE);
-
-    set_pwm(servo_num, 0, pulse_width);
 }
 
 void select_channel(uint8_t channel) {
@@ -131,26 +139,53 @@ void initialize_veml_device(VEML_Data *data, int channel) {
     if (init_result != ESP_OK) {
         ESP_LOGE("VEML7700", "Failed to initialize VEML7700 (Channel %d). Result: %d\n", channel, init_result);
     }
+    else{
+        ESP_LOGI("VEML7700", "Successfully initialized VEML7700 (Channel %d). Result: %d\n", channel, init_result);
+    }
 }
-
+//-----------------------------------------------------------------------
+//Set stepper task
+void stepper_task(void *pvParameter) {  
+    esp_rom_gpio_pad_select_gpio(STEP_PIN);         //selecting CLK pin
+    esp_rom_gpio_pad_select_gpio(DIR_PIN);          //selecting DIR pin
+    gpio_set_direction(STEP_PIN, GPIO_MODE_OUTPUT); //set CLK pin to output
+    gpio_set_direction(DIR_PIN, GPIO_MODE_OUTPUT);  //set DIR pin to output
+    //Pull USBC pin up to switch on power to Servos
+    esp_rom_gpio_pad_select_gpio(USBC_PIN);
+    gpio_set_direction(USBC_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_pull_mode(USBC_PIN, GPIO_PULLUP_ONLY);
+    gpio_set_level(DIR_PIN, 1); // Set direction
+    for (int i = 0; i < 150; i++) { // 200 steps for one revolution
+        gpio_set_level(STEP_PIN, 1);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
+        gpio_set_level(STEP_PIN, 0);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
+    }
+    vTaskDelay(pdMS_TO_TICKS(200)); // Delay between rotations
+}
 void app_main() {
+    esp_rom_gpio_pad_select_gpio(USBA_PIN);
+    gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(USBA_PIN, 1);
+
+    gpio_reset_pin(USBC_PIN);
+
     i2c_master_init();
-    pca9685_init();
+    pca9685_init(I2C_PORT);
     printf("ESP32 Initialized for I2C.\n");
 
     VEML_Data veml_devices[] = {
-        { .dev = NULL, .lux = 0, .fc = 0 },  // Placeholder for channel 1 (index 0)
-        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 2 (index 1)
-        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 3 (index 2)
-        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 4 (index 3)
-        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 5 (index 4)
-        { .dev = NULL, .lux = 0, .fc = 0 }   // Data for channel 6 (index 5)
+        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 0 (index 0)
+        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 1 (index 1)
+        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 2 (index 2)
+        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 3 (index 3)
+        { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 4 (index 4)
     };
     int num_veml_devices = sizeof(veml_devices) / sizeof(VEML_Data);
 
-    for (int i = 1; i < num_veml_devices; i++) { // Start from index 1 as index 0 is placeholder
-        select_channel(i + 1); // Channel index starts from 1, so add 1
-        initialize_veml_device(&veml_devices[i], i + 1); // Initialize VEML device for this channel
+    for (int i = 0; i < num_veml_devices; i++) { // Start from index 0
+        select_channel(i); // Channel index starts from 0
+        initialize_veml_device(&veml_devices[i], i); // Initialize VEML device for this channel
     }
 
     // Initialize timer
@@ -165,6 +200,7 @@ void app_main() {
     // Start timer
     esp_timer_start_periodic(software_timer, 5000000); // 5s timer
 
+
     while (1) {
         
     }
@@ -173,9 +209,9 @@ void app_main() {
 void timer_isr(void* arg) {
     printf("Software interrupt timer ISR\n");
     VEML_Data* veml_devices = (VEML_Data*)arg;
-    for (int i = 1; i < 6; i++) { // Start from index 1, as index 0 is placeholder
-        select_channel(i + 1); // Channel index starts from 1, so add 1
-        printf("Channel %d on the TCA9548 is now open.\n", i + 1);
+    for (int i = 0; i < 5; i++) { // Start from index p
+        select_channel(i); // Channel index starts from 0
+        printf("Channel %d on the TCA9548 is now open.\n", i);
 
         // Read VEML data
         if (veml_devices[i].dev != NULL) {
@@ -185,28 +221,31 @@ void timer_isr(void* arg) {
                 fc = lux * LUX_FC_COEFFICIENT;
                 veml_devices[i].lux = lux;
                 veml_devices[i].fc = fc;
-                printf("Sensor %d (Channel %d) - ALS: %0.4f lux, %0.4f fc\n", i + 1, i + 1, lux, fc);
+                printf("Sensor %d (Channel %d) - ALS: %0.4f lux, %0.4f fc\n", i, i, lux, fc);
             } else {
-                ESP_LOGE("VEML7700", "Failed to read data from VEML7700 (Channel %d). Result: %d\n", i + 1, read_result);
+                ESP_LOGE("VEML7700", "Failed to read data from VEML7700 (Channel %d). Result: %d\n", i, read_result);
             }
         } else {
-            ESP_LOGE("VEML7700", "VEML7700 device not initialized for Channel %d\n", i + 1);
+            ESP_LOGE("VEML7700", "VEML7700 device not initialized for Channel %d\n", i);
         }
     }
     printf("\n\n");
 
-    set_servo_angle(0,0);                        // set angle of servo 0  to 0 degree
-    printf("servo 0 to 0\n");
-    vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
-    set_servo_angle(0,10);                        // set angle of servo 0  to 0 degree
-    printf("servo 0 to 10\n");
-    vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
-    set_servo_angle(0,0);                        // set angle of servo 0  to 0 degree
-    printf("servo 0 to 0\n");
-    vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
-    set_servo_angle(0,10);                        // set angle of servo 0  to 0 degree
-    printf("servo 0 to 10\n");
-    vTaskDelay(pdMS_TO_TICKS(100));               // delay 100ms
-
+    for(int j=SERVO_MIN_AN; j<=SERVO_MAX_AN; j++){
+        for(int i=0; i<3; i++){
+            set_servo_angle(I2C_PORT, i, j);
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
+    }
+    for(int k=SERVO_MAX_AN; k>=SERVO_MIN_AN; k--){
+        for(int i=0; i<3; i++){
+            set_servo_angle(I2C_PORT, i, k);
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
+    }
     printf("\n\n");
+
+    //--------------
+    xTaskCreate(stepper_task, "stepper_task", 2048, NULL, 5, NULL);
+
 }

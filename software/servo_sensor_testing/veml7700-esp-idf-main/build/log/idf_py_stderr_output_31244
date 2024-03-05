@@ -1,0 +1,47 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM11 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33mStack dump detected[0m
+[0;33m0x408004ec: panic_abort at C:/Users/binhp/esp/v5.2/esp-idf/components/esp_system/panic.c:472
+0x40806d84: vPortTLSPointersDelCb at C:/Users/binhp/esp/v5.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:707
+[0m
+[0;33m0x408090f4: mmu_hal_paddr_to_vaddr at C:/Users/binhp/esp/v5.2/esp-idf/components/hal/mmu_hal.c:144
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\binhp\\esp\\v5.2\\servo_sensor_testing\\veml7700-esp-idf-main\\build\\veml7700-esp-idf-main.elf', '-ex', 'target remote | "C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpu7f1h4qw"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpu7f1h4qw': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x408004ec: panic_abort at C:/Users/binhp/esp/v5.2/esp-idf/components/esp_system/panic.c:472
+0x40806d84: vPortTLSPointersDelCb at C:/Users/binhp/esp/v5.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:707
+[0m
+[0;33m0x408090f4: mmu_hal_paddr_to_vaddr at C:/Users/binhp/esp/v5.2/esp-idf/components/hal/mmu_hal.c:144
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\binhp\\esp\\v5.2\\servo_sensor_testing\\veml7700-esp-idf-main\\build\\veml7700-esp-idf-main.elf', '-ex', 'target remote | "C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpobn6_eq9"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpobn6_eq9': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x408004ec: panic_abort at C:/Users/binhp/esp/v5.2/esp-idf/components/esp_system/panic.c:472
+0x40806d84: vPortTLSPointersDelCb at C:/Users/binhp/esp/v5.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:707
+[0m
+[0;33m0x408090f4: mmu_hal_paddr_to_vaddr at C:/Users/binhp/esp/v5.2/esp-idf/components/hal/mmu_hal.c:144
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\binhp\\esp\\v5.2\\servo_sensor_testing\\veml7700-esp-idf-main\\build\\veml7700-esp-idf-main.elf', '-ex', 'target remote | "C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpqjb596mn"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Users\\binhp\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\binhp\\AppData\\Local\\Temp\\tmpqjb596mn': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x4001975a: software_reset_cpu in ROM
+[0m
+[0m
