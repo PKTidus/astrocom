@@ -50,6 +50,8 @@
 #define SERVO_MIN_AN    90
 #define SERVO_MAX_AN    360
 
+float angle_spin = 0.0;
+
 
 void pca9685_write_byte(i2c_port_t i2c_num, uint8_t reg_addr, uint8_t data) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
@@ -206,7 +208,7 @@ void app_main() {
     esp_timer_create(&timer_args, &software_timer);
 
     // Start timer
-    esp_timer_start_periodic(software_timer, 5000000); // 5s timer
+    esp_timer_start_periodic(software_timer, 1000000); // 5s timer
 
 
     while (1) {
@@ -238,20 +240,38 @@ void timer_isr(void* arg) {
         }
     }
 
-    float servo_spin = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
+    float servo_spin_right = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
+    float servo_spin_left = (((veml_devices[1].lux + veml_devices[2].lux)/2) / ((veml_devices[0].lux + veml_devices[3].lux)/2));
     float stepper_spin = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2));
-    float angle_spin = 0.0;
+    
 
-    printf("Vert value is %.4f\n", servo_spin);
-    printf("Horiz value is %.4f\n", stepper_spin);
+    //printf("Servo value is %.4f\n", servo_spin_right);
+    printf("Stepper value is %.4f\n", stepper_spin);
 
-    if(servo_spin < 1)
+    //set_servo_angle(I2C_PORT, 0, 90);
+    //vTaskDelay(pdMS_TO_TICKS(1000));
+
+    // set_servo_angle(I2C_PORT, 0, 765);
+    // vTaskDelay(pdMS_TO_TICKS(1000));
+
+    // set_servo_angle(I2C_PORT, 0, 495);
+    // vTaskDelay(pdMS_TO_TICKS(1000));
+
+    if(servo_spin_right < 0.9)
     {
-
+        printf("Servo value is %.4f\n", servo_spin_right);
+        angle_spin = 495 + (270*servo_spin_right);
+        printf("setting servo step to %.4f\n\n", angle_spin);
+        set_servo_angle(I2C_PORT, 0, angle_spin);
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
-    else if(servo_spin > 1)
+    else if(servo_spin_left < 0.9)
     {
-        
+        printf("Servo value is %.4f\n", servo_spin_left);
+        angle_spin = 765 - (270*servo_spin_left);
+        printf("setting servo step to %.4f\n\n", angle_spin);  
+        set_servo_angle(I2C_PORT, 0, angle_spin);
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
     if(stepper_spin < 1)
     {
@@ -261,6 +281,9 @@ void timer_isr(void* arg) {
     {
 
     }
+
+    set_servo_angle(I2C_PORT, 0, angle_spin);
+    vTaskDelay(pdMS_TO_TICKS(1000));
     
 
     /*printf("\n\nBegin Servo spinning\n\n");
