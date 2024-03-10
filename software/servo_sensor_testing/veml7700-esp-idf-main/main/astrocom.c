@@ -2,6 +2,7 @@
 // Component config -> ESP System settings -> Disable Task Watchdog Timer
 
 #include <stdio.h>
+#include <math.h>
 #include "driver/i2c.h"
 #include "veml7700.h"
 #include "esp_log.h"
@@ -12,9 +13,9 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 // commenting zigbee stuff
-//#include "managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h"
-//#include "managed_components/espressif__esp-zigbee-lib/include/esp_zb_light.h"
-//#include "nvs_flash.h"
+#include "managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h"
+#include "managed_components/espressif__esp-zigbee-lib/include/esp_zb_light.h"
+#include "nvs_flash.h"
 
 #define I2C_MASTER_SCL_IO 10            // GPIO for sensor I2C clock
 #define I2C_MASTER_SDA_IO 11            // GPIO for sensor I2C data
@@ -51,6 +52,101 @@
 #define SERVO_MAX_AN    360
 
 float angle_spin = 0.0;
+float save_value = 0.0;
+
+//-------------------------ZIGBEE------------------------------------
+/**
+ * @note Make sure set idf.py menuconfig in zigbee component as zigbee end device!
+*/
+#if !defined ZB_ED_ROLE
+#error Define ZB_ED_ROLE in idf.py menuconfig to compile light (End Device) source code.
+#endif
+
+// manufacturer info
+char modelid[] = {11, 'E', 'S', 'P', '3', '2', 'C', '6', '.', 'E', 'n', 'd'};
+char manufname[] = {9, 'E', 's', 'p', 'r', 'e', 's', 's', 'i', 'f'};
+
+static const char *TAG = "ESP_ZB_ON_OFF_LIGHT";
+/********************* Define functions **************************/
+static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
+{
+    ESP_ERROR_CHECK(esp_zb_bdb_start_top_level_commissioning(mode_mask));
+}
+
+void attr_cb(uint8_t status, uint8_t endpoint, uint16_t cluster_id, uint16_t attr_id, void *new_value)
+{
+    if (cluster_id == ESP_ZB_ZCL_CLUSTER_ID_ON_OFF) {
+        uint8_t value = *(uint8_t *)new_value;
+        if (attr_id == ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID) {
+            /* implemented light on/off control */
+            ESP_LOGI(TAG, "on/off light set to %hd", value);
+            light_driver_set_power((bool)value);
+        }
+    } else {
+        /* Implement some actions if needed when other cluster changed */
+        ESP_LOGI(TAG, "cluster:0x%x, attribute:0x%x changed ", cluster_id, attr_id);
+    }
+}
+
+void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
+{
+    uint32_t *p_sg_p       = signal_struct->p_app_signal;
+    esp_err_t err_status = signal_struct->esp_err_status;
+    esp_zb_app_signal_type_t sig_type = *p_sg_p;
+    switch (sig_type) {
+    case ESP_ZB_ZDO_SIGNAL_SKIP_STARTUP:
+        ESP_LOGI(TAG, "Zigbee stack initialized");
+        esp_zb_bdb_start_top_level_commissioning(ESP_ZB_BDB_MODE_INITIALIZATION);
+        break;
+    case ESP_ZB_BDB_SIGNAL_DEVICE_FIRST_START:
+    case ESP_ZB_BDB_SIGNAL_DEVICE_REBOOT:
+        if (err_status == ESP_OK) {
+            ESP_LOGI(TAG, "Start network steering");
+            esp_zb_bdb_start_top_level_commissioning(ESP_ZB_BDB_MODE_NETWORK_STEERING);
+        } else {
+            /* commissioning failed */
+            ESP_LOGW(TAG, "Failed to initialize Zigbee stack (status: %d)", err_status);
+        }
+        break;
+    case ESP_ZB_BDB_SIGNAL_STEERING:
+        if (err_status == ESP_OK) {
+            esp_zb_ieee_addr_t extended_pan_id;
+            esp_zb_get_extended_pan_id(extended_pan_id);
+            ESP_LOGI(TAG, "Joined network successfully (Extended PAN ID: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x, PAN ID: 0x%04hx, Channel:%d)",
+                     extended_pan_id[7], extended_pan_id[6], extended_pan_id[5], extended_pan_id[4],
+                     extended_pan_id[3], extended_pan_id[2], extended_pan_id[1], extended_pan_id[0],
+                     esp_zb_get_pan_id(), esp_zb_get_current_channel());
+        } else {
+            ESP_LOGI(TAG, "Network steering was not successful (status: %d)", err_status);
+            esp_zb_scheduler_alarm((esp_zb_callback_t)bdb_start_top_level_commissioning_cb, ESP_ZB_BDB_MODE_NETWORK_STEERING, 1000);
+        }
+        break;
+    default:
+        ESP_LOGI(TAG, "ZDO signal: %d, status: %d", sig_type, err_status);
+        break;
+    }
+}
+
+static void esp_zb_task(void *pvParameters)
+{
+    /* initialize Zigbee stack with Zigbee end-device config */
+    esp_zb_cfg_t zb_nwk_cfg = ESP_ZB_ZED_CONFIG();
+    esp_zb_init(&zb_nwk_cfg);
+    /* set the on-off light device config */
+    esp_zb_on_off_light_cfg_t light_cfg = ESP_ZB_DEFAULT_ON_OFF_LIGHT_CONFIG();
+    esp_zb_ep_list_t *esp_zb_on_off_light_ep = esp_zb_on_off_light_ep_create(HA_ESP_LIGHT_ENDPOINT, &light_cfg);
+    // make cluster + send info
+    esp_zb_attribute_list_t *esp_zb_basic_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_BASIC);
+    esp_zb_basic_cluster_add_attr(esp_zb_basic_cluster, ESP_ZB_ZCL_ATTR_BASIC_MODEL_IDENTIFIER_ID, &modelid[0]);
+    esp_zb_basic_cluster_add_attr(esp_zb_basic_cluster, ESP_ZB_ZCL_ATTR_BASIC_MANUFACTURER_NAME_ID, &manufname[0]);
+    //
+    esp_zb_device_register(esp_zb_on_off_light_ep);
+    esp_zb_device_add_set_attr_value_cb(attr_cb);
+    esp_zb_set_primary_network_channel_set(ESP_ZB_PRIMARY_CHANNEL_MASK);
+    ESP_ERROR_CHECK(esp_zb_start(false));
+    esp_zb_main_loop_iteration();
+}
+//------------------------------ZIGBEE---------------------------------------------------
 
 
 void pca9685_write_byte(i2c_port_t i2c_num, uint8_t reg_addr, uint8_t data) {
@@ -104,6 +200,24 @@ void set_servo_angle(i2c_port_t i2c_num, uint8_t channel, double angle) {
     pca9685_set_pwm(i2c_num, channel, 0, pwm_val);
 }
 
+void set_servo_angle_loop(float new_value, float current_value)
+{
+    if(new_value < current_value)
+    {
+        for(int i=current_value; i>=new_value; i--){
+            set_servo_angle(I2C_PORT, 0, i);
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
+    }
+    else if(new_value > current_value)
+    {
+        for(int i=current_value; i<=new_value; i++){
+            set_servo_angle(I2C_PORT, 0, i);
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
+    } 
+}
+
 //-------------------------------------------------------------------------------
 void timer_isr(void* arg);
 
@@ -147,7 +261,7 @@ void initialize_veml_device(VEML_Data *data, int channel) {
 }
 //-----------------------------------------------------------------------
 //Set stepper task
-void stepper_task() {  
+void stepper_task(float val) {  
     esp_rom_gpio_pad_select_gpio(STEP_PIN);         //selecting CLK pin
     esp_rom_gpio_pad_select_gpio(DIR_PIN);          //selecting DIR pin
     gpio_set_direction(STEP_PIN, GPIO_MODE_OUTPUT); //set CLK pin to output
@@ -155,9 +269,28 @@ void stepper_task() {
     //Pull USBC pin up to switch on power to Servos
     esp_rom_gpio_pad_select_gpio(USBC_PIN);
     gpio_set_direction(USBC_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_pull_mode(USBC_PIN, GPIO_PULLUP_ONLY);
-    gpio_set_level(DIR_PIN, 1); // Set direction
-    for (int i = 0; i < 150; i++) { // 200 steps for one revolution
+    //gpio_set_pull_mode(USBC_PIN, GPIO_PULLUP_ONLY);
+    gpio_set_level(USBC_PIN,1);
+    //gpio_set_level(DIR_PIN, 0); // Set direction 0 clockwise 1 counterclockwise
+    /*if(val < 0.6)
+    {
+        for (int i = 0; i < 200; i++) { // 200 steps for one revolution
+        gpio_set_level(STEP_PIN, 1);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
+        gpio_set_level(STEP_PIN, 0);
+        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
+    }
+    vTaskDelay(pdMS_TO_TICKS(200)); // Delay between rotations
+    }*/
+    val = 1.0/val;
+    printf("val after inverse is %.4f\n\n", val);
+    val = pow(val,8);
+    if(val >= 300)
+    {
+        val = 300;
+    }
+    printf("\n\nstep size is %.4f\n\n", val);
+    for (int i = 0; i < val; i++) { // 200 steps for one revolution
         gpio_set_level(STEP_PIN, 1);
         vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
         gpio_set_level(STEP_PIN, 0);
@@ -169,20 +302,36 @@ void stepper_task() {
     gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
     gpio_set_level(USBA_PIN, 1);
 
-    gpio_reset_pin(USBC_PIN);
+    //gpio_reset_pin(USBC_PIN);
 
     return;
 }
+
+
+
 void app_main() {
     esp_rom_gpio_pad_select_gpio(USBA_PIN);
     gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_level(USBA_PIN, 1);
+    gpio_set_level(USBA_PIN, 1); // power switch servo
 
     gpio_reset_pin(USBC_PIN);
 
     i2c_master_init();
     pca9685_init(I2C_PORT);
     printf("ESP32 Initialized for I2C.\n");
+
+
+    //----------------------ZIGBEE---------------------------
+    esp_zb_platform_config_t config = {
+        .radio_config = ESP_ZB_DEFAULT_RADIO_CONFIG(),
+        .host_config = ESP_ZB_DEFAULT_HOST_CONFIG(),
+    };
+    ESP_ERROR_CHECK(nvs_flash_init());
+    /* load Zigbee light_bulb platform config to initialization */
+    ESP_ERROR_CHECK(esp_zb_platform_config(&config));
+    /* hardware related and device init */
+    light_driver_init(LIGHT_DEFAULT_OFF);
+    //----------------------ZIGBEE---------------------------
 
     VEML_Data veml_devices[] = {
         { .dev = NULL, .lux = 0, .fc = 0 },  // Data for channel 0 (index 0)
@@ -207,8 +356,22 @@ void app_main() {
     esp_timer_handle_t software_timer;
     esp_timer_create(&timer_args, &software_timer);
 
+    /*printf("servo set to 495, horizontal\n");
+    set_servo_angle_loop(0, 495);
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    printf("servo set to 765, vertical\n\n\n");
+    set_servo_angle_loop(495, 765);
+    vTaskDelay(pdMS_TO_TICKS(1000));*/
+
+    //ZIGBEE-------------------------------------------------
+    xTaskCreate(esp_zb_task, "Zigbee_main", 4096, NULL, 5, NULL);
+    //ZIGBEE-------------------------------------------------
+
+    save_value = 600;
+    set_servo_angle_loop(600,90);
+
     // Start timer
-    esp_timer_start_periodic(software_timer, 1000000); // 5s timer
+    esp_timer_start_periodic(software_timer, 5000000); // 5s timer
 
 
     while (1) {
@@ -240,48 +403,81 @@ void timer_isr(void* arg) {
         }
     }
 
-    float servo_spin_right = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
-    float servo_spin_left = (((veml_devices[1].lux + veml_devices[2].lux)/2) / ((veml_devices[0].lux + veml_devices[3].lux)/2));
-    float stepper_spin = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2));
+    float servo_spin_down = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
+    float servo_spin_up = (((veml_devices[1].lux + veml_devices[2].lux)/2) / ((veml_devices[0].lux + veml_devices[3].lux)/2));
+    float stepper_spin_clockwise = (((veml_devices[2].lux + veml_devices[3].lux)/2) / ((veml_devices[0].lux + veml_devices[1].lux)/2));
+    float stepper_spin_counterclockwise = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2));
+    float servo_spin_down_inv = 1/servo_spin_down;
+    float servo_spin_up_inv = 1/servo_spin_up;
+
     
 
-    //printf("Servo value is %.4f\n", servo_spin_right);
-    printf("Stepper value is %.4f\n", stepper_spin);
 
-    //set_servo_angle(I2C_PORT, 0, 90);
-    //vTaskDelay(pdMS_TO_TICKS(1000));
 
-    // set_servo_angle(I2C_PORT, 0, 765);
-    // vTaskDelay(pdMS_TO_TICKS(1000));
-
-    // set_servo_angle(I2C_PORT, 0, 495);
-    // vTaskDelay(pdMS_TO_TICKS(1000));
-
-    if(servo_spin_right < 0.9)
+    printf("\n\n");
+    if(stepper_spin_counterclockwise < 1)
     {
-        printf("Servo value is %.4f\n", servo_spin_right);
-        angle_spin = 495 + (270*servo_spin_right);
+        printf("counterclockwise is %.4f\n", stepper_spin_counterclockwise);
+    }
+    if(stepper_spin_clockwise < 1)
+    {
+        printf("clockwise is %.4f\n", stepper_spin_clockwise);
+    }
+
+    if(servo_spin_down < 0.8)
+    {
+        printf("Servo value is %.4f\n", servo_spin_down);
+        if((save_value - servo_spin_down_inv) < 495)
+        {
+            printf("hit max range at 495, horizontal\n");
+            angle_spin = 495;
+        }
+        else{
+            angle_spin = save_value - servo_spin_down_inv;
+        }
+        
         printf("setting servo step to %.4f\n\n", angle_spin);
-        set_servo_angle(I2C_PORT, 0, angle_spin);
+        printf("\n\nservo begins spinning\n"); 
+        set_servo_angle_loop(angle_spin, save_value);
+        printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
-    else if(servo_spin_left < 0.9)
+    else if(servo_spin_up < 0.8)
     {
-        printf("Servo value is %.4f\n", servo_spin_left);
-        angle_spin = 765 - (270*servo_spin_left);
+        printf("Servo value is %.4f\n", servo_spin_up);
+        if((save_value + servo_spin_up_inv) > 765)
+        {
+            printf("hit max range at 765, vertical\n");
+            angle_spin = 765;
+        }
+        else
+        {
+            angle_spin = save_value + servo_spin_up_inv;
+        }
         printf("setting servo step to %.4f\n\n", angle_spin);  
-        set_servo_angle(I2C_PORT, 0, angle_spin);
+        printf("\n\nservo begins spinning\n"); 
+        set_servo_angle_loop(angle_spin, save_value);
+        printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
-    if(stepper_spin < 1)
+    /*if(stepper_spin_clockwise < 0.9)
     {
-
+         printf("clockwise is %.4f\n", stepper_spin_clockwise);
+         gpio_set_level(DIR_PIN, 0); // Set direction 0 clockwise
+         printf("\n\nstepper begins spinning\n");  
+         stepper_task(stepper_spin_clockwise);
+         printf("stepper done spinning\n\n");  
     }
-    else if(stepper_spin > 1)
+    else if(stepper_spin_counterclockwise < 0.9)
     {
+        printf("counterclockwise is %.4f\n", stepper_spin_counterclockwise);
+        gpio_set_level(DIR_PIN, 1); // Set direction 1 counterclockwise
+        printf("\n\nstepper begins spinning\n");  
+        stepper_task(stepper_spin_counterclockwise);
+        printf("stepper done spinning\n\n");  
+    }*/
 
-    }
-
+    save_value = angle_spin;
     set_servo_angle(I2C_PORT, 0, angle_spin);
     vTaskDelay(pdMS_TO_TICKS(1000));
     
@@ -304,9 +500,9 @@ void timer_isr(void* arg) {
     printf("Servo done spinning\n\n");
 
     //--------------
-    //xTaskCreate(stepper_task, "stepper_task", 2048, NULL, 5, NULL);
+    //xTaskCreate(stepper_task, "stepper_task", 2048, NULL, 5, NULL);*/
 
-    printf("\n\nBegin Stepper spinning\n\n");
+    /*printf("\n\nBegin Stepper spinning\n\n");
     stepper_task();
     printf("Stepper done spinning\n\n");*/
 

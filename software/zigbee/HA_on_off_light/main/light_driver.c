@@ -52,7 +52,7 @@ void light_driver_init(bool power)
 {
     led_strip_config_t led_strip_conf = {
         .max_leds = CONFIG_EXAMPLE_STRIP_LED_NUMBER,
-        .strip_gpio_num = CONFIG_EXAMPLE_STRIP_LED_GPIO,
+        .strip_gpio_num = 20,
     };
     led_strip_rmt_config_t rmt_conf = {
         .resolution_hz = 10 * 1000 * 1000, // 10MHz
