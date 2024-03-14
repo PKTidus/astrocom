@@ -59,8 +59,11 @@ int dir = 1;
 
 float current_stepper_val = 0.0;
 
+float stepper_save_value = 0.0;
+float stepper_val_new = 0.0;
+
 float target_val_servo[] = {600,450};
-float target_val_stepper[] = {0,200};
+float target_val_stepper[] = {0,720};
 
 void set_servo_angle_loop(float new_value, float current_value, int channel);
 
@@ -317,10 +320,11 @@ void stepper_task(float val) {
     {
         val = 200;
     }
-
-    current_stepper_val = (val + current_stepper_val);
-    current_stepper_val = fmodf(current_stepper_val, 900);
-    current_stepper_val *= dir;
+    current_stepper_val = 0.0;
+    ESP_LOGI(TAG, "old horiz value of target is %.4f", target_val_stepper[0]);
+    target_val_stepper[0] = ((dir*val) + target_val_stepper[0]);
+    ESP_LOGI(TAG, "new horiz value of target is %.4f", target_val_stepper[0]);
+    target_val_stepper[1] = ((dir*val) + target_val_stepper[1]);
     printf("\n\nstep size is %.4f\n\n", val);
     for (int i = 0; i < val; i++) { // 200 steps for one revolution
         gpio_set_level(STEP_PIN, 1);
@@ -403,14 +407,24 @@ void app_main() {
 
     save_value = 600;
     set_servo_angle_loop(600,495, 0);
+    ESP_LOGI(TAG, "set sensor servo to 600");
 
-    set_servo_angle(I2C_PORT, 2, 600);
+    set_servo_angle_loop(510, 510, 1);
+    set_servo_angle_loop(600, 600, 2);
+    ESP_LOGI(TAG, "set mirror horizontal servo to 520 and vertical to 600");
+    vTaskDelay(pdMS_TO_TICKS(1000));
+
+    set_servo_angle_loop(459, 510, 1);
+    set_servo_angle_loop(450, 600, 2);
+    ESP_LOGI(TAG, "set mirror horizontal servo to 459 and vertical to 450");
     vTaskDelay(pdMS_TO_TICKS(1000));
     
 
 
-    set_servo_angle(I2C_PORT, 2, 450);
+    //set_servo_angle(I2C_PORT, 1, 450);
     vTaskDelay(pdMS_TO_TICKS(1000));
+
+    //set_servo_angle(I2C_PORT, 1, 495);
 
 
     // Start timer
@@ -509,9 +523,11 @@ void timer_isr(void* arg) {
     {
          printf("clockwise is %.4f\n", stepper_spin_clockwise);
          gpio_set_level(DIR_PIN, 1); // Set direction 0 clockwise
-         if(!dir)
+         ESP_LOGI(TAG, "dir is %d-----------------------------", dir);
+         if(dir < 0)
          {
             dir *= -1;
+            ESP_LOGI(TAG, "dir changes");
          }
          printf("\n\nstepper begins spinning\n");  
          stepper_task(stepper_spin_clockwise);
@@ -521,10 +537,13 @@ void timer_isr(void* arg) {
     {
         printf("counterclockwise is %.4f\n", stepper_spin_counterclockwise);
         gpio_set_level(DIR_PIN, 0); // Set direction 1 counterclockwise
+        ESP_LOGI(TAG, "dir is %d-----------------------------", dir);
         if(dir != -1)
         {
             dir *= -1;
+            ESP_LOGI(TAG, "dir changes");
         }
+
         printf("\n\nstepper begins spinning\n");  
         stepper_task(stepper_spin_counterclockwise);
         printf("stepper done spinning\n\n");  
@@ -533,44 +552,60 @@ void timer_isr(void* arg) {
     //angle_val = angle_spin * 0.37037;
     printf("angle val is %.4f\n\n", angle_val);
 
-    float new_servo_exchange = (((angle_spin - 495)*(400-643))/(765-495)) + 643;
-    float old_servo_exchange = (((save_value - 495)*(400-643))/(765-495)) + 643;
+    float new_servo_exchange = (((angle_spin - 495)*(400-600))/(765-495)) + 600;
+    float old_servo_exchange = (((save_value - 495)*(400-600))/(765-495)) + 600;
 
 
 
     float servo_vertical_pos_new = (new_servo_exchange + target_val_servo[valval])/2;
     float servo_vertical_pos_old = (old_servo_exchange + target_val_servo[valval])/2;
-    float stepper_val_new = 0.0;
-
-    if(current_stepper_val > (2880 + target_val_stepper[valval]))
-    {
-        float temp = ((current_stepper_val-5760)/2)+(target_val_stepper[valval]/2);
-        stepper_val_new = 5760 + temp;
-        stepper_val_new = fmodf(stepper_val_new, 5760);
-        printf("stepper val is %.4f\n", stepper_val_new);
-    }
-    else
-    {
-        stepper_val_new = (current_stepper_val + target_val_stepper[valval])/2;
-        printf("stepper val is %.4f\n", stepper_val_new);
-    }
     
 
+    
+
+
+
+
     ESP_LOGI(TAG, "target val servo is %.4f", target_val_servo[valval]);
+
+    if(servo_vertical_pos_new > 600)
+    {
+        servo_vertical_pos_new = 600;
+        servo_vertical_pos_old = 600;
+        ESP_LOGI(TAG, "GOT PAST 600");
+    }
 
 
 
     set_servo_angle_loop(servo_vertical_pos_new, servo_vertical_pos_old, 2);
     ESP_LOGI(TAG, "set servo to %.4f", servo_vertical_pos_new);
 
+    
+
+    stepper_val_new = target_val_stepper[valval]/2;
+
+    float scaled_stepper_val_new = ((stepper_val_new*(300-510))/1440) + 510;
+    float scaled_stepper_val_old = ((stepper_save_value*(300-510))/1440) + 510;
+
+    if(scaled_stepper_val_new > 510)
+    {
+        scaled_stepper_val_new = 510;
+        scaled_stepper_val_old = 510;
+        ESP_LOGI(TAG, "GOT PAST 510");
+    }
+
+
+    ESP_LOGI(TAG, "horizontal mirror servo set from %.4f to %.4f", scaled_stepper_val_old, scaled_stepper_val_new);
 
 
 
+    set_servo_angle_loop(scaled_stepper_val_new, scaled_stepper_val_old, 1);
 
-
-
+    // save old values of servos
+    stepper_save_value = stepper_val_new;
     save_value = angle_spin;
-    set_servo_angle(I2C_PORT, 0, angle_spin);
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    
+    // set_servo_angle(I2C_PORT, 0, angle_spin);
+    // vTaskDelay(pdMS_TO_TICKS(1000));
 
 }
