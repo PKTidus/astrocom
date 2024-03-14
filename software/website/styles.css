@@ -1,4 +1,98 @@
-/* Stylesheet start */
+/**************************************
+STATIC LAYOUT CSS
+**************************************/
+.container {
+  display: flex;
+}
+.element1, .element2 {
+  align-self: stretch; /* Ensures both elements stretch to match the container height */
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+	width: 960px;
+}
+
+nav, section {
+  float: left;
+}
+
+nav {
+  width: 200px;
+  margin-right: 10px;
+}
+
+section {
+  width: 750px;
+}
+
+.button {
+  background-color: #FFFFFF;
+  width: 85%;
+  border-style: double;
+  color: black;
+  padding: 15px 32px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.button:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+/**************************************
+CSS TO MAKE THE EXAMPLE LOOK PRETTY
+**************************************/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #143d80;
+  color: #FFF;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  color: #d9761a;
+}
+
+a:visited {
+  color: #d9761a;
+}
+
+header,
+nav,
+section {
+  border: 2px solid rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+header {
+  padding: 20px 0;
+}
+
+section {
+  padding: 20px 0;
+}
+
+nav {
+  padding: 20px 0;
+}
 
 /* Classes to center stuff */
 .centered-container {

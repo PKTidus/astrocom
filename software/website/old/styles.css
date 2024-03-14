@@ -1,0 +1,23 @@
+/* Stylesheet start */
+
+/* Classes to center stuff */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    /* align-items: center; /* Center vertically */
+    /* height: 100vh; /* Optional: Set a fixed height for vertical centering */
+}
+
+.centered-text {
+    text-align: center; /* Center text within this div */
+}
+
+.image-div {
+  text-align: center;
+  margin: 25px;
+}
+
+.custom-paragraph {
+  text-align: center;
+  margin: auto;
+}
