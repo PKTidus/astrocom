@@ -1,0 +1,58 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\bootloader\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5310 bytes. 0x2cf0 bytes (35%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/astrocom.c.obj
+C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/main/astrocom.c:152:13: warning: 'esp_zb_task' defined but not used [-Wunused-function]
+  152 | static void esp_zb_task(void *pvParameters)
+      |             ^~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable light_bulb.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32c6 image...
+Merged 2 ELF sections
+Successfully created esp32c6 image.
+Generated C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin
+[7/8] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/partition_table/partition-table.bin C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin"
+light_bulb.bin binary size 0x2cc60 bytes. Smallest app partition is 0x89800 bytes. 0x5cba0 bytes (67%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\components\esptool_py && C:\Users\Stephen\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Stephen/esp/esp-idf -D SERIAL_TOOL=C:/Users/Stephen/.espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Users/Stephen/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build -P C:/Users/Stephen/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c6 -p COM11 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 light_bulb.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM11
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.0)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: 40:4c:ca:ff:fe:4b:34:00
+BASE MAC: 40:4c:ca:4b:34:00
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0003cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21264 bytes to 12900...
+Writing at 0x00000000... (100 %)
+Wrote 21264 bytes (12900 compressed) at 0x00000000 in 0.6 seconds (effective 294.8 kbit/s)...
+Hash of data verified.
+Compressed 183392 bytes to 95152...
+Writing at 0x00010000... (16 %)
+Writing at 0x0001af9c... (33 %)
+Writing at 0x000214f7... (50 %)
+Writing at 0x000284d4... (66 %)
+Writing at 0x000304d6... (83 %)
+Writing at 0x00036eb4... (100 %)
+Wrote 183392 bytes (95152 compressed) at 0x00010000 in 2.6 seconds (effective 559.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 137...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (137 compressed) at 0x00008000 in 0.1 seconds (effective 455.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

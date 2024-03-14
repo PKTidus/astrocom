@@ -1,0 +1,14 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\bootloader\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5310 bytes. 0x2cf0 bytes (35%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/astrocom.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable light_bulb.elf
+FAILED: light_bulb.elf 
+cmd.exe /C "cd . && C:\Users\Stephen\.espressif\tools\riscv32-esp-elf\esp-12.2.0_20230208\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C6=0 -Wl,--Map=C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.map -Wl,--no-warn-rwx-segments -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32c6.peripherals.ld -T esp32c6.rom.ld -T esp32c6.rom.api.ld -T esp32c6.rom.rvfp.ld -T esp32c6.rom.newlib.ld -T esp32c6.rom.version.ld -T esp32c6.rom.phy.ld -T esp32c6.rom.coexist.ld -T esp32c6.rom.net80211.ld -T esp32c6.rom.pp.ld -T esp32c6.rom.wdt.ld -T esp32c6.rom.newlib-normal.ld -T esp32c6.rom.heap.ld -T memory.ld -T sections.ld @CMakeFiles\light_bulb.elf.rsp -o light_bulb.elf  && cd ."
+c:/users/stephen/.espressif/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/12.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(astrocom.c.obj): in function `app_main':
+C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/main/astrocom.c:346: undefined reference to `timer_isr'
+c:/users/stephen/.espressif/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/12.2.0/../../../../riscv32-esp-elf/bin/ld.exe: C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/main/astrocom.c:346: undefined reference to `timer_isr'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

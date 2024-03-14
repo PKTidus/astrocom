@@ -1,0 +1,29 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\bootloader\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5310 bytes. 0x2cf0 bytes (35%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/astrocom.c.obj
+C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/main/astrocom.c:151:13: warning: 'esp_zb_task' defined but not used [-Wunused-function]
+  151 | static void esp_zb_task(void *pvParameters)
+      |             ^~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable light_bulb.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32c6 image...
+Merged 2 ELF sections
+Successfully created esp32c6 image.
+Generated C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin
+[7/8] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/partition_table/partition-table.bin C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin"
+light_bulb.bin binary size 0x2e3d0 bytes. Smallest app partition is 0x89800 bytes. 0x5b430 bytes (66%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\components\esptool_py && C:\Users\Stephen\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Stephen/esp/esp-idf -D SERIAL_TOOL=C:/Users/Stephen/.espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Users/Stephen/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build -P C:/Users/Stephen/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c6 -p COM11 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 light_bulb.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM11
+Connecting......................................
+
+A fatal error occurred: Failed to connect to ESP32-C6: Wrong boot mode detected (0x8)! The chip needs to be in download mode.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/CMakeFiles/flash 
+cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\components\esptool_py && C:\Users\Stephen\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Stephen/esp/esp-idf -D SERIAL_TOOL=C:/Users/Stephen/.espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Users/Stephen/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build -P C:/Users/Stephen/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

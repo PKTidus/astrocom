@@ -1,0 +1,4 @@
+esptool.py v4.7.dev1
+Serial port COM11
+
+A fatal error occurred: Could not open COM11, the port doesn't exist

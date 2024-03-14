@@ -1,0 +1,1103 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x4 (DOWNLOAD(USB/UART0/SDIO_FEI_FEO))
+waiting for download
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d8
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 12 2024 14:54:21[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (80) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e148h ( 57672) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001e170 vaddr=40800000 size=01ea8h (  7848) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=58d58h (363864) map[0m
+[0;32mI (199) esp_image: segment 3: paddr=00078d80 vaddr=40801ea8 size=0dfa4h ( 57252) load[0m
+[0;32mI (216) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (216) boot: Disabling RNG early entropy source...[0m
+[0;32mI (228) cpu_start: Unicore app[0m
+[0;32mI (228) cpu_start: Pro cpu up.[0m
+[0;33mW (237) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (243) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     light_bulb[0m
+[0;32mI (252) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (257) cpu_start: Compile time:     Mar 12 2024 16:19:35[0m
+[0;32mI (263) cpu_start: ELF file SHA256:  4b80b8571dbcf516...[0m
+[0;32mI (269) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (274) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 408161B0 len 00066460 (409 KiB): D/IRAM[0m
+[0;32mI (302) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (309) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (316) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;33mW (324) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (337) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (351) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (356) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (361) app_start: Starting scheduler on CPU0[0m
+[0;32mI (366) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ESP32 Initialized for I2C.
+[0;32mI (386) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 0). Result: 0
+[0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 1). Result: 0
+[0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 2). Result: 0
+[0m
+[0;32mI (446) VEML7700: Successfully initialized VEML7700 (Channel 3). Result: 0
+[0m
+[0;32mI (456) VEML7700: Successfully initialized VEML7700 (Channel 4). Result: 0
+[0m
+[0;32mI (456) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (506) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (526) ESP_ZB_ON_OFF_LIGHT: ZDO signal: 23, status: -1[0m
+[0;32mI (526) ESP_ZB_ON_OFF_LIGHT: Zigbee stack initialized[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 4.9536 lux, 0.4602 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.6080 lux, 0.4281 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 4.3776 lux, 0.4067 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 5.0688 lux, 0.4709 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.4192 lux, 0.2248 fc
+[0;32mI (8756) ESP_ZB_ON_OFF_LIGHT: Start network steering[0m
+[0;32mI (8766) ESP_ZB_ON_OFF_LIGHT: Joined network successfully (Extended PAN ID: 2e:f3:b2:c7:44:ab:a5:09, PAN ID: 0xabc5, Channel:11)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 4.7808 lux, 0.4442 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.6080 lux, 0.4281 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 4.3200 lux, 0.4013 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.7808 lux, 0.4442 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.4192 lux, 0.2248 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 3.6288 lux, 0.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.4640 lux, 0.4147 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 4.3200 lux, 0.4013 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.4640 lux, 0.4147 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.1024 lux, 0.1953 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1.8216 lux, 0.1692 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 2.2248 lux, 0.2067 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 2.1672 lux, 0.2013 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 2.2320 lux, 0.2074 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1.0512 lux, 0.0977 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 7.1712 lux, 0.6662 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 8.6796 lux, 0.8064 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 8.2404 lux, 0.7656 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 8.7912 lux, 0.8167 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 4.1472 lux, 0.3853 fc
+hi mom:)
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.5520 lux, 1.4448 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 27.0648 lux, 2.5144 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 30.9996 lux, 2.8800 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.7848 lux, 1.7452 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.9584 lux, 1.0181 fc
+[0;32mI (31396) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.0372 lux, 1.3970 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.5320 lux, 1.6288 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 18.6912 lux, 1.7365 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 14.8176 lux, 1.3766 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1628 lux, 0.9442 fc
+[0;32mI (36216) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+hi mom:)
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8616 lux, 1.4736 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 63.0216 lux, 5.8549 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 61.2504 lux, 5.6903 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.5980 lux, 2.1923 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 13.4784 lux, 1.2522 fc
+[0;32mI (40606) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8760 lux, 1.4749 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 81.3708 lux, 7.5596 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.4380 lux, 8.6807 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.7024 lux, 2.2020 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.3232 lux, 1.6094 fc
+bye mom:(
+[0;32mI (49796) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3784 lux, 1.3358 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2800 lux, 1.6054 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3872 lux, 1.5224 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6112 lux, 1.6361 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2512 lux, 0.7666 fc
+hi mom:)
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3496 lux, 1.3331 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3448 lux, 1.6114 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4088 lux, 1.5244 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.0604 lux, 1.5850 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.1008 lux, 0.8455 fc
+[0;32mI (58566) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.9228 lux, 1.4793 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 51.0408 lux, 4.7418 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 83.3832 lux, 7.7465 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 19.4688 lux, 1.8087 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 16.6320 lux, 1.5452 fc
+[0;32mI (63336) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3928 lux, 1.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2872 lux, 1.6060 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3872 lux, 1.5224 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6256 lux, 1.6375 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2512 lux, 0.7666 fc
+hi mom:)
+[0;32mI (69736) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8976 lux, 1.4769 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 81.2952 lux, 7.5526 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.2868 lux, 8.6666 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.6700 lux, 2.1990 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.2908 lux, 1.6064 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8544 lux, 1.4729 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 81.1008 lux, 7.5345 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.0960 lux, 8.6489 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.6412 lux, 2.1963 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.2116 lux, 1.5990 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8976 lux, 1.4769 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 81.0432 lux, 7.5292 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.0528 lux, 8.6449 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.5836 lux, 2.1910 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.1972 lux, 1.5977 fc
+bye mom:(
+[0;32mI (84736) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3928 lux, 1.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2944 lux, 1.6067 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3764 lux, 1.5214 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6292 lux, 1.6378 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2512 lux, 0.7666 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3928 lux, 1.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2944 lux, 1.6067 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3944 lux, 1.5231 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6544 lux, 1.6401 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2692 lux, 0.7682 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.4108 lux, 1.3388 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3088 lux, 1.6080 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4016 lux, 1.5238 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6328 lux, 1.6381 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2584 lux, 0.7672 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3928 lux, 1.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2872 lux, 1.6060 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4124 lux, 1.5248 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6652 lux, 1.6412 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2512 lux, 0.7666 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3892 lux, 1.3368 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2944 lux, 1.6067 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3800 lux, 1.5218 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6256 lux, 1.6375 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2584 lux, 0.7672 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3964 lux, 1.3375 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2728 lux, 1.6047 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3656 lux, 1.5204 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6328 lux, 1.6381 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2584 lux, 0.7672 fc
+hi mom:)
+[0;32mI (114386) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8400 lux, 1.4716 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 78.0192 lux, 7.2482 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 84.4344 lux, 7.8442 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 23.6412 lux, 2.1963 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.1360 lux, 1.5920 fc
+[0;32mI (118616) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3568 lux, 1.3338 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3088 lux, 1.6080 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4088 lux, 1.5244 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6076 lux, 1.6358 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2584 lux, 0.7672 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3568 lux, 1.3338 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3232 lux, 1.6094 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4088 lux, 1.5244 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.5896 lux, 1.6341 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2692 lux, 0.7682 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3496 lux, 1.3331 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3088 lux, 1.6080 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.4124 lux, 1.5248 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.5932 lux, 1.6345 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2908 lux, 0.7702 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3712 lux, 1.3351 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3016 lux, 1.6074 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3872 lux, 1.5224 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.5968 lux, 1.6348 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2764 lux, 0.7689 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3496 lux, 1.3331 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3268 lux, 1.6097 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3728 lux, 1.5211 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6112 lux, 1.6361 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2728 lux, 0.7686 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3820 lux, 1.3361 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3160 lux, 1.6087 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3872 lux, 1.5224 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6184 lux, 1.6368 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2656 lux, 0.7679 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3712 lux, 1.3351 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.3088 lux, 1.6080 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.3764 lux, 1.5214 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.6076 lux, 1.6358 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2836 lux, 0.7696 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.2848 lux, 1.3271 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2584 lux, 1.6034 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.1568 lux, 1.5010 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.5104 lux, 1.6268 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2440 lux, 0.7659 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.1864 lux, 1.5967 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.2216 lux, 1.5070 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.2928 lux, 1.4207 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.5720 lux, 2.0970 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.6384 lux, 0.6167 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 13.8816 lux, 1.2896 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.8184 lux, 1.4696 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.6232 lux, 1.3585 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.8172 lux, 1.7482 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.3108 lux, 0.5863 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.5296 lux, 1.3498 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.0560 lux, 1.4917 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.9688 lux, 1.3906 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 21.1716 lux, 1.9669 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.5052 lux, 0.6044 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 12.6216 lux, 1.1726 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.2864 lux, 1.5131 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.5736 lux, 1.4468 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 20.0124 lux, 1.8592 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.9300 lux, 0.6438 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 12.5568 lux, 1.1666 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.9228 lux, 1.4793 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.0148 lux, 1.3020 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.3908 lux, 1.5228 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.6924 lux, 0.6217 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 12.8016 lux, 1.1893 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.0272 lux, 1.4890 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.2488 lux, 1.3238 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.3080 lux, 1.5151 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 6.8688 lux, 0.6381 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 13.0356 lux, 1.2110 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.4556 lux, 1.5288 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.8320 lux, 1.3779 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 14.8572 lux, 1.3803 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 7.4556 lux, 0.6926 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.8200 lux, 1.6555 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.0604 lux, 1.5850 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3864 lux, 1.4294 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.1936 lux, 1.5973 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.1476 lux, 0.8498 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.8236 lux, 1.6559 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.0748 lux, 1.5863 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3864 lux, 1.4294 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.2224 lux, 1.6000 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.1512 lux, 0.8502 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.7768 lux, 1.6515 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.0784 lux, 1.5866 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3864 lux, 1.4294 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.1792 lux, 1.5960 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.1656 lux, 0.8515 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.1344 lux, 1.4060 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.0416 lux, 1.4903 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.4504 lux, 1.3425 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.2232 lux, 1.6930 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 7.2180 lux, 0.6706 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 13.9356 lux, 1.2947 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8660 lux, 1.5669 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.1992 lux, 1.4121 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.3720 lux, 1.4281 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.2116 lux, 0.7629 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.0508 lux, 1.3054 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.1036 lux, 1.5890 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.6168 lux, 1.4508 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.6708 lux, 1.4559 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.3268 lux, 0.7736 fc
+hi mom:)
+[0;32mI (224916) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8292 lux, 1.4706 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.5012 lux, 7.6646 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.5108 lux, 8.7803 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.7484 lux, 2.1134 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9640 lux, 1.6689 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0560 lux, 1.4917 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.3320 lux, 7.6489 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.3992 lux, 8.7700 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.8276 lux, 2.1208 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9784 lux, 1.6702 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0272 lux, 1.4890 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0728 lux, 7.6248 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.1400 lux, 8.7459 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6044 lux, 2.1000 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.7840 lux, 1.6522 fc
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.1272 lux, 1.4054 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 77.7168 lux, 7.2201 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 77.9760 lux, 7.2442 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 20.3256 lux, 1.8883 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.7928 lux, 1.0027 fc
+[0;32mI (243186) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 11.3832 lux, 1.0575 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9272 lux, 1.5726 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3648 lux, 1.4274 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 12.6936 lux, 1.1793 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 7.8444 lux, 0.7288 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 10.9152 lux, 1.0141 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8912 lux, 1.5692 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3504 lux, 1.4261 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 12.3984 lux, 1.1518 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 7.8048 lux, 0.7251 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 10.9224 lux, 1.0147 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9272 lux, 1.5726 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3792 lux, 1.4288 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 12.4416 lux, 1.1559 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 7.8444 lux, 0.7288 fc
+hi mom:)
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 11.4444 lux, 1.0632 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.0604 lux, 1.5850 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.3576 lux, 1.4268 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 12.1392 lux, 1.1278 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.7012 lux, 0.8084 fc
+[0;32mI (263576) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0632 lux, 1.4923 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.3824 lux, 7.6536 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.6872 lux, 8.7967 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6620 lux, 2.1054 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9568 lux, 1.6682 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.1136 lux, 1.4970 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.3896 lux, 7.6542 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.7088 lux, 8.7987 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6836 lux, 2.1074 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9496 lux, 1.6676 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.1136 lux, 1.4970 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.5192 lux, 7.6663 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.8060 lux, 8.8078 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.8060 lux, 2.1187 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.0612 lux, 1.6779 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0704 lux, 1.4930 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.4904 lux, 7.6636 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.7592 lux, 8.8034 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.7736 lux, 2.1157 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.0576 lux, 1.6776 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0452 lux, 1.4906 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.4184 lux, 7.6569 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.7808 lux, 8.8054 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.7448 lux, 2.1131 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.0396 lux, 1.6759 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0200 lux, 1.4883 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.5192 lux, 7.6663 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.8384 lux, 8.8108 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.8492 lux, 2.1228 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.1152 lux, 1.6830 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0236 lux, 1.4886 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.4256 lux, 7.6576 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.8240 lux, 8.8094 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.8744 lux, 2.1251 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.0540 lux, 1.6773 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0200 lux, 1.4883 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.4760 lux, 7.6623 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.6368 lux, 8.7920 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.7484 lux, 2.1134 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 18.1152 lux, 1.6830 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0488 lux, 1.4910 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.2888 lux, 7.6449 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.6152 lux, 8.7900 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6440 lux, 2.1037 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9496 lux, 1.6676 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0560 lux, 1.4917 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.2744 lux, 7.6435 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.5828 lux, 8.7870 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6548 lux, 2.1047 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9388 lux, 1.6666 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0524 lux, 1.4913 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.2744 lux, 7.6435 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.6008 lux, 8.7887 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.6296 lux, 2.1024 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.9244 lux, 1.6652 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0272 lux, 1.4890 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.2456 lux, 7.6409 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.5792 lux, 8.7867 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.5936 lux, 2.0990 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.8704 lux, 1.6602 fc
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.6600 lux, 1.4549 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 54.2232 lux, 5.0375 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 79.6752 lux, 7.4021 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.6192 lux, 1.7298 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.5156 lux, 0.9769 fc
+[0;32mI (327866) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.2728 lux, 1.6047 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.6688 lux, 1.6415 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.4224 lux, 1.4328 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.0136 lux, 1.5806 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.9604 lux, 0.8324 fc
+hi mom:)
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.7832 lux, 1.5592 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 20.2680 lux, 1.8830 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 55.2240 lux, 5.1305 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.0712 lux, 1.5860 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.5624 lux, 0.9813 fc
+[0;32mI (336496) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0488 lux, 1.4910 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0224 lux, 7.6201 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.1832 lux, 8.7499 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.4100 lux, 2.0820 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.6400 lux, 1.6388 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8796 lux, 1.4753 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0620 lux, 7.6238 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.5712 lux, 8.6930 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 21.8304 lux, 2.0281 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.4600 lux, 1.6221 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0128 lux, 1.4876 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.1412 lux, 7.6312 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.3200 lux, 8.7626 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.5468 lux, 2.0947 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.8236 lux, 1.6559 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0380 lux, 1.4900 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.1736 lux, 7.6342 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.3272 lux, 8.7633 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.5540 lux, 2.0953 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.8200 lux, 1.6555 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0056 lux, 1.4870 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.1736 lux, 7.6342 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.2912 lux, 8.7599 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.4712 lux, 2.0876 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.8020 lux, 1.6539 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8760 lux, 1.4749 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0944 lux, 7.6268 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 93.8016 lux, 8.7144 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 19.8576 lux, 1.8448 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.7984 lux, 1.6535 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 15.8832 lux, 1.4756 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0944 lux, 7.6268 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 92.4264 lux, 8.5867 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 20.4516 lux, 1.9000 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.7228 lux, 1.6465 fc
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.0416 lux, 1.4903 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 82.0152 lux, 7.6195 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 94.0788 lux, 8.7402 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 22.3920 lux, 2.0803 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 17.6580 lux, 1.6405 fc
+[0;32mI (378876) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.0160 lux, 1.8595 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.8848 lux, 1.6616 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.2460 lux, 1.4164 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 19.2708 lux, 1.7903 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.0512 lux, 0.9338 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.0196 lux, 1.8599 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.8740 lux, 1.6605 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.1848 lux, 1.4107 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.8568 lux, 1.7519 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.9216 lux, 0.9217 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.4300 lux, 1.8980 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.6240 lux, 1.4515 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.9032 lux, 1.2916 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.8596 lux, 1.6592 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.4896 lux, 0.8816 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 19.9728 lux, 1.8555 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.2208 lux, 1.4141 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.4316 lux, 1.2478 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.3384 lux, 1.7037 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.1008 lux, 0.8455 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 21.0312 lux, 1.9539 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.2136 lux, 1.4134 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.4136 lux, 1.2462 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.7164 lux, 1.7388 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.2304 lux, 0.8575 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.0520 lux, 1.8629 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9848 lux, 1.5779 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.6448 lux, 1.3605 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.9568 lux, 1.6682 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.0792 lux, 0.8435 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 19.7676 lux, 1.8365 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 18.0576 lux, 1.6776 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.5980 lux, 1.3562 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.9432 lux, 1.7599 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.2780 lux, 0.9549 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 22.1184 lux, 2.0549 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 18.7164 lux, 1.7388 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.2128 lux, 1.3204 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 19.0296 lux, 1.7679 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 11.1276 lux, 1.0338 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 19.2744 lux, 1.7906 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.0560 lux, 1.4917 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.9104 lux, 1.2923 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.3880 lux, 1.6154 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.4608 lux, 0.8789 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 19.3176 lux, 1.7947 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.9048 lux, 1.4776 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.6512 lux, 1.2682 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.7912 lux, 1.6529 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.8028 lux, 0.9107 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 19.8972 lux, 1.8485 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.5016 lux, 1.4401 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.4244 lux, 1.2472 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 17.9028 lux, 1.6632 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.6948 lux, 0.9007 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 17.1540 lux, 1.5937 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 15.3792 lux, 1.4288 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 13.3884 lux, 1.2438 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.1452 lux, 1.4070 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 8.9136 lux, 0.8281 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.1672 lux, 1.8736 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 17.2980 lux, 1.6070 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.0652 lux, 1.3067 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.1044 lux, 1.6820 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 9.2808 lux, 0.8622 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.6676 lux, 1.9201 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 18.0720 lux, 1.6789 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 15.1632 lux, 1.4087 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.6264 lux, 1.7304 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1952 lux, 0.9472 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 20.6352 lux, 1.9171 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 18.0936 lux, 1.6809 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 14.9040 lux, 1.3846 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.7632 lux, 1.7432 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1736 lux, 0.9452 fc

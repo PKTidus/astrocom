@@ -1,0 +1,429 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x4 (DOWNLOAD(USB/UART0/SDIO_FEI_FEO))
+waiting for download
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d8
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 12 2024 14:54:21[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (80) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e2a8h ( 58024) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001e2d0 vaddr=40800000 size=01d48h (  7496) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=592b4h (365236) map[0m
+[0;32mI (199) esp_image: segment 3: paddr=000792dc vaddr=40801d48 size=0e10ch ( 57612) load[0m
+[0;32mI (217) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (217) boot: Disabling RNG early entropy source...[0m
+[0;32mI (228) cpu_start: Unicore app[0m
+[0;32mI (229) cpu_start: Pro cpu up.[0m
+[0;33mW (237) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (244) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) cpu_start: Application information:[0m
+[0;32mI (247) cpu_start: Project name:     light_bulb[0m
+[0;32mI (252) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (258) cpu_start: Compile time:     Mar 12 2024 16:19:35[0m
+[0;32mI (264) cpu_start: ELF file SHA256:  86b30b80a6606564...[0m
+[0;32mI (270) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (280) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (285) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 408161C0 len 00066450 (409 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (310) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (321) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (338) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (357) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (362) app_start: Starting scheduler on CPU0[0m
+[0;32mI (367) main_task: Started on CPU0[0m
+[0;32mI (367) main_task: Calling app_main()[0m
+[0;32mI (367) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ESP32 Initialized for I2C.
+[0;32mI (1707) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1757) VEML7700: Successfully initialized VEML7700 (Channel 0). Result: 0
+[0m
+[0;32mI (1757) VEML7700: Successfully initialized VEML7700 (Channel 1). Result: 0
+[0m
+[0;32mI (1757) VEML7700: Successfully initialized VEML7700 (Channel 2). Result: 0
+[0m
+[0;32mI (1767) VEML7700: Successfully initialized VEML7700 (Channel 3). Result: 0
+[0m
+[0;32mI (1777) VEML7700: Successfully initialized VEML7700 (Channel 4). Result: 0
+[0m
+[0;32mI (1787) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (1827) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (1857) ESP_ZB_ON_OFF_LIGHT: ZDO signal: 23, status: -1[0m
+[0;32mI (1857) ESP_ZB_ON_OFF_LIGHT: Zigbee stack initialized[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d8
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 12 2024 14:54:21[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (80) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e2a8h ( 58024) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001e2d0 vaddr=40800000 size=01d48h (  7496) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=592b4h (365236) map[0m
+[0;32mI (199) esp_image: segment 3: paddr=000792dc vaddr=40801d48 size=0e10ch ( 57612) load[0m
+[0;32mI (217) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (217) boot: Disabling RNG early entropy source...[0m
+[0;32mI (228) cpu_start: Unicore app[0m
+[0;32mI (229) cpu_start: Pro cpu up.[0m
+[0;33mW (237) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (244) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) cpu_start: Application information:[0m
+[0;32mI (247) cpu_start: Project name:     light_bulb[0m
+[0;32mI (252) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (258) cpu_start: Compile time:     Mar 12 2024 16:19:35[0m
+[0;32mI (264) cpu_start: ELF file SHA256:  86b30b80a6606564...[0m
+[0;32mI (270) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (280) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (285) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 408161C0 len 00066450 (409 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (310) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (321) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (338) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (357) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (362) app_start: Starting scheduler on CPU0[0m
+[0;32mI (367) main_task: Started on CPU0[0m
+[0;32mI (367) main_task: Calling app_main()[0m
+[0;32mI (367) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ESP32 Initialized for I2C.
+[0;32mI (387) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (437) VEML7700: Successfully initialized VEML7700 (Channel 0). Result: 0
+[0m
+[0;32mI (437) VEML7700: Successfully initialized VEML7700 (Channel 1). Result: 0
+[0m
+[0;32mI (437) VEML7700: Successfully initialized VEML7700 (Channel 2). Result: 0
+[0m
+[0;32mI (447) VEML7700: Successfully initialized VEML7700 (Channel 3). Result: 0
+[0m
+[0;32mI (457) VEML7700: Successfully initialized VEML7700 (Channel 4). Result: 0
+[0m
+[0;32mI (457) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;32mI (507) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (537) ESP_ZB_ON_OFF_LIGHT: ZDO signal: 23, status: -1[0m
+[0;32mI (537) ESP_ZB_ON_OFF_LIGHT: Zigbee stack initialized[0m
+[0;32mI (8757) ESP_ZB_ON_OFF_LIGHT: Start network steering[0m
+[0;32mI (8767) ESP_ZB_ON_OFF_LIGHT: Joined network successfully (Extended PAN ID: 2e:f3:b2:c7:44:ab:a5:09, PAN ID: 0xabc5, Channel:11)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 824.1408 lux, 76.5652 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 292.2624 lux, 27.1521 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 332.1216 lux, 30.8551 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 35.1360 lux, 3.2642 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 615.0528 lux, 57.1402 fc
+
+
+clockwise is 0.3290
+Servo value is 0.7266
+setting servo step to 601.3762
+
+
+
+servo begins spinning
+servo done spinning
+
+angle val is 0.0000
+
+[0;32mI (11807) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 819.5904 lux, 76.1424 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 306.7200 lux, 28.4952 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 354.8160 lux, 32.9635 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 35.5968 lux, 3.3070 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 613.5552 lux, 57.0011 fc
+
+
+clockwise is 0.3466
+Servo value is 0.7736
+setting servo step to 602.6689
+
+
+
+servo begins spinning
+servo done spinning
+
+angle val is 0.0000
+
+[0;32mI (16807) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 820.9152 lux, 76.2655 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 337.4208 lux, 31.3474 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 361.9872 lux, 33.6297 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 37.6128 lux, 3.4943 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 598.4352 lux, 55.5964 fc
+
+
+clockwise is 0.3450
+angle val is 0.0000
+
+[0;32mI (20737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1620.7776 lux, 150.5751 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 611.7984 lux, 56.8379 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 827.9712 lux, 76.9210 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 18.2016 lux, 1.6910 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1249.4304 lux, 116.0758 fc
+
+
+clockwise is 0.3790
+angle val is 0.0000
+
+[0;32mI (25737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1620.6624 lux, 150.5644 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 607.9968 lux, 56.4847 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 828.0000 lux, 76.9237 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 67.6800 lux, 6.2877 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1249.7472 lux, 116.1053 fc
+
+
+clockwise is 0.4019
+angle val is 0.0000
+
+[0;32mI (30737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+[0;32mI (31677) ESP_ZB_ON_OFF_LIGHT: set to target 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1621.4976 lux, 150.6420 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.7744 lux, 56.5570 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 827.2224 lux, 76.8514 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4176 lux, 12.5807 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1249.7184 lux, 116.1026 fc
+
+
+clockwise is 0.4316
+angle val is 0.0000
+
+[0;32mI (35737) ESP_ZB_ON_OFF_LIGHT: target val servo is 450.0000[0m
+[0;32mI (36357) ESP_ZB_ON_OFF_LIGHT: set to target 1[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1621.2384 lux, 150.6179 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 609.0624 lux, 56.5837 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.9056 lux, 76.8220 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4176 lux, 12.5807 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1249.0272 lux, 116.0384 fc
+
+
+clockwise is 0.4315
+angle val is 0.0000
+
+[0;32mI (40737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1620.4608 lux, 150.5457 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.9184 lux, 56.5703 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.8192 lux, 76.8140 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4176 lux, 12.5807 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1248.8544 lux, 116.0223 fc
+
+
+clockwise is 0.4316
+angle val is 0.0000
+
+[0;32mI (45737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1619.9136 lux, 150.4948 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.6880 lux, 56.5489 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.8192 lux, 76.8140 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4284 lux, 12.5817 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1248.5376 lux, 115.9929 fc
+
+
+clockwise is 0.4318
+angle val is 0.0000
+
+[0;32mI (50737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1619.5680 lux, 150.4627 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.7744 lux, 56.5570 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.8192 lux, 76.8140 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.3600 lux, 12.5754 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1248.4224 lux, 115.9822 fc
+
+
+clockwise is 0.4318
+angle val is 0.0000
+
+[0;32mI (55737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1619.3663 lux, 150.4440 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.1408 lux, 56.4981 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.6752 lux, 76.8006 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.3672 lux, 12.5760 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1248.3936 lux, 115.9795 fc
+
+
+clockwise is 0.4319
+angle val is 0.0000
+
+[0;32mI (60737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1619.0208 lux, 150.4119 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.0832 lux, 56.4928 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.3296 lux, 76.7685 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.3888 lux, 12.5780 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1248.2208 lux, 115.9635 fc
+
+
+clockwise is 0.4318
+angle val is 0.0000
+
+[0;32mI (65737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1618.4448 lux, 150.3584 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 608.0832 lux, 56.4928 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.3296 lux, 76.7685 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.3816 lux, 12.5774 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1247.7600 lux, 115.9206 fc
+
+
+clockwise is 0.4319
+angle val is 0.0000
+
+[0;32mI (70737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1618.1855 lux, 150.3343 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 607.9104 lux, 56.4767 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 826.1280 lux, 76.7498 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4608 lux, 12.5847 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1247.4144 lux, 115.8885 fc
+
+
+clockwise is 0.4320
+angle val is 0.0000
+
+[0;32mI (75737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 1617.8688 lux, 150.3049 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 607.5360 lux, 56.4419 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 825.8112 lux, 76.7203 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 135.4248 lux, 12.5814 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1247.3856 lux, 115.8859 fc
+
+
+clockwise is 0.4319
+angle val is 0.0000
+
+[0;32mI (80737) ESP_ZB_ON_OFF_LIGHT: target val servo is 600.0000[0m

@@ -1,0 +1,15 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\bootloader\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5310 bytes. 0x2cf0 bytes (35%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/astrocom.c.obj
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable light_bulb.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32c6 image...
+Merged 3 ELF sections
+Successfully created esp32c6 image.
+Generated C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Stephen\esp\esp-idf\examples\zigbee\light_sample\HA_on_off_light\build\esp-idf\esptool_py && C:\Users\Stephen\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Stephen/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/partition_table/partition-table.bin C:/Users/Stephen/esp/esp-idf/examples/zigbee/light_sample/HA_on_off_light/build/light_bulb.bin"
+light_bulb.bin binary size 0x76140 bytes. Smallest app partition is 0x89800 bytes. 0x136c0 bytes (14%) free.

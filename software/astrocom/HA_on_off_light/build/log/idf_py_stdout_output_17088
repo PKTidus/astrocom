@@ -1,0 +1,600 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x4 (DOWNLOAD(USB/UART0/SDIO_FEI_FEO))
+waiting for download
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d8
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 12 2024 14:54:21[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (80) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=0a6d8h ( 42712) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=0001a700 vaddr=40800000 size=05918h ( 22808) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=16d3ch ( 93500) map[0m
+[0;32mI (143) esp_image: segment 3: paddr=00036d64 vaddr=40805918 size=064fch ( 25852) load[0m
+[0;32mI (150) esp_image: segment 4: paddr=0003d268 vaddr=4080be20 size=01100h (  4352) load[0m
+[0;32mI (154) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (155) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Unicore app[0m
+[0;32mI (172) cpu_start: Pro cpu up.[0m
+[0;33mW (181) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) cpu_start: Application information:[0m
+[0;32mI (191) cpu_start: Project name:     light_bulb[0m
+[0;32mI (196) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (201) cpu_start: Compile time:     Mar 12 2024 16:19:35[0m
+[0;32mI (207) cpu_start: ELF file SHA256:  6961dd198e0b00fa...[0m
+[0;32mI (213) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (219) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (224) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (228) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (233) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 4080DE60 len 0006E7B0 (441 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (253) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (282) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (288) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (295) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (301) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (306) app_start: Starting scheduler on CPU0[0m
+[0;32mI (311) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ESP32 Initialized for I2C.
+[0;32mI (331) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) VEML7700: Successfully initialized VEML7700 (Channel 0). Result: 0
+[0m
+[0;32mI (381) VEML7700: Successfully initialized VEML7700 (Channel 1). Result: 0
+[0m
+[0;32mI (381) VEML7700: Successfully initialized VEML7700 (Channel 2). Result: 0
+[0m
+[0;32mI (391) VEML7700: Successfully initialized VEML7700 (Channel 3). Result: 0
+[0m
+[0;32mI (401) VEML7700: Successfully initialized VEML7700 (Channel 4). Result: 0
+[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 66.5856 lux, 6.1860 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 61.9776 lux, 5.7579 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 46.4256 lux, 4.3131 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 48.3840 lux, 4.4950 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 11.4048 lux, 1.0595 fc
+
+
+clockwise is 0.7375
+clockwise is 0.7375
+
+
+stepper begins spinning
+val after inverse is 1.3560
+
+
+
+step size is 11.4318
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 66.5280 lux, 6.1807 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 62.0352 lux, 5.7633 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 46.4256 lux, 4.3131 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 48.4416 lux, 4.5004 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 11.4048 lux, 1.0595 fc
+
+
+clockwise is 0.7379
+clockwise is 0.7379
+
+
+stepper begins spinning
+val after inverse is 1.3552
+
+
+
+step size is 11.3764
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 66.6144 lux, 6.1887 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 62.0928 lux, 5.7686 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 46.4256 lux, 4.3131 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 48.4416 lux, 4.5004 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 11.4336 lux, 1.0622 fc
+
+
+clockwise is 0.7371
+clockwise is 0.7371
+
+
+stepper begins spinning
+val after inverse is 1.3567
+
+
+
+step size is 11.4787
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 33.2208 lux, 3.0863 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 30.9528 lux, 2.8756 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 23.2200 lux, 2.1572 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 24.2424 lux, 2.2522 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 5.6088 lux, 0.5211 fc
+
+
+clockwise is 0.7396
+clockwise is 0.7396
+
+
+stepper begins spinning
+val after inverse is 1.3521
+
+
+
+step size is 11.1700
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 117.3636 lux, 10.9034 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 109.8036 lux, 10.2011 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 84.2688 lux, 7.8288 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 89.1216 lux, 8.2797 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 21.6756 lux, 2.0137 fc
+
+
+clockwise is 0.7633
+clockwise is 0.7633
+
+
+stepper begins spinning
+val after inverse is 1.3101
+
+
+
+step size is 8.6809
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 234.4644 lux, 21.7824 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 219.3300 lux, 20.3764 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 168.9588 lux, 15.6968 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 178.5168 lux, 16.5847 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 42.9120 lux, 3.9867 fc
+
+
+clockwise is 0.7657
+clockwise is 0.7657
+
+
+stepper begins spinning
+val after inverse is 1.3060
+
+
+
+step size is 8.4621
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 234.1944 lux, 21.7574 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 471.8520 lux, 43.8365 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 169.7976 lux, 15.7747 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 180.5148 lux, 16.7704 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 51.1308 lux, 4.7502 fc
+
+
+clockwise is 0.4962
+Servo value is 0.6463
+setting servo step to 598.4528
+
+
+
+servo begins spinning
+servo done spinning
+
+clockwise is 0.4962
+
+
+stepper begins spinning
+val after inverse is 2.0155
+
+
+
+step size is 272.2838
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 471.8520 lux, 43.8365 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 943.7040 lux, 87.6729 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 50.1840 lux, 4.6622 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 178.8660 lux, 16.6172 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 139.8888 lux, 12.9961 fc
+
+
+clockwise is 0.1618
+Servo value is 0.6547
+setting servo step to 598.4727
+
+
+
+servo begins spinning
+servo done spinning
+
+clockwise is 0.1618
+
+
+stepper begins spinning
+val after inverse is 6.1801
+
+
+
+step size is 300.0000
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 943.7040 lux, 87.6729 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 33.0912 lux, 3.0743 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 47.3940 lux, 4.4030 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 166.4028 lux, 15.4593 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 93.0096 lux, 8.6409 fc
+
+
+clockwise is 0.2189
+Servo value is 0.0725
+setting servo step to 613.7927
+
+
+
+servo begins spinning
+servo done spinning
+
+clockwise is 0.2189
+
+
+stepper begins spinning
+val after inverse is 4.5688
+
+
+
+step size is 300.0000
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 105.1704 lux, 9.7706 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 27.7164 lux, 2.5749 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 112.0536 lux, 10.4101 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 160.7184 lux, 14.9312 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 124.5240 lux, 11.5687 fc
+
+
+counterclockwise is 0.4872
+Servo value is 0.5257
+setting servo step to 601.9023
+
+
+
+servo begins spinning
+servo done spinning
+
+counterclockwise is 0.4872
+
+
+stepper begins spinning
+val after inverse is 2.0527
+
+
+
+step size is 300.0000
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 97.4520 lux, 9.0536 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 59.6952 lux, 5.5459 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 98.7732 lux, 9.1763 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 158.2272 lux, 14.6998 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 97.1100 lux, 9.0218 fc
+
+
+counterclockwise is 0.6115
+Servo value is 0.6198
+setting servo step to 601.6135
+
+
+
+servo begins spinning
+servo done spinning
+
+counterclockwise is 0.6115
+
+
+stepper begins spinning
+val after inverse is 1.6354
+
+
+
+step size is 51.1702
+
+stepper done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 193.0968 lux, 17.9393 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 61.4196 lux, 5.7061 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 80.1072 lux, 7.4422 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 159.7680 lux, 14.8429 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 97.5960 lux, 9.0670 fc
+
+
+clockwise is 0.9425
+Servo value is 0.4011
+setting servo step to 602.4933
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.0024 lux, 17.8376 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 63.5760 lux, 5.9064 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 77.9976 lux, 7.2462 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.7624 lux, 15.0282 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 98.9604 lux, 9.1937 fc
+
+
+clockwise is 0.9381
+Servo value is 0.4002
+setting servo step to 602.4988
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.0024 lux, 17.8376 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 63.9180 lux, 5.9382 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 78.0120 lux, 7.2475 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.7660 lux, 15.0285 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 99.5400 lux, 9.2476 fc
+
+
+clockwise is 0.9369
+Servo value is 0.4012
+setting servo step to 602.4926
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.1032 lux, 17.8470 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 65.3832 lux, 6.0743 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 78.9084 lux, 7.3308 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.7336 lux, 15.0255 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 100.8792 lux, 9.3720 fc
+
+
+clockwise is 0.9346
+Servo value is 0.4078
+setting servo step to 602.4522
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.2256 lux, 17.8583 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 65.1348 lux, 6.0512 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 80.1360 lux, 7.4449 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.6544 lux, 15.0182 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 100.8144 lux, 9.3660 fc
+
+
+clockwise is 0.9395
+Servo value is 0.4105
+setting servo step to 602.4360
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.1536 lux, 17.8516 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 64.9908 lux, 6.0378 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 80.3016 lux, 7.4603 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.6544 lux, 15.0182 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 100.8936 lux, 9.3733 fc
+
+
+clockwise is 0.9409
+Servo value is 0.4107
+setting servo step to 602.4351
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.1752 lux, 17.8537 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 65.0520 lux, 6.0435 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 80.2656 lux, 7.4569 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.6796 lux, 15.0205 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 100.8936 lux, 9.3733 fc
+
+
+clockwise is 0.9406
+Servo value is 0.4107
+setting servo step to 602.4351
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 192.1320 lux, 17.8496 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 65.0052 lux, 6.0392 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 80.3736 lux, 7.4669 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 161.6688 lux, 15.0195 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 100.8576 lux, 9.3700 fc
+
+
+clockwise is 0.9413
+Servo value is 0.4109
+setting servo step to 602.4337
+
+
+
+servo begins spinning
+servo done spinning
+
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 193.4568 lux, 17.9727 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 69.2064 lux, 6.4295 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 81.1584 lux, 7.5399 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 162.1944 lux, 15.0683 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 101.7468 lux, 9.4526 fc
+
+
+clockwise is 0.9265
+Servo value is 0.4228
+setting servo step to 602.3652
+
+
+
+servo begins spinning
+servo done spinning
+

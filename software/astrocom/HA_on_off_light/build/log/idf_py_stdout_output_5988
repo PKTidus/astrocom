@@ -1,0 +1,351 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x4 (DOWNLOAD(USB/UART0/SDIO_FEI_FEO))
+waiting for download
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd10
+load:0x4086e610,len:0x2dc8
+load:0x40875728,len:0x17d8
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 12 2024 14:54:21[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00089800[0m
+[0;32mI (80) boot:  3 zb_storage       Unknown data     01 81 0009a000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 0009e000 00000400[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e148h ( 57672) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001e170 vaddr=40800000 size=01ea8h (  7848) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=58d58h (363864) map[0m
+[0;32mI (199) esp_image: segment 3: paddr=00078d80 vaddr=40801ea8 size=0dfa4h ( 57252) load[0m
+[0;32mI (216) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (216) boot: Disabling RNG early entropy source...[0m
+[0;32mI (228) cpu_start: Unicore app[0m
+[0;32mI (228) cpu_start: Pro cpu up.[0m
+[0;33mW (237) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (243) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     light_bulb[0m
+[0;32mI (252) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (257) cpu_start: Compile time:     Mar 12 2024 16:19:35[0m
+[0;32mI (263) cpu_start: ELF file SHA256:  45bff1dca4e14a65...[0m
+[0;32mI (269) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (274) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 408161B0 len 00066460 (409 KiB): D/IRAM[0m
+[0;32mI (302) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (309) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (316) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;33mW (324) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (337) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (351) coexist: coex firmware version: 80b0d89[0m
+[0;32mI (356) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (361) app_start: Starting scheduler on CPU0[0m
+[0;32mI (366) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ESP32 Initialized for I2C.
+[0;32mI (386) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 0). Result: 0
+[0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 1). Result: 0
+[0m
+[0;32mI (436) VEML7700: Successfully initialized VEML7700 (Channel 2). Result: 0
+[0m
+[0;32mI (446) VEML7700: Successfully initialized VEML7700 (Channel 3). Result: 0
+[0m
+[0;32mI (456) VEML7700: Successfully initialized VEML7700 (Channel 4). Result: 0
+[0m
+[0;32mI (456) phy_init: phy_version 202,b4b3263,May 17 2023,20:14:14[0m
+[0;33mW (466) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (526) phy: libbtbb version: b684fcb, May 17 2023, 20:14:35[0m
+[0;32mI (626) ESP_ZB_ON_OFF_LIGHT: ZDO signal: 23, status: -1[0m
+[0;32mI (626) ESP_ZB_ON_OFF_LIGHT: Zigbee stack initialized[0m
+[0;32mI (626) ESP_ZB_ON_OFF_LIGHT: Start network steering[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 4.2624 lux, 0.3960 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.3776 lux, 0.4067 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 6.4512 lux, 0.5993 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.0320 lux, 0.3746 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.5344 lux, 0.2355 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 4.3200 lux, 0.4013 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.3200 lux, 0.4013 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 6.5088 lux, 0.6047 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.0896 lux, 0.3799 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.5920 lux, 0.2408 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 4.3200 lux, 0.4013 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 4.3488 lux, 0.4040 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 6.4800 lux, 0.6020 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 4.0608 lux, 0.3773 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 2.5920 lux, 0.2408 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 2.1600 lux, 0.2007 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 2.1672 lux, 0.2013 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 3.2328 lux, 0.3003 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 2.0376 lux, 0.1893 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 1.2888 lux, 0.1197 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 8.4564 lux, 0.7856 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 8.4528 lux, 0.7853 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 12.1644 lux, 1.1301 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 8.0244 lux, 0.7455 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 5.0796 lux, 0.4719 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8768 lux, 1.5679 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8840 lux, 1.5686 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3108 lux, 2.2585 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0272 lux, 1.4890 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1736 lux, 0.9452 fc
+[0;32mI (33746) ESP_ZB_ON_OFF_LIGHT: Network steering was not successful (status: -1)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8984 lux, 1.5699 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8984 lux, 1.5699 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3324 lux, 2.2606 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0416 lux, 1.4903 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1448 lux, 0.9425 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.9128 lux, 1.5712 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9272 lux, 1.5726 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3072 lux, 2.2582 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0416 lux, 1.4903 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1520 lux, 0.9432 fc
+[0;32mI (42876) ESP_ZB_ON_OFF_LIGHT: Network steering was not successful (status: -1)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.9128 lux, 1.5712 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9344 lux, 1.5733 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.2928 lux, 2.2569 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0344 lux, 1.4896 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1520 lux, 0.9432 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8480 lux, 1.5652 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8840 lux, 1.5686 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.1704 lux, 2.2455 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.8148 lux, 1.4692 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.0944 lux, 0.9378 fc
+[0;32mI (51996) ESP_ZB_ON_OFF_LIGHT: Network steering was not successful (status: -1)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8192 lux, 1.5626 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8984 lux, 1.5699 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.2712 lux, 2.2549 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.9156 lux, 1.4786 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1520 lux, 0.9432 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8480 lux, 1.5652 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9416 lux, 1.5739 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.2784 lux, 2.2555 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.9264 lux, 1.4796 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1628 lux, 0.9442 fc
+[0;32mI (61986) ESP_ZB_ON_OFF_LIGHT: Joined network successfully (Extended PAN ID: 2e:f3:b2:c7:44:ab:a5:09, PAN ID: 0xabc5, Channel:11)[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.6680 lux, 1.5485 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9308 lux, 1.5729 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.2496 lux, 2.2529 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 15.6960 lux, 1.4582 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1412 lux, 0.9421 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.9236 lux, 1.5723 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9200 lux, 1.5719 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3612 lux, 2.2632 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0452 lux, 1.4906 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1448 lux, 0.9425 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8876 lux, 1.5689 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9020 lux, 1.5702 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3252 lux, 2.2599 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0560 lux, 1.4917 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1520 lux, 0.9432 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 16.8768 lux, 1.5679 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.9056 lux, 1.5706 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 24.3072 lux, 2.2582 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 16.0488 lux, 1.4910 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 10.1448 lux, 0.9425 fc
+hi mom:)
+[0;32mI (85016) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 1[0m
+bye mom:(
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 14.3928 lux, 1.3371 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 16.8840 lux, 1.5686 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 16.8336 lux, 1.5639 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 11.4228 lux, 1.0612 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 12.2220 lux, 1.1355 fc
+[0;32mI (88756) ESP_ZB_ON_OFF_LIGHT: uhhhhh on/off light set to 0[0m
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+Sensor 0 (Channel 0) - ALS: 163.1160 lux, 15.1540 fc
+Channel 1 on the TCA9548 is now open.
+Sensor 1 (Channel 1) - ALS: 144.8784 lux, 13.4596 fc
+Channel 2 on the TCA9548 is now open.
+Sensor 2 (Channel 2) - ALS: 116.4780 lux, 10.8212 fc
+Channel 3 on the TCA9548 is now open.
+Sensor 3 (Channel 3) - ALS: 114.0588 lux, 10.5964 fc
+Channel 4 on the TCA9548 is now open.
+Sensor 4 (Channel 4) - ALS: 51.3864 lux, 4.7740 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+[0;33mW (95546) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 0 (Channel 0) - ALS: 0.0000 lux, 0.0000 fc
+Channel 1 on the TCA9548 is now open.
+[0;33mW (95556) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 1 (Channel 1) - ALS: 0.0000 lux, 0.0000 fc
+Channel 2 on the TCA9548 is now open.
+[0;33mW (95566) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 2 (Channel 2) - ALS: 0.0000 lux, 0.0000 fc
+Channel 3 on the TCA9548 is now open.
+[0;33mW (95586) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 3 (Channel 3) - ALS: 0.0000 lux, 0.0000 fc
+Channel 4 on the TCA9548 is now open.
+[0;33mW (95596) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 4 (Channel 4) - ALS: 0.0000 lux, 0.0000 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+[0;33mW (100546) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 0 (Channel 0) - ALS: 0.0000 lux, 0.0000 fc
+Channel 1 on the TCA9548 is now open.
+[0;33mW (100556) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 1 (Channel 1) - ALS: 0.0000 lux, 0.0000 fc
+Channel 2 on the TCA9548 is now open.
+[0;33mW (100566) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 2 (Channel 2) - ALS: 0.0000 lux, 0.0000 fc
+Channel 3 on the TCA9548 is now open.
+[0;33mW (100586) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 3 (Channel 3) - ALS: 0.0000 lux, 0.0000 fc
+Channel 4 on the TCA9548 is now open.
+[0;33mW (100596) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 4 (Channel 4) - ALS: 0.0000 lux, 0.0000 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+[0;33mW (105546) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 0 (Channel 0) - ALS: 0.0000 lux, 0.0000 fc
+Channel 1 on the TCA9548 is now open.
+[0;33mW (105556) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 1 (Channel 1) - ALS: 0.0000 lux, 0.0000 fc
+Channel 2 on the TCA9548 is now open.
+[0;33mW (105566) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 2 (Channel 2) - ALS: 0.0000 lux, 0.0000 fc
+Channel 3 on the TCA9548 is now open.
+[0;33mW (105586) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 3 (Channel 3) - ALS: 0.0000 lux, 0.0000 fc
+Channel 4 on the TCA9548 is now open.
+[0;33mW (105596) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 4 (Channel 4) - ALS: 0.0000 lux, 0.0000 fc
+Software interrupt timer ISR
+Channel 0 on the TCA9548 is now open.
+[0;33mW (110546) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 0 (Channel 0) - ALS: 0.0000 lux, 0.0000 fc
+Channel 1 on the TCA9548 is now open.
+[0;33mW (110556) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 1 (Channel 1) - ALS: 0.0000 lux, 0.0000 fc
+Channel 2 on the TCA9548 is now open.
+[0;33mW (110566) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 2 (Channel 2) - ALS: 0.0000 lux, 0.0000 fc
+Channel 3 on the TCA9548 is now open.
+[0;33mW (110586) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 3 (Channel 3) - ALS: 0.0000 lux, 0.0000 fc
+Channel 4 on the TCA9548 is now open.
+[0;33mW (110596) VEML7700: veml7700_i2c_read() returned -1[0m
+Sensor 4 (Channel 4) - ALS: 0.0000 lux, 0.0000 fc
