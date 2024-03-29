@@ -1,6 +1,8 @@
 // YOU NEED TO DISABLE WATCHDOG TIMER IN MENUCONFIG TO RUN THIS CODE
 // Component config -> ESP System settings -> Disable Task Watchdog Timer
 
+// includes Vishay VEML7700 Light Sensor driver for integration with ESP-IDF framework by Kristijan Grozdanovski
+
 #include <stdio.h>
 #include <math.h>
 #include "driver/i2c.h"
@@ -9,10 +11,9 @@
 #include "driver/gpio.h"
 #include "esp_intr_alloc.h"
 #include "esp_timer.h"
-//----------------------------------test
+// zigbee libraries
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-// commenting zigbee stuff
 #include "managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h"
 #include "managed_components/espressif__esp-zigbee-lib/include/esp_zb_light.h"
 #include "nvs_flash.h"
@@ -42,7 +43,7 @@
 
 // I2C Configuration
 #define I2C_PORT        0
-#define I2C_FREQ_HZ     1000000
+#define I2C_FREQ_HZ     20000 // 20kHz
 
 // Configuration for servo motors
 #define SERVO_FREQ_HZ   50
@@ -51,20 +52,24 @@
 #define SERVO_MIN_AN    90
 #define SERVO_MAX_AN    360
 
+// global variables to store sensor and mirror values
 float angle_spin = 0.0;
 float save_value = 0.0;
 float angle_val = 0.0;
-int valval = 0;
-int dir = 1;
 
+int target_num = 0; // target number
+int dir = 1; // direction of stepper
+
+// global variables to store stepper values
 float current_stepper_val = 0.0;
-
 float stepper_save_value = 0.0;
 float stepper_val_new = 0.0;
 
+// target location arrays
 float target_val_servo[] = {600,450};
 float target_val_stepper[] = {0,720};
 
+// function prototype for slow servo spin
 void set_servo_angle_loop(float new_value, float current_value, int channel);
 
 //-------------------------ZIGBEE------------------------------------
@@ -92,26 +97,19 @@ void attr_cb(uint8_t status, uint8_t endpoint, uint16_t cluster_id, uint16_t att
         uint8_t value = *(uint8_t *)new_value;
         if (attr_id == ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID) {
             /* implemented light on/off control */
-            if (!valval)
+            if (!target_num)
             {
-                valval++;
+                target_num++;
                 ESP_LOGI(TAG, "set to target 0");
-                /*set_servo_angle_loop(495,765, 0);
-                vTaskDelay(pdMS_TO_TICKS(1000));*/
                 gpio_set_level(20, 1);
             }
-            else if (valval)
+            else if (target_num)
             {
-                valval--;
+                target_num--;
                 ESP_LOGI(TAG, "set to target 1");
-                /*set_servo_angle_loop(765,495, 0);
-                vTaskDelay(pdMS_TO_TICKS(1000));*/
                 gpio_set_level(20, 0);
             }
-            //ESP_LOGI(TAG, "uhhhhh on/off light set to %hd", value);
             light_driver_set_power((bool)value);
-            //light_driver_init(1);
-            
         }
     } else {
         /* Implement some actions if needed when other cluster changed */
@@ -177,9 +175,9 @@ static void esp_zb_task(void *pvParameters)
     ESP_ERROR_CHECK(esp_zb_start(false));
     esp_zb_main_loop_iteration();
 }
-//------------------------------ZIGBEE---------------------------------------------------
+//------------------------------END OF ZIGBEE---------------------------------------------------
 
-
+//------------------------------SERVO MUX FUNCTIONS---------------------------------------------
 void pca9685_write_byte(i2c_port_t i2c_num, uint8_t reg_addr, uint8_t data) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
@@ -221,7 +219,9 @@ void pca9685_init(i2c_port_t i2c_num) {
         pca9685_set_pwm(i2c_num, i, 0, 0);
     }
 }
+//-----------------------END OF SERVO MUX FUNCTIONS---------------------------------------------
 
+//------------------------------SERVO CTL FUNCTIONS---------------------------------------------
 void set_servo_angle(i2c_port_t i2c_num, uint8_t channel, double angle) {
     // Calculate pulse length
     uint16_t pulse = (uint16_t)(SERVO_MIN_US + (angle / 180.0) * (SERVO_MAX_US - SERVO_MIN_US));
@@ -248,16 +248,20 @@ void set_servo_angle_loop(float new_value, float current_value, int channel)
         }
     } 
 }
+//------------------------END OF SERVO CTL FUNCTIONS---------------------------------------------
 
 //-------------------------------------------------------------------------------
+// timer interrupt handler prototype
 void timer_isr(void* arg);
 
+// structure of light sensor
 typedef struct {
     veml7700_handle_t dev;
     double lux;
     double fc;
 } VEML_Data;
 
+// I2C init function
 void i2c_master_init() {
     i2c_config_t conf;
     conf.mode = I2C_MODE_MASTER;
@@ -271,16 +275,18 @@ void i2c_master_init() {
     i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
 }
 
+// sensor mux channel select
 void select_channel(uint8_t channel) {
     uint8_t cmd = 1 << channel;
     i2c_cmd_handle_t cmd_handle = i2c_cmd_link_create();
     i2c_master_start(cmd_handle);
-    i2c_master_write_byte(cmd_handle, (TCA9548_ADDR << 1) | I2C_MASTER_WRITE, true); // why does this shift TCA9548 left one?
+    i2c_master_write_byte(cmd_handle, (TCA9548_ADDR << 1) | I2C_MASTER_WRITE, true);
     i2c_master_write_byte(cmd_handle, cmd, true);
     i2c_master_stop(cmd_handle);
     i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, 1000 / portTICK_PERIOD_MS);
 }
 
+// sensor init function
 void initialize_veml_device(VEML_Data *data, int channel) {
     esp_err_t init_result = veml7700_initialize(&(data->dev), I2C_MASTER_NUM);
     if (init_result != ESP_OK) {
@@ -291,6 +297,7 @@ void initialize_veml_device(VEML_Data *data, int channel) {
     }
 }
 //-----------------------------------------------------------------------
+
 //Set stepper task
 void stepper_task(float val) {  
     esp_rom_gpio_pad_select_gpio(STEP_PIN);         //selecting CLK pin
@@ -302,20 +309,10 @@ void stepper_task(float val) {
     gpio_set_direction(USBC_PIN, GPIO_MODE_OUTPUT);
     //gpio_set_pull_mode(USBC_PIN, GPIO_PULLUP_ONLY);
     gpio_set_level(USBC_PIN,1);
-    //gpio_set_level(DIR_PIN, 0); // Set direction 0 clockwise 1 counterclockwise
-    /*if(val < 0.6)
-    {
-        for (int i = 0; i < 200; i++) { // 200 steps for one revolution
-        gpio_set_level(STEP_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
-        gpio_set_level(STEP_PIN, 0);
-        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust delay
-    }
-    vTaskDelay(pdMS_TO_TICKS(200)); // Delay between rotations
-    }*/
     val = 1.0/val;
     printf("val after inverse is %.4f\n\n", val);
-    val = pow(val,8);
+    val = pow(val,8); // set to 8th power to adjust accurately to sensor values
+    // if above 200 reset to 200
     if(val >= 200)
     {
         val = 200;
@@ -338,17 +335,14 @@ void stepper_task(float val) {
     gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
     gpio_set_level(USBA_PIN, 1);
 
-    //gpio_reset_pin(USBC_PIN);
-
     return;
 }
 
-
-
+// main function
 void app_main() {
     esp_rom_gpio_pad_select_gpio(USBA_PIN);
     gpio_set_direction(USBA_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_level(USBA_PIN, 1); // power switch servo
+    gpio_set_level(USBA_PIN, 1); // power switch **sensor**
 
     gpio_reset_pin(USBC_PIN);
     esp_rom_gpio_pad_select_gpio(20);
@@ -394,17 +388,12 @@ void app_main() {
     esp_timer_handle_t software_timer;
     esp_timer_create(&timer_args, &software_timer);
 
-    /*printf("servo set to 495, horizontal\n");
-    set_servo_angle_loop(0, 495, 0);
-    vTaskDelay(pdMS_TO_TICKS(1000));
-    printf("servo set to 765, vertical\n\n\n");
-    set_servo_angle_loop(495, 765, 0);
-    vTaskDelay(pdMS_TO_TICKS(1000));*/
-
     //ZIGBEE-------------------------------------------------
     xTaskCreate(esp_zb_task, "Zigbee_main", 4096, NULL, 5, NULL);
     //ZIGBEE-------------------------------------------------
 
+
+    //-----------------STARTING VALS FOR MOTORS--------------
     save_value = 600;
     set_servo_angle_loop(600,495, 0);
     ESP_LOGI(TAG, "set sensor servo to 600");
@@ -417,29 +406,23 @@ void app_main() {
     set_servo_angle_loop(459, 510, 1);
     set_servo_angle_loop(450, 600, 2);
     ESP_LOGI(TAG, "set mirror horizontal servo to 459 and vertical to 450");
-    vTaskDelay(pdMS_TO_TICKS(1000));
-    
-
-
-    //set_servo_angle(I2C_PORT, 1, 450);
-    vTaskDelay(pdMS_TO_TICKS(1000));
-
-    //set_servo_angle(I2C_PORT, 1, 495);
-
+    vTaskDelay(pdMS_TO_TICKS(2000));
+    //-----------------STARTING VALS FOR MOTORS--------------
 
     // Start timer
     esp_timer_start_periodic(software_timer, 5000000); // 5s timer
 
-
+    // infinite loop
     while (1) {
         
     }
 }
 
+// interrupt handler
 void timer_isr(void* arg) {
     printf("Software interrupt timer ISR\n");
     VEML_Data* veml_devices = (VEML_Data*)arg;
-    for (int i = 0; i < 5; i++) { // Start from index p
+    for (int i = 0; i < 5; i++) { // Start from index 0
         select_channel(i); // Channel index starts from 0
         printf("Channel %d on the TCA9548 is now open.\n", i);
 
@@ -460,18 +443,17 @@ void timer_isr(void* arg) {
         }
     }
 
-    float servo_spin_down = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2));
-    float servo_spin_up = (((veml_devices[1].lux + veml_devices[2].lux)/2) / ((veml_devices[0].lux + veml_devices[3].lux)/2));
-    float stepper_spin_clockwise = (((veml_devices[2].lux + veml_devices[3].lux)/2) / ((veml_devices[0].lux + veml_devices[1].lux)/2));
-    float stepper_spin_counterclockwise = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2));
-    float servo_spin_down_inv = 1/servo_spin_down;
-    float servo_spin_up_inv = 1/servo_spin_up;
-    if(servo_spin_down_inv > 20)
+    // calculate ratios of sensor
+    float servo_spin_down = (((veml_devices[0].lux + veml_devices[3].lux)/2) / ((veml_devices[1].lux + veml_devices[2].lux)/2)); // ratio for down movement
+    float servo_spin_up = (((veml_devices[1].lux + veml_devices[2].lux)/2) / ((veml_devices[0].lux + veml_devices[3].lux)/2)); // ratio for up movement
+    float stepper_spin_clockwise = (((veml_devices[2].lux + veml_devices[3].lux)/2) / ((veml_devices[0].lux + veml_devices[1].lux)/2)); // ratio for clkwise stepper
+    float stepper_spin_counterclockwise = (((veml_devices[0].lux + veml_devices[1].lux)/2) / ((veml_devices[2].lux + veml_devices[3].lux)/2)); // ratio for cntrclkwise stepper
+    float servo_spin_down_inv = 1/servo_spin_down; // inverse of down
+    float servo_spin_up_inv = 1/servo_spin_up; // inverse of up
+    if(servo_spin_down_inv > 20) // reset to 20 if bigger
         servo_spin_down_inv = 20;
-    if(servo_spin_up_inv > 20)
+    if(servo_spin_up_inv > 20) // reset to 20 if bigger
         servo_spin_up_inv = 20;
-
-
 
     printf("\n\n");
     if(stepper_spin_counterclockwise < 1)
@@ -483,7 +465,7 @@ void timer_isr(void* arg) {
         printf("clockwise is %.4f\n", stepper_spin_clockwise);
     }
 
-    if(servo_spin_down < 0.8)
+    if(servo_spin_down < 0.8) // sensor needs to be moved down
     {
         printf("Servo value is %.4f\n", servo_spin_down);
         if((save_value - servo_spin_down_inv) < 495)
@@ -501,7 +483,7 @@ void timer_isr(void* arg) {
         printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
-    else if(servo_spin_up < 0.8)
+    else if(servo_spin_up < 0.8) // sensor needs to be moved up
     {
         printf("Servo value is %.4f\n", servo_spin_up);
         if((save_value + servo_spin_up_inv) > 765)
@@ -519,10 +501,10 @@ void timer_isr(void* arg) {
         printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
-    if(stepper_spin_clockwise < 0.9)
+    if(stepper_spin_clockwise < 0.9) // stepper needs to be moved clockwise
     {
          printf("clockwise is %.4f\n", stepper_spin_clockwise);
-         gpio_set_level(DIR_PIN, 1); // Set direction 0 clockwise
+         gpio_set_level(DIR_PIN, 1); // Set direction 1 clockwise
          ESP_LOGI(TAG, "dir is %d-----------------------------", dir);
          if(dir < 0)
          {
@@ -533,10 +515,10 @@ void timer_isr(void* arg) {
          stepper_task(stepper_spin_clockwise);
          printf("stepper done spinning\n\n"); 
     }
-    else if(stepper_spin_counterclockwise < 0.9)
+    else if(stepper_spin_counterclockwise < 0.9) // stepper needs to be moved counterclockwise
     {
         printf("counterclockwise is %.4f\n", stepper_spin_counterclockwise);
-        gpio_set_level(DIR_PIN, 0); // Set direction 1 counterclockwise
+        gpio_set_level(DIR_PIN, 0); // Set direction 0 counterclockwise
         ESP_LOGI(TAG, "dir is %d-----------------------------", dir);
         if(dir != -1)
         {
@@ -549,25 +531,19 @@ void timer_isr(void* arg) {
         printf("stepper done spinning\n\n");  
     }
 
-    //angle_val = angle_spin * 0.37037;
     printf("angle val is %.4f\n\n", angle_val);
 
+    // scale vertical movement of sensor position to mirror
     float new_servo_exchange = (((angle_spin - 495)*(400-600))/(765-495)) + 600;
     float old_servo_exchange = (((save_value - 495)*(400-600))/(765-495)) + 600;
 
+    // set values to half of target and sensor range
+    float servo_vertical_pos_new = (new_servo_exchange + target_val_servo[target_num])/2;
+    float servo_vertical_pos_old = (old_servo_exchange + target_val_servo[target_num])/2;
 
+    ESP_LOGI(TAG, "target val servo is %.4f", target_val_servo[target_num]);
 
-    float servo_vertical_pos_new = (new_servo_exchange + target_val_servo[valval])/2;
-    float servo_vertical_pos_old = (old_servo_exchange + target_val_servo[valval])/2;
-    
-
-    
-
-
-
-
-    ESP_LOGI(TAG, "target val servo is %.4f", target_val_servo[valval]);
-
+    // if past furthest range reset
     if(servo_vertical_pos_new > 600)
     {
         servo_vertical_pos_new = 600;
@@ -575,37 +551,32 @@ void timer_isr(void* arg) {
         ESP_LOGI(TAG, "GOT PAST 600");
     }
 
-
-
+    // move mirror with servo function
     set_servo_angle_loop(servo_vertical_pos_new, servo_vertical_pos_old, 2);
     ESP_LOGI(TAG, "set servo to %.4f", servo_vertical_pos_new);
 
     
+    // new stepper value is half of the target, since sensor is always at 0
+    stepper_val_new = target_val_stepper[target_num]/2;
 
-    stepper_val_new = target_val_stepper[valval]/2;
-
+    // scale values to mirror range
     float scaled_stepper_val_new = ((stepper_val_new*(300-510))/1440) + 510;
     float scaled_stepper_val_old = ((stepper_save_value*(300-510))/1440) + 510;
-
+    
+    // if past max range reset to max range
     if(scaled_stepper_val_new > 510)
     {
         scaled_stepper_val_new = 510;
         scaled_stepper_val_old = 510;
         ESP_LOGI(TAG, "GOT PAST 510");
     }
-
-
     ESP_LOGI(TAG, "horizontal mirror servo set from %.4f to %.4f", scaled_stepper_val_old, scaled_stepper_val_new);
 
 
-
+    // move mirror with servo function
     set_servo_angle_loop(scaled_stepper_val_new, scaled_stepper_val_old, 1);
 
     // save old values of servos
     stepper_save_value = stepper_val_new;
     save_value = angle_spin;
-    
-    // set_servo_angle(I2C_PORT, 0, angle_spin);
-    // vTaskDelay(pdMS_TO_TICKS(1000));
-
 }
