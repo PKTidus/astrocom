@@ -84,7 +84,7 @@ void set_servo_angle_loop(float new_value, float current_value, int channel);
 char modelid[] = {11, 'E', 'S', 'P', '3', '2', 'C', '6', '.', 'E', 'n', 'd'};
 char manufname[] = {9, 'E', 's', 'p', 'r', 'e', 's', 's', 'i', 'f'};
 
-static const char *TAG = "ESP_ZB_ON_OFF_LIGHT";
+static const char *TAG = "ASTROCOM";
 /********************* Define functions **************************/
 static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
 {
