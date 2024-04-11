@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A.S.T.R.O.COM.</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>A.S.T.R.O.COM.</h1>
+      <header id="headertext">Welcome to Group 14's Project Website!</header>
+      <div class="container">
+      <div>
+        <nav class="element1">
+          <button class="button" onclick="showContent('content1')">Intro</button>
+          <button class="button" onclick="showContent('content2')">Group Members</button>
+          <button class="button" onclick="showContent('content3')">Project Videos</button>
+          <button class="button" onclick="showContent('content4')">Documents</button>
+          <button class="button" onclick="showContent('content5')">Sponsor & Committee</button>
+          <button class="button" onclick="showContent('content6')">Special Thanks</button> 
+        </nav>
+      </div>
+    <section class="element2">
+      <div id="contentContainer">
+        <div id="content1" style="display: none;">
+            <div id="titledesc" class="centered-container">
+            <div id="titledesctext" class="centered-text">
+            <h2>Advanced Solar Tracking and<br> Rover Observation Communication </h2>
+            <p id="description" class="custom-paragraph">
+              Our project is an extension of FSI's RE-RASSOR rover project.<br>
+              The addition of a reflector tower and a mobile communication tower<br>
+              will allow for rovers to explore permanently shaded craters <br>
+              on the moon's surface and communicate with each other.<br>
+              <br>
+            </p>
+          <img src="img/UCF_Logo.png" width="150" height="150"alt=""> 
+          <img src="img/logo.png" width="175" height="150"alt="">
+        </div>
+          </div>
+        </div>
+
+        <div id="content2" style="display: none;">
+          <h3>Group Members</h3>
+          <div id="members" class="centered-container">
+            <div id="firstmember" class="image-div">
+              <div>Alex Fiset</div>
+              <div>Electrical Engineering</div>
+              <img style="border: #FFFFFF 6px solid; margin-top: 2px;" src="img/alex.png" alt="">
+              <div> al638481@ucf.edu </div>
+            </div>
+
+            <div id="secondmember" class="image-div">
+              <div>Pedro Kasprzykowski</div>
+              <div>Computer Engineering</div>
+              <img style="border: #FFFFFF 6px solid; margin-top: 2px;" src="img/pedro.png" alt="">
+              <div> pe505853@ucf.edu </div>
+            </div>
+          </div>
+
+          <div id="members" class="centered-container">
+            <div id="thirdmember" class="image-div">
+              <div>Stephen Martin</div>
+              <div>Computer Engineering</div>
+              <img style="border: #FFFFFF 6px solid; margin-top: 2px;" src="img/stephen.png" alt="">
+              <div> st322653@ucf.edu </div>
+            </div>
+
+            <div id="fourthmember" class="image-div">
+              <div>Binh Pham</div>
+              <div>Computer Engineering</div>
+              <img style="border: #FFFFFF 6px solid; margin-top: 2px;" src="img/binh.png" alt="">
+              <div> binh.pham@ucf.edu </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content3" style="display: none;">
+          <div id="demotitle" class="centered-text">
+            <h3>SD1 Parts Demo</h3>
+          </div>
+          <div id="demovid" class="centered-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0ZmuXKTEneQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div id="cdrtitle" class="centered-text">
+            <h3>SD2 CDR Presentation</h3>
+          </div>
+          <div id="cdr" class="centered-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ygGBptffEXs?si=C3-6tWAqChHGbEQR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <div id="midtitle" class="centered-text">
+            <h3>SD2 Midterm Demo</h3>
+          </div>
+          <div id="midtermdemo" class="centered-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gzapvkfR6yc?si=ickiHpu6l-0Mlgqf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <div id="finaltitle" class="centered-text">
+            <h3>SD2 Final Presentation</h3>
+          </div>
+          <div id="finalvid" class="centered-text">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/25WsKIyLoFI?si=EDt6q51M195ydcOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <div id="content4" style="display: none;">
+          <div id="doctext" class="centered-text">
+            <h3>Documents</h3>
+            <a href="doc/Divide_and_Conquer.pdf" target="_blank">Divide & Conquer</a>
+            <p><a href="doc/SD_1_Combined.pdf" target="_blank">Senior Design 1 Final Report</a></p>
+            <p><a href="doc/CDR_Presentation.pptx">CDR Presentation</a></p>
+            <p><a href="doc/8pg.pdf" target="_blank">Conference Paper</a></p>
+            <p><a href="doc/Final_Presentation.pptx">Final Presentation</a></p>
+            <p><a href="">Senior Design 2 Final Report</a> (Unavailable)</p>
+          </div>
+        </div>
+
+        <div id="content5" style="display: none;">
+          <div id="sponsor" class="centered-container">
+            <div id="sponsortext" class="centered-text">
+              <h3>Sponsored by Florida Space Institute</h3>
+              <p>Contact: <a href="https://fsi.ucf.edu/mike-conroy/" target="_blank">Mike Conroy, Engineering Support - Senior Design</a></p>
+            </div>
+          </div>
+
+          <div id="appreciation" class="centered-container">
+            <div id="appreciatetext" class="centered-text">
+              <h3>Committee</h3>
+              <p>Mentor/Faculty Advisor: <a href="https://www.ece.ucf.edu/person/chungyong-chan/" target="_blank">Dr. Chung Yong Chan</a></p>
+              <p>Faculty Reviewer: <a href="https://www.ece.ucf.edu/person/mike-borowczak/" target="_blank">Dr. Mike Borowczak</a></p>
+              <p>Faculty Reviewer: <a href="https://www.ece.ucf.edu/person/mingjie-lin/" target="_blank">Dr. Mingjie Lin</a></p>
+              <p>Faculty Reviewer: <a href="https://www.ece.ucf.edu/person/saleem-sahawneh/" target="_blank">Dr. Saleem Sahawneh</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="content6" style="display: none;">
+          <div id="appreciation" class="centered-container">
+            <div id="appreciatetext" class="centered-text">
+              <h2>A big thank you to:</h2>
+              <h3>For being the best of the best:</h3>
+              <p style="color: #d9761a;">Dr. Arthur Weeks</p>
+              <h3>Providing light:</h3>
+              <p style="color: #d9761a;">Steve Martin</p>
+              <h3>Fabrication and woodcutting support:</h3>
+              <p style="color: #d9761a;">UCF Theatre Department</p>
+              <p style="color: #d9761a;">Stefan Price (Roundtable Productions LLC, MakerFX Makerspace)</p>
+              <p style="color: #d9761a;">Texas Instruments Innovation Lab at UCF</p>
+              <h3>Code support: </h3>
+              <p style="color: #d9761a;">Kristijan Grozdanovski</p>
+              <p style="color: #d9761a;">Nerivec</p>
+              <p style="color: #d9761a;">Nick Pettit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </div>
+  </body>
+</html>

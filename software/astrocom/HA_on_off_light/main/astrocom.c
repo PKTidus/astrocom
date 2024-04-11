@@ -2,6 +2,7 @@
 // Component config -> ESP System settings -> Disable Task Watchdog Timer
 
 // includes Vishay VEML7700 Light Sensor driver for integration with ESP-IDF framework by Kristijan Grozdanovski
+// Copyright (c) 2022, Kristijan Grozdanovski
 
 #include <stdio.h>
 #include <math.h>
@@ -43,7 +44,7 @@
 
 // I2C Configuration
 #define I2C_PORT        0
-#define I2C_FREQ_HZ     20000 // 20kHz
+#define I2C_FREQ_HZ     50000 // 20kHz
 
 // Configuration for servo motors
 #define SERVO_FREQ_HZ   50
@@ -56,9 +57,12 @@
 float angle_spin = 0.0;
 float save_value = 0.0;
 float angle_val = 0.0;
+float new_mirror_vert = 0.0;
+float new_mirror_horiz = 0.0;
 
 int target_num = 0; // target number
 int dir = 1; // direction of stepper
+int target_change_var = 0; // boolean that ignores thresholds when changing targets
 
 // global variables to store stepper values
 float current_stepper_val = 0.0;
@@ -99,14 +103,17 @@ void attr_cb(uint8_t status, uint8_t endpoint, uint16_t cluster_id, uint16_t att
             /* implemented light on/off control */
             if (!target_num)
             {
+                target_change_var++;
                 target_num++;
-                ESP_LOGI(TAG, "set to target 0");
+                ESP_LOGI(TAG, "set to target 1");
                 gpio_set_level(20, 1);
             }
             else if (target_num)
             {
+                new_mirror_horiz -= 20;
+                target_change_var++;
                 target_num--;
-                ESP_LOGI(TAG, "set to target 1");
+                ESP_LOGI(TAG, "set to target 0");
                 gpio_set_level(20, 0);
             }
             light_driver_set_power((bool)value);
@@ -398,7 +405,7 @@ void app_main() {
     set_servo_angle_loop(600,495, 0);
     ESP_LOGI(TAG, "set sensor servo to 600");
 
-    set_servo_angle_loop(510, 510, 1);
+    /*set_servo_angle_loop(510, 510, 1);
     set_servo_angle_loop(600, 600, 2);
     ESP_LOGI(TAG, "set mirror horizontal servo to 520 and vertical to 600");
     vTaskDelay(pdMS_TO_TICKS(1000));
@@ -406,7 +413,7 @@ void app_main() {
     set_servo_angle_loop(459, 510, 1);
     set_servo_angle_loop(450, 600, 2);
     ESP_LOGI(TAG, "set mirror horizontal servo to 459 and vertical to 450");
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    vTaskDelay(pdMS_TO_TICKS(2000));*/
     //-----------------STARTING VALS FOR MOTORS--------------
 
     // Start timer
@@ -465,7 +472,7 @@ void timer_isr(void* arg) {
         printf("clockwise is %.4f\n", stepper_spin_clockwise);
     }
 
-    if(servo_spin_down < 0.8) // sensor needs to be moved down
+    if(servo_spin_down < 0.8 || (target_change_var == 1 && servo_spin_down < 1)) // sensor needs to be moved down
     {
         printf("Servo value is %.4f\n", servo_spin_down);
         if((save_value - servo_spin_down_inv) < 495)
@@ -482,8 +489,9 @@ void timer_isr(void* arg) {
         set_servo_angle_loop(angle_spin, save_value, 0);
         printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
+        target_change_var = 0;
     }
-    else if(servo_spin_up < 0.8) // sensor needs to be moved up
+    else if(servo_spin_up < 0.8 || (target_change_var == 1 && servo_spin_up < 1)) // sensor needs to be moved up
     {
         printf("Servo value is %.4f\n", servo_spin_up);
         if((save_value + servo_spin_up_inv) > 765)
@@ -500,8 +508,9 @@ void timer_isr(void* arg) {
         set_servo_angle_loop(angle_spin, save_value, 0);
         printf("servo done spinning\n\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
+        target_change_var = 0;
     }
-    if(stepper_spin_clockwise < 0.9) // stepper needs to be moved clockwise
+    if(stepper_spin_clockwise < 0.9 || (target_change_var == 1 && stepper_spin_clockwise < 1)) // stepper needs to be moved clockwise
     {
          printf("clockwise is %.4f\n", stepper_spin_clockwise);
          gpio_set_level(DIR_PIN, 1); // Set direction 1 clockwise
@@ -514,8 +523,9 @@ void timer_isr(void* arg) {
          printf("\n\nstepper begins spinning\n");  
          stepper_task(stepper_spin_clockwise);
          printf("stepper done spinning\n\n"); 
+         target_change_var = 0;
     }
-    else if(stepper_spin_counterclockwise < 0.9) // stepper needs to be moved counterclockwise
+    else if(stepper_spin_counterclockwise < 0.9 || (target_change_var == 1 && stepper_spin_counterclockwise < 1)) // stepper needs to be moved counterclockwise
     {
         printf("counterclockwise is %.4f\n", stepper_spin_counterclockwise);
         gpio_set_level(DIR_PIN, 0); // Set direction 0 counterclockwise
@@ -529,6 +539,7 @@ void timer_isr(void* arg) {
         printf("\n\nstepper begins spinning\n");  
         stepper_task(stepper_spin_counterclockwise);
         printf("stepper done spinning\n\n");  
+        target_change_var = 0;
     }
 
     printf("angle val is %.4f\n\n", angle_val);
@@ -540,6 +551,7 @@ void timer_isr(void* arg) {
     // set values to half of target and sensor range
     float servo_vertical_pos_new = (new_servo_exchange + target_val_servo[target_num])/2;
     float servo_vertical_pos_old = (old_servo_exchange + target_val_servo[target_num])/2;
+    new_mirror_vert = servo_vertical_pos_new;
 
     ESP_LOGI(TAG, "target val servo is %.4f", target_val_servo[target_num]);
 
@@ -578,5 +590,6 @@ void timer_isr(void* arg) {
 
     // save old values of servos
     stepper_save_value = stepper_val_new;
+    new_mirror_horiz = stepper_save_value;
     save_value = angle_spin;
 }
