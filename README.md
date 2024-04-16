@@ -17,4 +17,4 @@ Dr. Arthur Weeks
 
 **This project was sponsored by the [Florida Space Institute](https://fsi.ucf.edu/)**  
 
-**This project was made as a [University of Central Florida Electrical and Computer Engineering Department](https://www.ece.ucf.edu/) Senior Design project throughout the Fall 2023 - Spring 2024 term.**  
+**This project was made as a [University of Central Florida Electrical and Computer Engineering Department](https://www.ece.ucf.edu/) Senior Design project throughout the Fall 2023 - Spring 2024 term**  
